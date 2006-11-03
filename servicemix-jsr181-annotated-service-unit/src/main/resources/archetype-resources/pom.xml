@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <packaging>jbi-service-unit</packaging>
+  <version>${version}</version>
+  <name>A custom project</name>
+  <url>http://www.myorganization.org</url>
+  <pluginRepositories>
+		<pluginRepository>
+			<id>apache.snapshots</id>
+			<name>Maven Central Plugins Development Repository</name>
+			<url>http://cvs.apache.org/maven-snapshot-repository</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+	<repositories>
+		<repository>
+			<id>apache.snapshots</id>
+			<name>Maven Central Plugins Development Repository</name>
+			<url>http://cvs.apache.org/maven-snapshot-repository</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	<properties>
+		<servicemix-version>3.0-incubating-SNAPSHOT</servicemix-version>
+		<xfire-version>1.2</xfire-version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.codehaus.xfire</groupId>
+			<artifactId>xfire-jaxws</artifactId>
+			<version>${xfire-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.servicemix</groupId>
+			<artifactId>servicemix-jsr181</artifactId>
+			<version>${servicemix-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>test</phase>
+						<configuration>
+							<tasks>
+								<taskdef
+									classname="org.codehaus.xfire.gen.WsdlGenTask"
+									name="wsdlgen">
+									<classpath>
+										<pathelement
+											path="${basedir}/target/classes" />
+										<pathelement
+											path="${basedir}/src/main/java" />											
+										<path
+											refid="maven.test.classpath" />
+									</classpath>
+								</taskdef>
+								<wsdlgen
+									configUrl="${basedir}/src/main/resources/services.xml"
+									outputDirectory="${basedir}/src/main/resources" />
+							</tasks>
+							<sourceRoot>
+								${basedir}/src/main/java
+							</sourceRoot>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.codehaus.xfire</groupId>
+						<artifactId>xfire-generator</artifactId>
+						<version>${xfire-version}</version>
+						<exclusions>
+							<exclusion>
+								<groupId>javax.xml</groupId>
+								<artifactId>jsr173</artifactId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+					<dependency>
+						<groupId>org.codehaus.xfire</groupId>
+						<artifactId>xfire-jaxws</artifactId>
+						<version>${xfire-version}</version>
+					</dependency>
+					<dependency>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+						<version>2.4</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.servicemix.tooling</groupId>
+				<artifactId>jbi-maven-plugin</artifactId>
+				<version>${servicemix-version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<type>service-unit</type>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

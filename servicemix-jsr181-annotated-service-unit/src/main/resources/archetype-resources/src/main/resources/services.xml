@@ -1,0 +1,10 @@
+<beans xmlns="http://xfire.codehaus.org/config/1.0">  
+  <service>
+  	<name>ExampleService</name>
+    <serviceClass>${packageName}.ExampleService</serviceClass>    
+    <serviceFactory>jsr181</serviceFactory>
+    <createDefaultBindings>false</createDefaultBindings>   
+  </service>
+
+</beans>
+

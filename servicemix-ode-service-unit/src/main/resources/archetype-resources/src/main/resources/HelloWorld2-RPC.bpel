@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpws:process xmlns:bpws="http://schemas.xmlsoap.org/ws/2004/03/business-process/" xmlns:hello="urn:/HelloWorld2-RPC.wsdl" xmlns:tns="urn:/HelloWorld2-RPC.bpel" xmlns:xsd="http://www.w3.org/2001/XMLSchema" exitOnStandardFault="yes" name="HelloWorld2-RPC" targetNamespace="urn:/HelloWorld2-RPC.bpel">
+<bpws:import importType="http://schemas.xmlsoap.org/wsdl/" location="HelloWorld2-RPC.wsdl" namespace="urn:/HelloWorld2-RPC.wsdl"/>
+<bpws:partnerLinks>
+<bpws:partnerLink myRole="Provider" name="helloPartnerLink" partnerLinkType="hello:HelloPartnerLinkType"/>
+</bpws:partnerLinks>
+<bpws:variables>
+<bpws:variable messageType="hello:HelloRequest" name="request"/>
+<bpws:variable messageType="hello:HelloResponse" name="response"/>
+<bpws:variable name="text" type="xsd:string"/>
+</bpws:variables>
+<bpws:sequence>
+<bpws:receive createInstance="yes" name="start" partnerLink="helloPartnerLink" portType="hello:HelloPortType"/>
+<bpws:assign name="assignFromRequestToVariable" validate="yes">
+<bpws:copy>
+<bpws:from part="text" variable="request"/>
+<bpws:to variable="text"/>
+</bpws:copy>
+</bpws:assign>
+<bpws:assign name="assignFromVariableToResponse" validate="no">
+<bpws:copy>
+<bpws:from>
+<bpws:expression></bpws:expression>
+</bpws:from>
+<bpws:to part="text" variable="response"/>
+</bpws:copy>
+</bpws:assign>
+<bpws:reply name="end" operation="Hello" partnerLink="helloPartnerLink" portType="hello:HelloPortType" variable="response"/>
+</bpws:sequence>
+</bpws:process>

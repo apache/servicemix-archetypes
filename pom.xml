@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.apache.servicemix</groupId>
+    <artifactId>servicemix</artifactId>
+    <version>3.1-incubating-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>org.apache.servicemix</groupId>
+  <artifactId>archetypes</artifactId>
+  <version>3.1-incubating-SNAPSHOT</version>
+  <name>ServiceMix :: Archetypes</name>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>servicemix-binding-component</module>
+    <module>servicemix-service-engine</module>
+    <module>servicemix-service-unit</module>
+    <module>servicemix-service-assembly</module>
+    <module>servicemix-shared-library</module>    
+    <module>servicemix-http-consumer-service-unit</module>    
+    <module>servicemix-http-provider-service-unit</module>    
+    <module>servicemix-jms-consumer-service-unit</module>    
+    <module>servicemix-jms-provider-service-unit</module>    
+    <module>servicemix-jsr181-wsdl-first-service-unit</module>
+    <module>servicemix-lwcontainer-service-unit</module>
+    <module>servicemix-eip-service-unit</module>
+    <module>servicemix-embedded-simple</module>
+    <module>servicemix-ode-service-unit</module>
+    <module>servicemix-jsr181-annotated-service-unit</module>
+    <module>servicemix-saxon-xquery-service-unit</module>
+    <module>servicemix-saxon-xslt-service-unit</module>
+    <module>servicemix-archetypes-itests</module>
+  </modules>
+
+</project>
