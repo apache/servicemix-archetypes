@@ -14,18 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ${packageName};
+package org.apache.servicemix.tooling;
 
-import org.apache.servicemix.common.BaseComponent;
-import org.apache.servicemix.common.BaseLifeCycle;
+public class Jsr181AnnotatedServiceUnitTest extends AbstractArchetypeTest {
 
-/**
- *
- */
-public class MyLifeCycle extends BaseLifeCycle {
-
-    public MyLifeCycle(BaseComponent component) {
-        super(component);
+    public void testJsr181AnnotatedServiceUnit() throws Exception {
+        testServiceMixArchetype("jsr181-annotated-service-unit");
     }
 
 }

@@ -78,12 +78,32 @@
     </dependency>
     <dependency>
       <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-jsr181-annotated-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
       <artifactId>servicemix-jsr181-wsdl-first-service-unit</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.servicemix.tooling</groupId>
       <artifactId>servicemix-lwcontainer-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-ode-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-saxon-xquery-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-saxon-xslt-service-unit</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
     <dependency>
@@ -113,6 +133,22 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-archetype-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <includes>
+            <include>**/*Test*</include>
+          </includes>
+          <excludes>
+            <exclude>**/BindingComponent*</exclude>
+            <exclude>**/Jsr181*</exclude>
+            <exclude>**/ServiceEngine*</exclude>
+            <exclude>**/EmbeddedSimple*</exclude>
+	        </excludes>
+	        <forkMode>always</forkMode>
+        </configuration>
       </plugin>
     </plugins>
   </build>

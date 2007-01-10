@@ -29,7 +29,7 @@
       	<sm:component>
             <my:component>
             	<my:endpoints>
-            		<my:endpoint service="test:service" endpoint="endpoint" />
+            		<my:provider service="test:service" endpoint="endpoint" />
             	</my:endpoints>
             </my:component>
         </sm:component>

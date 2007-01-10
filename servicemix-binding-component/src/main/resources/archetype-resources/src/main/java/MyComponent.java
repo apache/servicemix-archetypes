@@ -16,29 +16,42 @@
  */
 package ${packageName};
 
-import org.apache.servicemix.common.BaseComponent;
-import org.apache.servicemix.common.BaseLifeCycle;
-import org.apache.servicemix.common.BaseServiceUnitManager;
-import org.apache.servicemix.common.Deployer;
+import java.util.List;
+
+import javax.jbi.servicedesc.ServiceEndpoint;
+
+import org.apache.servicemix.common.DefaultComponent;
+import org.apache.servicemix.common.Endpoint;
 
 /**
- *
+ * @org.apache.xbean.XBean element="component"
  */
-public class MyComponent extends BaseComponent
+public class MyComponent extends DefaultComponent
 {
-    /* (non-Javadoc)
-     * @see org.servicemix.common.BaseComponent#createLifeCycle()
-     */
-    protected BaseLifeCycle createLifeCycle() {
-        return new MyLifeCycle(this);
+
+    private MyEndpointType[] endpoints;
+    
+    public MyEndpointType[] getEndpoints() {
+        return endpoints;
+    }
+    
+    public void setEndpoints(MyEndpointType[] endpoints) {
+        this.endpoints = endpoints;
     }
 
-    /* (non-Javadoc)
-     * @see org.servicemix.common.BaseComponent#createServiceUnitManager()
-     */
-    public BaseServiceUnitManager createServiceUnitManager() {
-        Deployer[] deployers = new Deployer[] { new MyDeployer(this) };
-        return new BaseServiceUnitManager(this, deployers);
+    protected List getConfiguredEndpoints() {
+        return asList(getEndpoints());
+    }
+
+    protected Class[] getEndpointClasses() {
+        return new Class[] { MyConsumerEndpoint.class, MyProviderEndpoint.class };
+    }
+
+    protected Endpoint getResolvedEPR(ServiceEndpoint ep) throws Exception {
+        MyProviderEndpoint endpoint = new MyProviderEndpoint(this, ep);
+        // TODO: initialize endpoint here
+        endpoint.activate();
+        return endpoint;
     }
 
 }

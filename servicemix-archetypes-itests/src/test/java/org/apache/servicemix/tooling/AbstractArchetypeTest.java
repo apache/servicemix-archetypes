@@ -34,9 +34,9 @@ import org.apache.maven.monitor.event.EventMonitor;
 import org.apache.maven.project.MavenProject;
 import org.codehaus.plexus.util.FileUtils;
 
-public class ArchetypeTest extends TestCase {
+public abstract class AbstractArchetypeTest extends TestCase {
 
-    private File baseDir = new File(System.getProperty("basedir", ".")).getAbsoluteFile();
+    private static final File baseDir = new File(System.getProperty("basedir", ".")).getAbsoluteFile();
 
     private MavenEmbedder maven;
     private Properties sysProps = System.getProperties();
@@ -67,58 +67,6 @@ public class ArchetypeTest extends TestCase {
         maven.stop();
         maven = null;
         System.gc();
-    }
-    
-    public void testBindingComponent() throws Exception {
-        testServiceMixArchetype("binding-component");
-    }
-    
-    public void testEIPServiceUnit() throws Exception {
-        testServiceMixArchetype("eip-service-unit");
-    }
-    
-    public void testEmbeddedSimple() throws Exception {
-        testServiceMixArchetype("embedded-simple");
-    }
-    
-    public void testHttpConsumerServiceUnit() throws Exception {
-        testServiceMixArchetype("http-consumer-service-unit");
-    }
-    
-    public void testHttpProviderServiceUnit() throws Exception {
-        testServiceMixArchetype("http-provider-service-unit");
-    }
-    
-    public void testJmsConsumerServiceUnit() throws Exception {
-        testServiceMixArchetype("jms-consumer-service-unit");
-    }
-    
-    public void testJmsProviderServiceUnit() throws Exception {
-        testServiceMixArchetype("jms-provider-service-unit");
-    }
-    
-    public void testJsr181WsdlFirstServiceUnit() throws Exception {
-        testServiceMixArchetype("jsr181-wsdl-first-service-unit");
-    }
-    
-    public void testLwContainerServiceUnit() throws Exception {
-        testServiceMixArchetype("lwcontainer-service-unit");
-    }
-    
-    public void testServiceAssembly() throws Exception {
-        testServiceMixArchetype("service-assembly");
-    }
-    
-    public void testServiceEngine() throws Exception {
-        testServiceMixArchetype("service-engine");
-    }
-    
-    public void testServiceUnit() throws Exception {
-        testServiceMixArchetype("service-unit");
-    }
-    
-    public void testSharedLibrary() throws Exception {
-        testServiceMixArchetype("shared-library");
     }
     
     protected void testServiceMixArchetype(String artifactId) throws Exception {

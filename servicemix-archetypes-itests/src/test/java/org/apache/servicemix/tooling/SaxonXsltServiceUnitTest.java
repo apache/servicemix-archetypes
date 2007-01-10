@@ -14,30 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ${packageName};
+package org.apache.servicemix.tooling;
 
-import javax.jbi.messaging.MessageExchange;
+public class SaxonXsltServiceUnitTest extends AbstractArchetypeTest {
 
-import org.apache.servicemix.common.ExchangeProcessor;
-
-public class MyProviderProcessor implements ExchangeProcessor {
-
-    private MyEndpoint endpoint;
-
-    public MyProviderProcessor(MyEndpoint endpoint) {
-        this.endpoint = endpoint;
+    public void testSaxonXsltServiceUnit() throws Exception {
+        testServiceMixArchetype("saxon-xslt-service-unit");
     }
 
-    public void start() throws Exception {
-        // TODO
-    }
-    
-    public void stop() throws Exception {
-        // TODO
-    }
- 
-    public void process(MessageExchange exchange) throws Exception {
-        // TODO
-    }
- 
 }

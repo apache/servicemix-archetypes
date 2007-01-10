@@ -28,9 +28,20 @@
   <url>http://www.myorganization.org</url>
   <pluginRepositories>
     <pluginRepository>
+      <id>apache.incubating</id>
+      <name>Apache Incubating Repository</name>
+      <url>http://people.apache.org/repo/m2-incubating-repository</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+         <enabled>true</enabled>
+      </releases>
+    </pluginRepository>
+    <pluginRepository>
       <id>apache.snapshots</id>
-      <name>Maven Central Plugins Development Repository</name>
-      <url>http://cvs.apache.org/maven-snapshot-repository</url>
+      <name>Apache Snapshots Repository</name>
+      <url>http://people.apache.org/repo/m2-snapshot-repository</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -41,9 +52,20 @@
   </pluginRepositories>
   <repositories>
     <repository>
+      <id>apache.incubating</id>
+      <name>Apache Incubating Repository</name>
+      <url>http://people.apache.org/repo/m2-incubating-repository</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+         <enabled>true</enabled>
+      </releases>
+    </repository>
+    <repository>
       <id>apache.snapshots</id>
-      <name>Maven Central Plugins Development Repository</name>
-      <url>http://cvs.apache.org/maven-snapshot-repository</url>
+      <name>Apache Snapshots Repository</name>
+      <url>http://people.apache.org/repo/m2-snapshot-repository</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -51,14 +73,9 @@
          <enabled>false</enabled>
       </releases>
     </repository>
-    <repository>
-      <id>servicemix-m2-repo</id>
-      <name>Servicemix Maven2 Repository</name>
-      <url>http://servicemix.org/m2-repo</url>
-    </repository>
   </repositories>
 	<properties>
-	  <xbean-version>2.6</xbean-version>
+	  <xbean-version>2.8</xbean-version>
 	  <servicemix-version>3.1-incubating-SNAPSHOT</servicemix-version>
 	</properties>
   <dependencies>
@@ -71,6 +88,7 @@
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-core</artifactId>
       <version>${servicemix-version}</version>      
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

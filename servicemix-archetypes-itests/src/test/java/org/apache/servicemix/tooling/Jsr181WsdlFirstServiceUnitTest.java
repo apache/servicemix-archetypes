@@ -14,25 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ${packageName};
+package org.apache.servicemix.tooling;
 
-import javax.jbi.management.DeploymentException;
+public class Jsr181WsdlFirstServiceUnitTest extends AbstractArchetypeTest {
 
-import org.apache.servicemix.common.BaseComponent;
-import org.apache.servicemix.common.Endpoint;
-import org.apache.servicemix.common.xbean.AbstractXBeanDeployer;
-
-public class MyDeployer extends AbstractXBeanDeployer {
-
-    public MyDeployer(BaseComponent component) {
-        super(component);
+    public void testJsr181WsdlFirstServiceUnit() throws Exception {
+        testServiceMixArchetype("jsr181-wsdl-first-service-unit");
     }
 
-    protected boolean validate(Endpoint endpoint) throws DeploymentException {
-        if (endpoint instanceof MyEndpoint == false) {
-            throw new DeploymentException("Endpoint should be a MyEndpoint");
-        }
-        ((MyEndpoint) endpoint).validate();
-        return true;
-    }
 }
