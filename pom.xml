@@ -54,4 +54,32 @@
         <module>servicemix-archetypes-itests</module>
     </modules>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>build</artifactId>
+                <version>${servicemix-version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.servicemix</groupId>
+                        <artifactId>build</artifactId>
+                        <version>3.1-incubating-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
