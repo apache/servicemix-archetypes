@@ -25,18 +25,20 @@
   </classpath>
 
   <sm:serviceunit id="jbi">
+    <sm:activationSpecs>
+
+      <!-- Put lw components here -->
+      <sm:activationSpec service="replaceMe:myService">
+        <sm:component>
+          <bean class="org.apache.servicemix.components.cache.CacheComponent">
+            <property name="cache">
+              <bean class="org.apache.servicemix.components.cache.LRUCache" />
+            </property>
+          </bean>
+        </sm:component>
+      </sm:activationSpec>
   
-    <!-- Put lw components here -->
-    <sm:activationSpec>
-      <sm:component>
-        <bean class="org.apache.servicemix.components.cache.CacheComponent">
-          <property name="cache">
-            <bean class="org.apache.servicemix.components.cache.LRUCache" />
-          </property>
-        </bean>
-      </sm:component>
-    </sm:activationSpec>
-  
+    </sm:activationSpecs>
   </sm:serviceunit>
 
 </beans>
