@@ -19,10 +19,6 @@
 -->
 <beans xmlns:jsr181="http://servicemix.apache.org/jsr181/1.0">
 
-    <classpath>
-        <location>.</location>
-    </classpath>
-  
     <jsr181:endpoint pojoClass="${packageName}.ExampleService" />
 
 </beans>

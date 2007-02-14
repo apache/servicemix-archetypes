@@ -20,10 +20,6 @@
 <beans xmlns:sm="http://servicemix.apache.org/config/1.0"
        xmlns:replaceMe="http://servicemix.apache.org/replaceMe">
 
-  <classpath>
-    <location>.</location>
-  </classpath>
-
   <sm:serviceunit id="jbi">
     <sm:activationSpecs>
 

@@ -20,12 +20,6 @@
 <beans xmlns:jms="http://servicemix.apache.org/jms/1.0"
        xmlns:test="http://test">
 
-	<!--  Define an additional classpath location
-	      for wsdl resources -->
-    <classpath>
-        <location>.</location>
-    </classpath>
-
     <!-- START SNIPPET: consumer -->
     <jms:endpoint service="test:MyConsumerService"
                   endpoint="jms"
