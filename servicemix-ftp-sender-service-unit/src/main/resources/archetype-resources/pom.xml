@@ -23,8 +23,8 @@
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
   <packaging>jbi-service-unit</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>A example service unit using Apache ODE's Service Engine</name>
+  <version>${version}</version>
+  <name>A Service HTTP Service Engine Service Unit</name>
   <url>http://www.myorganization.org</url>
   <pluginRepositories>
     <pluginRepository>
@@ -75,10 +75,14 @@
     </repository>
   </repositories>
 	<properties>
-    <componentName>OdeBpelEngine</componentName>
 	  <servicemix-version>3.2-incubating-SNAPSHOT</servicemix-version>
 	</properties>
-  <dependencies> 
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-ftp</artifactId>
+      <version>${servicemix-version}</version>      
+    </dependency>
   </dependencies>
   <build>
   	<resources>
@@ -94,7 +98,7 @@
         <groupId>org.apache.servicemix.tooling</groupId>
         <artifactId>jbi-maven-plugin</artifactId>
         <version>${servicemix-version}</version>      
-        <extensions>true</extensions>        
+        <extensions>true</extensions>
       </plugin>     
     </plugins>
   </build>

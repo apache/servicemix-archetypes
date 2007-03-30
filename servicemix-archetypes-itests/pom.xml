@@ -58,6 +58,16 @@
     </dependency>
     <dependency>
       <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-ftp-poller-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-ftp-sender-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
       <artifactId>servicemix-http-consumer-service-unit</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
@@ -104,6 +114,11 @@
     <dependency>
       <groupId>org.apache.servicemix.tooling</groupId>
       <artifactId>servicemix-saxon-xslt-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-bean-service-unit</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
     <dependency>
