@@ -54,6 +54,7 @@
         <module>servicemix-saxon-xquery-service-unit</module>
         <module>servicemix-saxon-xslt-service-unit</module>
         <module>servicemix-bean-service-unit</module>
+        <module>servicemix-drools-service-unit</module>
         <module>servicemix-archetypes-itests</module>
     </modules>
 

@@ -141,6 +141,11 @@
       <artifactId>servicemix-shared-library</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-drools-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
   </dependencies>
   
   <build>
