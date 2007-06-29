@@ -72,17 +72,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.servicemix</groupId>
-                        <artifactId>build</artifactId>
-                        <version>3.2-incubating-SNAPSHOT</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
         </plugins>
     </build>
 
