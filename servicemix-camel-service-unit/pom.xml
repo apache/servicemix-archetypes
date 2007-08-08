@@ -23,12 +23,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.apache.camel</groupId>
-    <artifactId>camel-parent</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <groupId>org.apache.servicemix</groupId>
+    <artifactId>archetypes</artifactId>
+    <version>3.2-incubating-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camel-jbi-service-unit</artifactId>
-  <name>Camel :: Archetypes :: JBI Service Unit</name>
+  <artifactId>servicemix-eip-service-unit</artifactId>
+  <name>ServiceMix :: Archetypes :: CamelServiceUnit</name>
 
 </project>
