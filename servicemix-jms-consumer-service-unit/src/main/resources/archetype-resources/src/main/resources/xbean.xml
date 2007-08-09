@@ -44,7 +44,7 @@
                   defaultMep="http://www.w3.org/2004/08/wsdl/in-out"
                   connectionFactory="#connectionFactory" />
 
-    <amq:connectionFactory id="connectionFactory" brokerURL="tcp://localhost:61616/" />
+    <amq:connectionFactory id="connectionFactory" brokerURL="tcp://localhost:61616" />
 
     <!-- JMS ConnectionFactory from JNDI -
     <bean id="connectionFactory" class="org.springframework.jndi.JndiObjectFactoryBean">
