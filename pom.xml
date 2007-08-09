@@ -47,6 +47,7 @@
         <module>servicemix-jms-provider-service-unit</module>
         <module>servicemix-jsr181-wsdl-first-service-unit</module>
         <module>servicemix-lwcontainer-service-unit</module>
+        <module>servicemix-camel-service-unit</module>
         <module>servicemix-eip-service-unit</module>
         <module>servicemix-embedded-simple</module>
         <module>servicemix-ode-service-unit</module>
