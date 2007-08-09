@@ -27,6 +27,7 @@
     <version>3.2-incubating-SNAPSHOT</version>
   </parent>
 
+  <groupId>org.apache.servicemix.tooling</groupId>
   <artifactId>servicemix-jsr181-wsdl-first-service-unit</artifactId>
   <name>ServiceMix :: Archetypes :: Jsr181WsdlFirstServiceUnit</name>
 

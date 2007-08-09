@@ -27,6 +27,7 @@
     <version>3.2-incubating-SNAPSHOT</version>
   </parent>
 
+  <groupId>org.apache.servicemix.tooling</groupId>
   <artifactId>servicemix-service-unit</artifactId>
   <name>ServiceMix :: Archetypes :: ServiceUnit</name>
 

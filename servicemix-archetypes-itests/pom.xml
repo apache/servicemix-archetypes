@@ -146,6 +146,11 @@
       <artifactId>servicemix-drools-service-unit</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-camel-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
   </dependencies>
   
   <build>
