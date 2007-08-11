@@ -113,4 +113,10 @@
     </eip:namespaces>
   </eip:namespace-context>
 
+  <eip:resequencer service="replaceMe:resequencer" endpoint="endpoint" capacity="100" timeout="2000">
+    <eip:target>
+      <eip:exchange-target service="replaceMe:trace6" />
+    </eip:target>
+  </eip:resequencer>
+  
 </beans>
