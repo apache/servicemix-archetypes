@@ -84,60 +84,58 @@
 					<filters>
 						<servicemix-version>${servicemix-version}</servicemix-version>
 						<xbean-version>${xbean-version}</xbean-version>
-						<camel-version>1.1-SNAPSHOT</camel-version>
+						<camel-version>${camel-version}</camel-version>
 						<xfire-version>${xfire-version}</xfire-version>
-						<releases-repo>http://people.apache.org/repo/m2-incubating-repository</releases-repo>
-						<snapshots-repo>http://people.apache.org/repo/m2-snapshot-repository</snapshots-repo>
-						<repositories><![CDATA[ 
-						  <pluginRepositories>
-						    <pluginRepository>
-						      <id>apache.incubating</id>
-						      <name>Apache Incubating Repository</name>
-						      <url>http://people.apache.org/repo/m2-incubating-repository</url>
-						      <snapshots>
-						        <enabled>false</enabled>
-						      </snapshots>
-						      <releases>
-						         <enabled>true</enabled>
-						      </releases>
-						    </pluginRepository>
-						    <pluginRepository>
-						      <id>apache.snapshots</id>
-						      <name>Apache Snapshots Repository</name>
-						      <url>http://people.apache.org/repo/m2-snapshot-repository</url>
-						      <snapshots>
-						        <enabled>true</enabled>
-						      </snapshots>
-						      <releases>
-						         <enabled>false</enabled>
-						      </releases>
-						    </pluginRepository>
-						  </pluginRepositories>
-						  <repositories>
-						    <repository>
-						      <id>apache.incubating</id>
-						      <name>Apache Incubating Repository</name>
-						      <url>http://people.apache.org/repo/m2-incubating-repository</url>
-						      <snapshots>
-						        <enabled>false</enabled>
-						      </snapshots>
-						      <releases>
-						         <enabled>true</enabled>
-						      </releases>
-						    </repository>
-						    <repository>
-						      <id>apache.snapshots</id>
-						      <name>Apache Snapshots Repository</name>
-						      <url>http://people.apache.org/repo/m2-snapshot-repository</url>
-						      <snapshots>
-						        <enabled>true</enabled>
-						      </snapshots>
-						      <releases>
-						         <enabled>false</enabled>
-						      </releases>
-						    </repository>
-						  </repositories>
-						]]></repositories>
+						<repositories><![CDATA[  
+  <pluginRepositories>
+    <pluginRepository>
+      <id>${releases-repo-id}</id>
+      <name>${releases-repo-name}</name>
+      <url>${releases-repo-url}</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+	</pluginRepository>
+	<pluginRepository>
+	  <id>${snapshots-repo-id}</id>
+	  <name>${snapshots-repo-name}</name>
+	  <url>${snapshots-repo-url}</url>
+	  <snapshots>
+	    <enabled>true</enabled>
+	  </snapshots>
+	  <releases>
+	    <enabled>false</enabled>
+	  </releases>
+	</pluginRepository>
+  </pluginRepositories>
+  <repositories>
+    <repository>
+      <id>${releases-repo-id}</id>
+      <name>${releases-repo-name}</name>
+      <url>${releases-repo-url}</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+    <repository>
+      <id>${snapshots-repo-id}</id>
+      <name>${snapshots-repo-name}</name>
+      <url>${snapshots-repo-url}</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </repository>
+  </repositories>
+]]></repositories>
 					</filters>
 				</configuration>
 				<executions>
