@@ -26,58 +26,14 @@
   <version>${version}</version>
   <name>A custom project</name>
   <url>http://www.myorganization.org</url>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>apache.incubating</id>
-      <name>Apache Incubating Repository</name>
-      <url>http://people.apache.org/repo/m2-incubating-repository</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-         <enabled>true</enabled>
-      </releases>
-    </pluginRepository>
-    <pluginRepository>
-      <id>apache.snapshots</id>
-      <name>Apache Snapshots Repository</name>
-      <url>http://people.apache.org/repo/m2-snapshot-repository</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-         <enabled>false</enabled>
-      </releases>
-    </pluginRepository>
-  </pluginRepositories>
-  <repositories>
-    <repository>
-      <id>apache.incubating</id>
-      <name>Apache Incubating Repository</name>
-      <url>http://people.apache.org/repo/m2-incubating-repository</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-         <enabled>true</enabled>
-      </releases>
-    </repository>
-    <repository>
-      <id>apache.snapshots</id>
-      <name>Apache Snapshots Repository</name>
-      <url>http://people.apache.org/repo/m2-snapshot-repository</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-         <enabled>false</enabled>
-      </releases>
-    </repository>
-  </repositories>
-	<properties>
-	  <xbean-version>2.8</xbean-version>
-	  <servicemix-version>3.2-incubating-SNAPSHOT</servicemix-version>
-	</properties>
+
+@{repositories}
+
+  <properties>
+    <xbean-version>@{xbean-version}</xbean-version>
+    <servicemix-version>@{servicemix-version}</servicemix-version>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
