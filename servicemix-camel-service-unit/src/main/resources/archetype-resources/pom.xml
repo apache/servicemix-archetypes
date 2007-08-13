@@ -19,32 +19,24 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
   <packaging>jbi-service-unit</packaging>
   <version>${version}</version>
-
   <name>A Camel based JBI Service Unit</name>
-
   <url>http://www.myorganization.org</url>
-
-@{repositories}
-
+  @{repositories}
   <properties>
   	<camel-version>@{camel-version}</camel-version>
     <servicemix-version>@{servicemix-version}</servicemix-version>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-camel</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-core</artifactId>
@@ -52,10 +44,8 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-
   <build>
     <defaultGoal>install</defaultGoal>
-
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -65,7 +55,6 @@
           <target>1.5</target>
         </configuration>
       </plugin>
-
       <!-- creates the JBI deployment unit -->
       <plugin>
         <groupId>org.apache.servicemix.tooling</groupId>
@@ -73,14 +62,12 @@
         <version>${servicemix-version}</version>
         <extensions>true</extensions>
       </plugin>
-
       <!-- allows the route to be ran via 'mvn camel:run' -->
       <plugin>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-maven-plugin</artifactId>
         <version>${camel-version}</version>
       </plugin>
-
     </plugins>
   </build>
 </project>

@@ -26,9 +26,7 @@
   <version>${version}</version>
   <name>An X-Query based Service</name>
   <url>http://www.myorganization.org</url>
-
-@{repositories}
-
+  @{repositories}
   <properties>
     <servicemix-version>@{servicemix-version}</servicemix-version>
   </properties>

@@ -27,14 +27,11 @@
   <version>${version}</version>
   <name>An example JSR-181 Service Unit</name>
   <url>http://www.myorganization.org</url>
-
-@{repositories}
-
+  @{repositories}
   <properties>
     <xfire-version>@{xfire-version}</xfire-version>
     <servicemix-version>@{servicemix-version}</servicemix-version>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>

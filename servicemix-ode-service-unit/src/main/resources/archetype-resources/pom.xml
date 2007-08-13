@@ -26,9 +26,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>A example service unit using Apache ODE's Service Engine</name>
   <url>http://www.myorganization.org</url>
-
-@{repositories}
-
+  @{repositories}
   <properties>
     <componentName>OdeBpelEngine</componentName>
     <servicemix-version>@{servicemix-version}</servicemix-version>

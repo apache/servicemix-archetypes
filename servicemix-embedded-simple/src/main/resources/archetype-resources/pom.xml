@@ -25,14 +25,11 @@
   <version>${version}</version>
   <name>A custom project</name>
   <url>http://www.myorganization.org</url>
-
-@{repositories}
-
+  @{repositories}
   <properties>
     <xbean-version>@{xbean-version}</xbean-version>
     <servicemix-version>@{servicemix-version}</servicemix-version>
   </properties>
-
   <build>
   	<resources>
       <resource>

@@ -26,13 +26,10 @@
   <version>${version}</version>
   <name>A servicemix-bean Service Unit</name>
   <url>http://www.myorganization.org</url>
-
-@{repositories}
-
+  @{repositories}
   <properties>
     <servicemix-version>@{servicemix-version}</servicemix-version>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
