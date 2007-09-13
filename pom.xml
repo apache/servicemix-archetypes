@@ -57,6 +57,8 @@
         <module>servicemix-bean-service-unit</module>
         <module>servicemix-drools-service-unit</module>
         <module>servicemix-archetypes-itests</module>
+        <module>servicemix-cxf-bc-service-unit</module>
+        <module>servicemix-cxf-se-service-unit</module>
     </modules>
 
     <build>
