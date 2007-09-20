@@ -25,7 +25,7 @@
   <parent>
     <groupId>org.apache.servicemix</groupId>
     <artifactId>archetypes</artifactId>
-    <version>3.2-incubating-SNAPSHOT</version>
+    <version>3.2-SNAPSHOT</version>
   </parent>
 
   <groupId>org.apache.servicemix.tooling</groupId>
