@@ -21,9 +21,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Collections;
 import java.util.Properties;
+import java.util.UUID;
 
 import junit.framework.TestCase;
-
 import org.apache.maven.cli.ConsoleDownloadMonitor;
 import org.apache.maven.embedder.MavenEmbedder;
 import org.apache.maven.embedder.MavenEmbedderConsoleLogger;
@@ -41,7 +41,7 @@ public abstract class AbstractArchetypeTest extends TestCase {
     private MavenEmbedder maven;
     private Properties sysProps = System.getProperties();
     private String version;
-    
+
     protected void setUp() throws Exception {
         maven = new MavenEmbedder();
         maven.setOffline(true);
@@ -84,23 +84,20 @@ public abstract class AbstractArchetypeTest extends TestCase {
         props.setProperty("archetypeArtifactId", artifactId);
         props.setProperty("archetypeVersion", version);
         props.setProperty("groupId", "sample");
-        props.setProperty("artifactId", "sample");
+        props.setProperty("artifactId", UUID.randomUUID().toString());
+        props.setProperty("user.dir", targetDir.getAbsolutePath());
         props.setProperty("basedir", targetDir.getAbsolutePath());
-        
-        MavenProject parent = maven.readProject(getDefaultArchetypePom());
+
+        MavenProject parent = maven.readProject(getDefaultArchetypePom(new File(targetDir, "pom.xml")));
         System.setProperties((Properties) sysProps.clone());
-        System.setProperty("user.dir", targetDir.getAbsolutePath());
-        maven.execute(parent, 
+        maven.execute(parent,
                       Collections.singletonList("archetype:create"), 
                       eventMonitor, 
                       new ConsoleDownloadMonitor(), 
                       props, 
                       targetDir);
-
         System.setProperties((Properties) sysProps.clone());
-        targetDir = new File(targetDir, "sample");
-        System.setProperty("user.dir", targetDir.getAbsolutePath());
-        System.setProperty("basedir", targetDir.getAbsolutePath());
+        targetDir = new File(targetDir, props.getProperty("artifactId"));
         MavenProject prj = maven.readProject(new File(targetDir, "pom.xml"));
         maven.execute(prj, 
                       Collections.singletonList("package"), 
@@ -110,9 +107,8 @@ public abstract class AbstractArchetypeTest extends TestCase {
                       targetDir);
     }
 
-    private File getDefaultArchetypePom() throws IOException {
+    private File getDefaultArchetypePom(File pomFile) throws IOException {
         URL archetypePom = getClass().getClassLoader().getResource("archetype-pom.xml");
-        File pomFile = File.createTempFile("archetypePom", "xml");
         FileUtils.copyURLToFile(archetypePom, pomFile);
         return pomFile;
     }
