@@ -48,7 +48,7 @@
 				</includes>
 			</resource>
 			<resource>
-				<directory>target/generated-sources</directory>
+				<directory>target/jaxws</directory>
 				<includes>
 					<include>**/*</include>
 				</includes>
@@ -71,9 +71,9 @@
             <phase>generate-sources</phase>
             <configuration>
               <wsdls>
-                <wsdl>${basedir}/src/main/resources/service.wsdl</wsdl>
+                <wsdl>src/main/resources/service.wsdl</wsdl>
               </wsdls>
-              <outputDirectory>${basedir}/target/jaxws</outputDirectory>
+              <outputDirectory>target/jaxws</outputDirectory>
               <profile>org.codehaus.xfire.jaxws.gen.JAXWSProfile</profile>
             </configuration>
             <goals>

@@ -89,30 +89,6 @@
 						<camel-version>${camel-version}</camel-version>
 						<xfire-version>${xfire-version}</xfire-version>
 						<repositories><![CDATA[  
-  <pluginRepositories>
-    <pluginRepository>
-      <id>${releases-repo-id}</id>
-      <name>${releases-repo-name}</name>
-      <url>${releases-repo-url}</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-	</pluginRepository>
-	<pluginRepository>
-	  <id>${snapshots-repo-id}</id>
-	  <name>${snapshots-repo-name}</name>
-	  <url>${snapshots-repo-url}</url>
-	  <snapshots>
-	    <enabled>true</enabled>
-	  </snapshots>
-	  <releases>
-	    <enabled>false</enabled>
-	  </releases>
-	</pluginRepository>
-  </pluginRepositories>
   <repositories>
     <repository>
       <id>${releases-repo-id}</id>
@@ -137,6 +113,30 @@
       </releases>
     </repository>
   </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>${releases-repo-id}</id>
+      <name>${releases-repo-name}</name>
+      <url>${releases-repo-url}</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+	</pluginRepository>
+	<pluginRepository>
+	  <id>${snapshots-repo-id}</id>
+	  <name>${snapshots-repo-name}</name>
+	  <url>${snapshots-repo-url}</url>
+	  <snapshots>
+	    <enabled>true</enabled>
+	  </snapshots>
+	  <releases>
+	    <enabled>false</enabled>
+	  </releases>
+	</pluginRepository>
+  </pluginRepositories>
 ]]></repositories>
 					</filters>
 				</configuration>

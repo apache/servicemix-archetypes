@@ -20,7 +20,6 @@
 <archetype>
   <id>servicemix-se</id>
   <sources>
-    <source>src/main/java/MyBootstrap.java</source>
     <source>src/main/java/MyComponent.java</source>
     <source>src/main/java/MyEndpoint.java</source>
   </sources>

@@ -32,4 +32,13 @@
   <artifactId>servicemix-camel-service-unit</artifactId>
   <name>ServiceMix :: Archetypes :: CamelServiceUnit</name>
 
+  <dependencies>
+	<dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-maven-plugin</artifactId>
+      <version>${camel-version}</version>
+      <scope>test</scope>
+	</dependency>
+  </dependencies>
+
 </project>

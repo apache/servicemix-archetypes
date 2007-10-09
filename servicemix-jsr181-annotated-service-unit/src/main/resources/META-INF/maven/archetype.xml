@@ -23,7 +23,6 @@
     <source>src/main/java/ExampleService.java</source>
   </sources>
   <resources>
-    <resource>src/main/resources/services.xml</resource>
     <resource>src/main/resources/xbean.xml</resource>   
   </resources>  
 </archetype>

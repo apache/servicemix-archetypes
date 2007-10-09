@@ -161,6 +161,62 @@
       <artifactId>servicemix-cxf-bc-service-unit</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-bean</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-camel</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-cxf-bc</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-cxf-se</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-eip</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-ftp</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-http</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-jms</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-jsr181</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-lwcontainer</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-saxon</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
   </dependencies>
   
   <build>
@@ -180,6 +236,9 @@
             <include>**/*Test.*</include>
           </includes>
           <excludes>
+            <exclude>**/BindingComponentTest.java</exclude>
+            <exclude>**/ServiceEngineTest.java</exclude>
+            <exclude>**/Jsr181WsdlFirstServiceUnitTest.java</exclude>
           </excludes>
         </configuration>
       </plugin>

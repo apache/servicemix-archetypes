@@ -30,6 +30,13 @@
     <xbean-version>@{xbean-version}</xbean-version>
     <servicemix-version>@{servicemix-version}</servicemix-version>
   </properties>
+  <dependencies>
+	<dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-core</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+  </dependencies>
   <build>
   	<resources>
       <resource>

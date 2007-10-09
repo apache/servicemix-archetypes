@@ -18,12 +18,14 @@ package org.apache.servicemix.tooling;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.net.URL;
 import java.util.Collections;
 import java.util.Properties;
 import java.util.UUID;
 
 import junit.framework.TestCase;
+import org.apache.maven.artifact.manager.WagonManager;
 import org.apache.maven.cli.ConsoleDownloadMonitor;
 import org.apache.maven.embedder.MavenEmbedder;
 import org.apache.maven.embedder.MavenEmbedderConsoleLogger;
@@ -52,12 +54,10 @@ public abstract class AbstractArchetypeTest extends TestCase {
         maven.setLogger(logger);
         maven.start();
 
-        /*
         Field f = maven.getClass().getDeclaredField("wagonManager");
         f.setAccessible(true);
         WagonManager wagon = (WagonManager) f.get(maven);
         wagon.setOnline(false);
-        */
         
         MavenProject project = maven.readProject(new File(baseDir, "pom.xml"));
         version = project.getVersion();
@@ -79,6 +79,7 @@ public abstract class AbstractArchetypeTest extends TestCase {
         targetDir.mkdirs();
         EventMonitor eventMonitor = new DefaultEventMonitor(new PlexusLoggerAdapter(
                         new MavenEmbedderConsoleLogger()));
+
         Properties props = new Properties();
         props.setProperty("archetypeGroupId", groupId);
         props.setProperty("archetypeArtifactId", artifactId);
