@@ -73,7 +73,7 @@
               <wsdls>
                 <wsdl>src/main/resources/service.wsdl</wsdl>
               </wsdls>
-              <outputDirectory>target/jaxws</outputDirectory>
+              <outputDirectory>target/generated-sources</outputDirectory>
               <profile>org.codehaus.xfire.jaxws.gen.JAXWSProfile</profile>
             </configuration>
             <goals>
