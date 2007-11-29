@@ -58,7 +58,6 @@
         <extensions>true</extensions>
         <configuration>   
         	<type>binding-component</type>       
-          <bootstrap>${packageName}.MyBootstrap</bootstrap>
           <component>${packageName}.MyComponent</component>
         </configuration>
       </plugin>

@@ -59,7 +59,6 @@
         <extensions>true</extensions>
         <configuration>
           <type>service-engine</type>
-          <bootstrap>${packageName}.MyBootstrap</bootstrap>
           <component>${packageName}.MyComponent</component>
         </configuration>
       </plugin>
