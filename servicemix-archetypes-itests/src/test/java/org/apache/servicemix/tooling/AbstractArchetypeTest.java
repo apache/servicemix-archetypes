@@ -46,7 +46,7 @@ public abstract class AbstractArchetypeTest extends TestCase {
 
     protected void setUp() throws Exception {
         maven = new MavenEmbedder();
-        maven.setOffline(true);
+        maven.setOffline(false);
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         maven.setClassLoader(classLoader);
         MavenEmbedderLogger logger = new MavenEmbedderConsoleLogger();
@@ -57,7 +57,7 @@ public abstract class AbstractArchetypeTest extends TestCase {
         Field f = maven.getClass().getDeclaredField("wagonManager");
         f.setAccessible(true);
         WagonManager wagon = (WagonManager) f.get(maven);
-        wagon.setOnline(false);
+        wagon.setOnline(true); //SM-1197
         
         MavenProject project = maven.readProject(new File(baseDir, "pom.xml"));
         version = project.getVersion();

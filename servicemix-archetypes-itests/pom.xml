@@ -77,6 +77,11 @@
       <version>${servicemix-version}</version>
     </dependency>
     <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-jbi</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
       <groupId>org.apache.servicemix.tooling</groupId>
       <artifactId>servicemix-jms-consumer-service-unit</artifactId>
       <version>${servicemix-version}</version>
