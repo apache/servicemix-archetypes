@@ -57,7 +57,7 @@ public abstract class AbstractArchetypeTest extends TestCase {
         Field f = maven.getClass().getDeclaredField("wagonManager");
         f.setAccessible(true);
         WagonManager wagon = (WagonManager) f.get(maven);
-        wagon.setOnline(true); //SM-1197
+        wagon.setOnline(true);
         
         MavenProject project = maven.readProject(new File(baseDir, "pom.xml"));
         version = project.getVersion();
