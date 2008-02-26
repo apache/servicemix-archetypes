@@ -166,6 +166,11 @@
       <artifactId>servicemix-cxf-bc-service-unit</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-osworkflow-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.apache.servicemix</groupId>
@@ -220,6 +225,11 @@
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-saxon</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-osworkflow</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
   </dependencies>
