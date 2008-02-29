@@ -167,7 +167,7 @@
       <version>${servicemix-version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.servicemix</groupId>
+      <groupId>org.apache.servicemix.tooling</groupId>
       <artifactId>servicemix-osworkflow-service-unit</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
