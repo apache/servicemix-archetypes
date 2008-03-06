@@ -108,6 +108,11 @@
     </dependency>
     <dependency>
       <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-mail-service-unit</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
       <artifactId>servicemix-ode-service-unit</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
@@ -220,6 +225,11 @@
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-lwcontainer</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-mail</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
     <dependency>

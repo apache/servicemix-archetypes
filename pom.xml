@@ -60,6 +60,7 @@
         <module>servicemix-cxf-bc-service-unit</module>
         <module>servicemix-cxf-se-service-unit</module>
         <module>servicemix-osworkflow-service-unit</module>
+        <module>servicemix-mail-service-unit</module>
     </modules>
 
     <build>
