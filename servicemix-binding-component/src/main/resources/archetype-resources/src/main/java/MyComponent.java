@@ -26,8 +26,7 @@ import org.apache.servicemix.common.Endpoint;
 /**
  * @org.apache.xbean.XBean element="component"
  */
-public class MyComponent extends DefaultComponent
-{
+public class MyComponent extends DefaultComponent {
 
     private MyEndpointType[] endpoints;
     
@@ -44,7 +43,7 @@ public class MyComponent extends DefaultComponent
     }
 
     protected Class[] getEndpointClasses() {
-        return new Class[] { MyConsumerEndpoint.class, MyProviderEndpoint.class };
+        return new Class[] {MyConsumerEndpoint.class, MyProviderEndpoint.class};
     }
 
     protected Endpoint getResolvedEPR(ServiceEndpoint ep) throws Exception {

@@ -17,7 +17,6 @@
 package ${packageName};
 
 import javax.jbi.management.DeploymentException;
-import javax.jbi.messaging.MessagingException;
 import javax.jbi.messaging.MessageExchange;
 import javax.jbi.messaging.NormalizedMessage;
 import javax.jbi.servicedesc.ServiceEndpoint;

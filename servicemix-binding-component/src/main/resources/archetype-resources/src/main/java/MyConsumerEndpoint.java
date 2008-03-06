@@ -31,8 +31,8 @@ public class MyConsumerEndpoint extends ConsumerEndpoint implements MyEndpointTy
     }
     
     public String getLocationURI() {
-         // TODO: return a URI that unique identify this endpoint
-         return getService() +  "#" + getEndpoint(); 
+        // TODO: return a URI that unique identify this endpoint
+        return getService() +  "#" + getEndpoint(); 
     }
     
     public void start() throws Exception {
