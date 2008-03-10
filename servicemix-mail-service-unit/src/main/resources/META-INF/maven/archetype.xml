@@ -18,8 +18,8 @@
 
 -->
 <archetype>
-  <id>servicemix-mail-service-unit</id>
+  <id>servicemix-su</id>
   <resources>
     <resource>src/main/resources/xbean.xml</resource>   
-  </resources>  
+  </resources>
 </archetype>

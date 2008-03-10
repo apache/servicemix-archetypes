@@ -18,7 +18,7 @@
 
 -->
 <archetype>
-  <id>servicemix-osworkflow-service-unit</id>
+  <id>servicemix-su</id>
   <sources>
     <source>src/main/java/ExampleCondition.java</source>
     <source>src/main/java/ExampleFunction.java</source>
