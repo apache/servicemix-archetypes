@@ -39,6 +39,8 @@
         <module>servicemix-service-unit</module>
         <module>servicemix-service-assembly</module>
         <module>servicemix-shared-library</module>    
+        <module>servicemix-file-poller-service-unit</module>
+        <module>servicemix-file-sender-service-unit</module>
         <module>servicemix-ftp-poller-service-unit</module>
         <module>servicemix-ftp-sender-service-unit</module>
         <module>servicemix-http-consumer-service-unit</module>
