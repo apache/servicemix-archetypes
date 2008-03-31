@@ -33,6 +33,7 @@
     <mail:sender service="replaceMe:mailService" 
                  endpoint="senderEndpoint"
                  sender="no-reply@mycompany.com"
+                 receiver="your-static-receiver-address@some-host.com"
                  debugMode="false" 
                  connection="smtp://username@host?password=mypass" />                 
 </beans>
