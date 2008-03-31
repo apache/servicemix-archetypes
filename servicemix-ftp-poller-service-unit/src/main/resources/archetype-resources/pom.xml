@@ -24,7 +24,7 @@
   <artifactId>${artifactId}</artifactId>
   <packaging>jbi-service-unit</packaging>
   <version>${version}</version>
-  <name>A Service HTTP Service Engine Service Unit</name>
+  <name>A FTP Service Engine Service Unit</name>
   <url>http://www.myorganization.org</url>
   @{repositories}
   <properties>

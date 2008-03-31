@@ -23,6 +23,7 @@
   <ftp:poller service="replaceMe:withYourService"
               endpoint="endpoint"
               targetService="replaceMe:receiver"
+              deleteFile="true"
               uri="ftp://servicemix:rocks@localhost/smx/test" />
 
 </beans>
