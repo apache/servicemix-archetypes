@@ -18,6 +18,7 @@
 
 -->
 <beans xmlns:drools="http://servicemix.apache.org/drools/1.0"
+       xmlns:util="http://www.springframework.org/schema/util"
        xmlns:replaceMe="http://servicemix.apache.org/replaceMe">
 
   <drools:endpoint service="replaceMe:myRouter"
