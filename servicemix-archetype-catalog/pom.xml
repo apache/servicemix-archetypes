@@ -33,6 +33,12 @@
   <name>ServiceMix :: Archetypes :: Catalog</name>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
@@ -45,6 +51,7 @@
             <configuration>
               <tasks>
                 <mkdir dir="${project.build.directory}"/>
+                <mkdir dir="${project.build.directory}/temp"/>
               </tasks>
             </configuration>
           </execution>
@@ -63,16 +70,51 @@
         </executions>
         <configuration>
           <repository>${settings.localRepository}/org/apache/servicemix/tooling</repository>
-          <catalogFile>${project.build.directory}/archetype-catalog.xml</catalogFile>
+          <catalogFile>${project.build.directory}/temp/archetype-catalog.xml</catalogFile>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>xslt-maven-plugin</artifactId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <phase>process-resources</phase>        
+            <goals>
+              <goal>transform</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <xslFile>target/classes/filter.xsl</xslFile>
+          <srcDir>${project.build.directory}/temp</srcDir>
+          <destDir>${project.build.directory}</destDir>
+          <parameters><version>${servicemix-version}</version></parameters>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.1</version>
+        <executions>
+          <execution>
+            <id>attach-artifacts</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attach-artifact</goal>
+            </goals>
+            <configuration>
+              <artifacts>
+                <artifact>
+                  <file>${project.build.directory}/archetype-catalog.xml</file>
+                  <type>xml</type>
+                </artifact>
+              </artifacts>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
-
-  <dependencies>
-    <groupId>org.apache.servicemix</groupId>
-    <artifactId>servicemix-archetypes-itests</artifactId>
-    <version>3.3-SNAPSHOT</version>
-  </dependencies>
 
 </project>

@@ -176,7 +176,17 @@
       <artifactId>servicemix-osworkflow-service-unit</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-project-root</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
 
+    <dependency>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-core</artifactId>
+      <version>${servicemix-version}</version>
+    </dependency>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-bean</artifactId>

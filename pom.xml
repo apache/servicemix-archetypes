@@ -58,11 +58,13 @@
         <module>servicemix-saxon-xslt-service-unit</module>
         <module>servicemix-bean-service-unit</module>
         <module>servicemix-drools-service-unit</module>
-        <module>servicemix-archetypes-itests</module>
         <module>servicemix-cxf-bc-service-unit</module>
         <module>servicemix-cxf-se-service-unit</module>
         <module>servicemix-osworkflow-service-unit</module>
         <module>servicemix-mail-service-unit</module>
+        <module>servicemix-archetype-catalog</module>
+        <module>servicemix-project-root</module>
+        <module>servicemix-archetypes-itests</module>
     </modules>
 
     <build>
