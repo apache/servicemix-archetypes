@@ -51,7 +51,8 @@
             <configuration>
               <tasks>
                 <mkdir dir="${project.build.directory}"/>
-                <mkdir dir="${project.build.directory}/temp"/>
+                <mkdir dir="${project.build.directory}/temp/allversions"/>
+                <mkdir dir="${project.build.directory}/temp/duplicates"/>
               </tasks>
             </configuration>
           </execution>
@@ -70,7 +71,7 @@
         </executions>
         <configuration>
           <repository>${settings.localRepository}/org/apache/servicemix/tooling</repository>
-          <catalogFile>${project.build.directory}/temp/archetype-catalog.xml</catalogFile>
+          <catalogFile>${project.build.directory}/temp/allversions/archetype-catalog.xml</catalogFile>
         </configuration>
       </plugin>
       <plugin>
@@ -79,18 +80,31 @@
         <version>1.0</version>
         <executions>
           <execution>
+            <id>filter-by-version</id>
             <phase>process-resources</phase>        
             <goals>
               <goal>transform</goal>
             </goals>
+            <configuration>
+              <xslFile>target/classes/filter.xsl</xslFile>
+              <srcDir>${project.build.directory}/temp/allversions</srcDir>
+              <destDir>${project.build.directory}/temp/duplicates</destDir>
+              <parameters><version>${servicemix-version}</version></parameters>
+            </configuration>
+          </execution>
+          <execution>
+            <id>dedup</id>
+            <phase>process-resources</phase>        
+            <goals>
+              <goal>transform</goal>
+            </goals>
+            <configuration>
+              <xslFile>target/classes/dedup.xsl</xslFile>
+              <srcDir>${project.build.directory}/temp/duplicates</srcDir>
+              <destDir>${project.build.directory}</destDir>
+            </configuration>
           </execution>
         </executions>
-        <configuration>
-          <xslFile>target/classes/filter.xsl</xslFile>
-          <srcDir>${project.build.directory}/temp</srcDir>
-          <destDir>${project.build.directory}</destDir>
-          <parameters><version>${servicemix-version}</version></parameters>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>

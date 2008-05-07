@@ -23,8 +23,8 @@
   <xsl:strip-space elements="*"/>
   <xsl:param name="version"/>
 
-  <xsl:template match="archetype[version != '@{servicemix-version}']">
-    <!-- simply drop archetypes for other versions of ServiceMix -->
+  <xsl:template match="archetype[artifactId = preceding-sibling::archetype/artifactId]">
+    <!-- drop any duplicate archetype definitions (e.g. with snapshot builds) -->
   </xsl:template>
 
   <xsl:template match="archetypes">
