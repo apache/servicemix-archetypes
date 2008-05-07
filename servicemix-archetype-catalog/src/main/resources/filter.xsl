@@ -20,10 +20,20 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 version="1.0">
 
+  <xsl:strip-space elements="*"/>
   <xsl:param name="version"/>
 
-  <xsl:template match="archetype[version != '@{servicemix-version}']">
+  <xsl:template match="archetype[version != '@{servicemix-version}'] | archetype[concat(artifactId,version) = concat(preceding-sibling::archetype/artifactId,preceding-sibling::archetype/version)]">
     <!-- simply drop archetypes for other versions of ServiceMix -->
+    <!-- and also drop any duplicate archetype definitions (e.g. with snapshot builds) -->
+  </xsl:template>
+
+  <xsl:template match="archetypes">
+     <archetypes>
+       <xsl:apply-templates select="archetype">
+         <xsl:sort select="artifactId"/>
+       </xsl:apply-templates>
+     </archetypes>
   </xsl:template>
 
   <xsl:template match="@*|node()">
