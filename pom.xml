@@ -94,6 +94,7 @@
 						<xbean-version>${xbean-version}</xbean-version>
 						<camel-version>${camel-version}</camel-version>
 						<xfire-version>${xfire-version}</xfire-version>
+                                                <activemq-version>${activemq-version}</activemq-version>
 						<repositories><![CDATA[  
   <repositories>
     <repository>

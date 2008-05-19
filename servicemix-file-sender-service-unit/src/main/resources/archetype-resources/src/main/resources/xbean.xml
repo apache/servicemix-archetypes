@@ -18,7 +18,11 @@
 
 -->
 <beans xmlns:file="http://servicemix.apache.org/file/1.0"
-       xmlns:replaceMe="http://servicemix.apache.org/replaceMe">
+       xmlns:replaceMe="http://servicemix.apache.org/replaceMe"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://servicemix.apache.org/file/1.0 http://servicemix.apache.org/schema/servicemix-file-@{servicemix-version}.xsd
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
  <file:sender service="replaceMe:withYourService"
               endpoint="endpoint"
