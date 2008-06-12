@@ -63,6 +63,7 @@
         <module>servicemix-cxf-se-wsdl-first-service-unit</module>
         <module>servicemix-osworkflow-service-unit</module>
         <module>servicemix-mail-service-unit</module>
+        <module>servicemix-scripting-service-unit</module>
         <module>servicemix-archetype-catalog</module>
         <module>servicemix-project-root</module>
         <module>servicemix-archetypes-itests</module>
