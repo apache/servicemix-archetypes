@@ -60,6 +60,7 @@
         <module>servicemix-drools-service-unit</module>
         <module>servicemix-cxf-bc-service-unit</module>
         <module>servicemix-cxf-se-service-unit</module>
+        <module>servicemix-cxf-se-wsdl-first-service-unit</module>
         <module>servicemix-osworkflow-service-unit</module>
         <module>servicemix-mail-service-unit</module>
         <module>servicemix-archetype-catalog</module>
@@ -93,6 +94,7 @@
 						<servicemix-version>${servicemix-version}</servicemix-version>
 						<xbean-version>${xbean-version}</xbean-version>
 						<camel-version>${camel-version}</camel-version>
+                                                <cxf-version>${cxf-version}</cxf-version>
 						<xfire-version>${xfire-version}</xfire-version>
                                                 <activemq-version>${activemq-version}</activemq-version>
 						<repositories><![CDATA[  

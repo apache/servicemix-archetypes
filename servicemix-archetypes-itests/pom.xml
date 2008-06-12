@@ -167,6 +167,11 @@
       <version>${servicemix-version}</version>
     </dependency>
     <dependency>
+       <groupId>org.apache.servicemix.tooling</groupId>
+       <artifactId>servicemix-cxf-se-wsdl-first-service-unit</artifactId>
+       <version>${servicemix-version}</version>
+    </dependency>
+    <dependency>
       <groupId>org.apache.servicemix.tooling</groupId>
       <artifactId>servicemix-cxf-bc-service-unit</artifactId>
       <version>${servicemix-version}</version>
