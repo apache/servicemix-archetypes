@@ -27,7 +27,8 @@
   <version>${version}</version>
   <name>An example JSR-181 Service Unit</name>
   <url>http://www.myorganization.org</url>
-@{repositories}
+
+  @{repositories}
 
   <properties>
     <componentName>servicemix-jsr181</componentName>

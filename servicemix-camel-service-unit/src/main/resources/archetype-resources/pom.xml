@@ -26,7 +26,8 @@
   <version>${version}</version>
   <name>A Camel based JBI Service Unit</name>
   <url>http://www.myorganization.org</url>
-@{repositories}
+  
+  @{repositories}
 
   <properties>
     <componentName>servicemix-camel</componentName>

@@ -26,7 +26,8 @@
   <version>${version}</version>
   <name>A scripting service unit</name>
   <url>http://www.myorganization.org</url>
-@{repositories}
+
+  @{repositories}
 
   <properties>
     <componentName>servicemix-scripting</componentName>

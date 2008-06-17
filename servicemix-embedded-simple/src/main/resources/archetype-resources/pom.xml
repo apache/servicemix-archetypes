@@ -25,10 +25,8 @@
   <version>${version}</version>
   <name>A custom project</name>
   <url>http://www.myorganization.org</url>
-@{repositories}
 
-  <properties>
-  </properties>
+  @{repositories}
 
   <dependencies>
   	<dependency>

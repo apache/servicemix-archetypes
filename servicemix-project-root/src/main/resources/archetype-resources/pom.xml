@@ -26,7 +26,8 @@
   <version>${version}</version>
   <name>ServiceMix :: ${artifactId}</name>
   <url>http://servicemix.apache.org</url>
-@{repositories}
+
+  @{repositories}
 
   <properties>
     <servicemix-version>@{servicemix-version}</servicemix-version>

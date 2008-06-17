@@ -26,7 +26,8 @@
   <version>${version}</version>
   <name>A LWContainer Service Unit</name>
   <url>http://www.myorganization.org</url>
-@{repositories}
+
+  @{repositories}
   
   <properties>
     <componentName>servicemix-lwcontainer</componentName>

@@ -26,7 +26,8 @@
   <version>${version}</version>
   <name>A file sender service unit</name>
   <url>http://www.myorganization.org</url>
-@{repositories}
+
+  @{repositories}
 
   <properties>
     <componentName>servicemix-file</componentName>
