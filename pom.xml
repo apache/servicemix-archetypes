@@ -22,9 +22,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.apache.servicemix</groupId>
-        <artifactId>servicemix</artifactId>
-        <version>3.3-SNAPSHOT</version>
+      <groupId>org.apache.servicemix</groupId>
+      <artifactId>servicemix-pom</artifactId>
+      <version>1.0</version>
     </parent>
 
     <groupId>org.apache.servicemix</groupId>
@@ -70,12 +70,21 @@
         <module>servicemix-archetypes-itests</module>
     </modules>
 
+    <properties>
+				<servicemix-version>3.2.1</servicemix-version>
+				<xbean-version>3.2</xbean-version>
+				<camel-version>1.3.0</camel-version>
+        <cxf-version>2.1.1-SNAPSHOT</cxf-version>
+				<xfire-version>1.2.5</xfire-version>
+        <activemq-version>5.1.0</activemq-version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.servicemix</groupId>
-                <artifactId>build</artifactId>
-                <version>${servicemix-version}</version>
+                <artifactId>servicemix-build</artifactId>
+                <version>1.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -88,34 +97,26 @@
 				<inherited>true</inherited>
 				<groupId>org.apache.servicemix.tooling</groupId>
 				<artifactId>res-maven-plugin</artifactId>
-				<version>${servicemix-version}</version>
+				<version>3.2.1</version>
 				<configuration>
 					<inputDirectory>${basedir}/src/main/resources</inputDirectory>
 					<outputDirectory>${basedir}/target/classes</outputDirectory>
 					<filters>
+					  
+					  <!-- Don't like these bits.. archetypes should not be tied to specific versions if possible -->
 						<servicemix-version>${servicemix-version}</servicemix-version>
 						<xbean-version>${xbean-version}</xbean-version>
 						<camel-version>${camel-version}</camel-version>
-                                                <cxf-version>${cxf-version}</cxf-version>
+            <cxf-version>${cxf-version}</cxf-version>
 						<xfire-version>${xfire-version}</xfire-version>
-                                                <activemq-version>${activemq-version}</activemq-version>
-						<repositories><![CDATA[  
+            <activemq-version>${activemq-version}</activemq-version>
+          
+  					<repositories><![CDATA[  
   <repositories>
     <repository>
-      <id>${releases-repo-id}</id>
-      <name>${releases-repo-name}</name>
-      <url>${releases-repo-url}</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-    <repository>
-      <id>${snapshots-repo-id}</id>
-      <name>${snapshots-repo-name}</name>
-      <url>${snapshots-repo-url}</url>
+      <id>apache.snapshots</id>
+      <name>Apache Snapshots Repository</name>
+      <url>http://people.apache.org/repo/m2-snapshot-repository</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -124,22 +125,10 @@
       </releases>
     </repository>
   </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>${releases-repo-id}</id>
-      <name>${releases-repo-name}</name>
-      <url>${releases-repo-url}</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-	</pluginRepository>
 	<pluginRepository>
-	  <id>${snapshots-repo-id}</id>
-	  <name>${snapshots-repo-name}</name>
-	  <url>${snapshots-repo-url}</url>
+    <id>apache.snapshots</id>
+    <name>Apache Snapshots Repository</name>
+    <url>http://people.apache.org/repo/m2-snapshot-repository</url>
 	  <snapshots>
 	    <enabled>true</enabled>
 	  </snapshots>
