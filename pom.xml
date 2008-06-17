@@ -29,7 +29,7 @@
 
     <groupId>org.apache.servicemix</groupId>
     <artifactId>archetypes</artifactId>
-    <version>3.3-SNAPSHOT</version>
+    <version>4.0-SNAPSHOT</version>
     <name>ServiceMix :: Archetypes</name>
     <packaging>pom</packaging>
 
