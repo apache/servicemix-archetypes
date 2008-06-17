@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
 <!--
 
     Licensed to the Apache Software Foundation (ASF) under one or more
@@ -18,15 +17,13 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>org.apache.servicemix</groupId>
     <artifactId>archetypes</artifactId>
     <version>4.0-SNAPSHOT</version>
   </parent>
-
+  
   <artifactId>servicemix-archetypes-itests</artifactId>
   <name>ServiceMix :: Archetypes :: ITests</name>
   
@@ -41,152 +38,12 @@
       <artifactId>maven-embedder</artifactId>
       <version>2.0.4</version>
     </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-binding-component</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-eip-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-embedded-simple</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-ftp-poller-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-ftp-sender-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-http-consumer-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-http-provider-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
+    
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-jbi</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-jms-consumer-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-jms-provider-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-jsr181-annotated-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-jsr181-wsdl-first-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-lwcontainer-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-mail-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-ode-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-saxon-xquery-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-saxon-xslt-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-bean-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-service-assembly</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-service-engine</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-shared-library</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-drools-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-camel-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-cxf-se-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-       <groupId>org.apache.servicemix.tooling</groupId>
-       <artifactId>servicemix-cxf-se-wsdl-first-service-unit</artifactId>
-       <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-cxf-bc-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-osworkflow-service-unit</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.tooling</groupId>
-      <artifactId>servicemix-project-root</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-core</artifactId>
@@ -257,8 +114,149 @@
       <artifactId>servicemix-osworkflow</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-binding-component</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-eip-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-embedded-simple</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-ftp-poller-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-ftp-sender-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-http-consumer-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-http-provider-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-jms-consumer-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-jms-provider-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-jsr181-annotated-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-jsr181-wsdl-first-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-lwcontainer-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-mail-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-ode-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-saxon-xquery-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-saxon-xslt-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-bean-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-service-assembly</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-service-engine</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-shared-library</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-drools-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-camel-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-cxf-se-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-cxf-se-wsdl-first-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-cxf-bc-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-osworkflow-service-unit</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.tooling</groupId>
+      <artifactId>servicemix-project-root</artifactId>
+      <version>${archetypes-version}</version>
+    </dependency>
+
   </dependencies>
-  
   <build>
     <plugins>
       <plugin>
@@ -284,5 +282,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>
