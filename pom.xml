@@ -23,11 +23,20 @@
     <artifactId>servicemix-pom</artifactId>
     <version>1.0</version>
   </parent>
+  
   <groupId>org.apache.servicemix</groupId>
   <artifactId>archetypes</artifactId>
   <version>4.0-SNAPSHOT</version>
+  
   <name>ServiceMix :: Archetypes</name>
   <packaging>pom</packaging>
+  
+  <scm>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/servicemix/archetypes/trunk</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/servicemix/archetypes/trunk</developerConnection>
+    <url>http://svn.apache.org/viewcvs.cgi/servicemix/archetypes/trunk</url>
+  </scm>
+  
   <modules>
     <module>servicemix-binding-component</module>
     <module>servicemix-service-engine</module>
@@ -98,7 +107,8 @@
           <inputDirectory>${basedir}/src/main/resources</inputDirectory>
           <outputDirectory>${basedir}/target/classes</outputDirectory>
           <filters>
-            <!-- Don't like these bits.. archetypes should not be tied to specific versions if possible -->
+<!-- Don't like these bits.. archetypes should not be tied to specific versions if possible -->
+            <jbi-maven-plugin-version>3.2.1</jbi-maven-plugin-version>
             <servicemix-version>${servicemix-version}</servicemix-version>
             <xbean-version>${xbean-version}</xbean-version>
             <camel-version>${camel-version}</camel-version>
@@ -144,4 +154,80 @@
       </plugin>
     </plugins>
   </build>
+  
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-release-plugin</artifactId>
+            <version>2.0-beta-7</version>
+            <configuration>
+              <preparationGoals>clean,verify,install</preparationGoals>
+              <autoVersionSubmodules>true</autoVersionSubmodules>
+            </configuration>
+          </plugin>
+          <!-- We want a source jar -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.0.4</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- We want the JavaDoc JAR published with the release -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.4</version>
+            <inherited>true</inherited>
+            <configuration>
+              <source>1.5</source>
+            </configuration>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- We want to sign the artifact, the POM, and all attached artifacts -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.0-alpha-4</version>
+            <inherited>true</inherited>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- We want to deploy the artifact to a staging location for perusal -->
+          <plugin>
+            <inherited>true</inherited>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>2.3</version>
+            <configuration>
+              <altDeploymentRepository>${deploy.altRepository}</altDeploymentRepository>
+              <updateReleaseInfo>true</updateReleaseInfo>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+  
 </project>
