@@ -17,8 +17,7 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
@@ -26,31 +25,28 @@
   <version>${version}</version>
   <name>A Service HTTP Service Engine Service Unit</name>
   <url>http://www.myorganization.org</url>
-  
-  @{repositories}
-  
+@{repositories}
+
   <properties>
     <componentName>servicemix-http</componentName>
   </properties>
   
-  <properties></properties>
-  
   <build>
-  	<resources>
+    <resources>
       <resource>
         <directory>src/main/resources</directory>
         <includes>
           <include>**/*</include>
         </includes>
-      </resource>    
+      </resource>
     </resources>
     <plugins>
       <plugin>
         <groupId>org.apache.servicemix.tooling</groupId>
         <artifactId>jbi-maven-plugin</artifactId>
-        <version>@{jbi-maven-plugin-version}</version>      
+        <version>@{jbi-maven-plugin-version}</version>
         <extensions>true</extensions>
-      </plugin>     
+      </plugin>
     </plugins>
   </build>
 </project>

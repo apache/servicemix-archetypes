@@ -27,18 +27,20 @@
   <version>${version}</version>
   <name>An example JSR-181 Service Unit</name>
   <url>http://www.myorganization.org</url>
-  @{repositories}
+@{repositories}
+
   <properties>
-    <xfire-version>@{xfire-version}</xfire-version>
-    <servicemix-version>@{servicemix-version}</servicemix-version>
+    <componentName>servicemix-jsr181</componentName>
   </properties>
+  
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-jsr181</artifactId>
-      <version>${servicemix-version}</version>      
+      <version>@{servicemix-version}</version>      
     </dependency>
   </dependencies>
+  
   <build>
 		<resources>
 			<resource>
@@ -65,7 +67,7 @@
       <plugin>
         <groupId>org.apache.servicemix.tooling</groupId>
         <artifactId>xfire-maven-plugin</artifactId>
-        <version>${servicemix-version}</version>
+        <version>@{servicemix-version}</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -85,7 +87,7 @@
       <plugin>
         <groupId>org.apache.servicemix.tooling</groupId>
         <artifactId>jbi-maven-plugin</artifactId>
-        <version>${servicemix-version}</version>      
+        <version>@{jbi-maven-plugin-version}</version>
         <extensions>true</extensions>
       </plugin>
     </plugins>

@@ -26,24 +26,26 @@
   <version>${version}</version>
   <name>A Camel based JBI Service Unit</name>
   <url>http://www.myorganization.org</url>
-  @{repositories}
+@{repositories}
+
   <properties>
-  	<camel-version>@{camel-version}</camel-version>
-    <servicemix-version>@{servicemix-version}</servicemix-version>
+    <componentName>servicemix-camel</componentName>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-camel</artifactId>
-      <version>${servicemix-version}</version>
+      <version>@{servicemix-version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-core</artifactId>
-      <version>${servicemix-version}</version>
+      <version>@{servicemix-version}</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
+  
   <build>
     <defaultGoal>install</defaultGoal>
     <plugins>
@@ -59,14 +61,14 @@
       <plugin>
         <groupId>org.apache.servicemix.tooling</groupId>
         <artifactId>jbi-maven-plugin</artifactId>
-        <version>${servicemix-version}</version>
+        <version>@{jbi-maven-plugin-version}</version>
         <extensions>true</extensions>
       </plugin>
       <!-- allows the route to be ran via 'mvn camel:run' -->
       <plugin>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-maven-plugin</artifactId>
-        <version>${camel-version}</version>
+        <version>@{camel-version}</version>
       </plugin>
     </plugins>
   </build>

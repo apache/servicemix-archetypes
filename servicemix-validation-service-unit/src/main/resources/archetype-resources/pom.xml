@@ -26,23 +26,12 @@
   <version>${version}</version>
   <name>A validation service unit</name>
   <url>http://www.myorganization.org</url>
-  @{repositories}
+@{repositories}
+
   <properties>
-    <servicemix-version>@{servicemix-version}</servicemix-version>
+    <componentName>servicemix-validation</componentName>
   </properties>
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.servicemix</groupId>
-      <artifactId>servicemix-core</artifactId>
-      <version>${servicemix-version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix</groupId>
-      <artifactId>servicemix-validation</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-  </dependencies>
+
   <build>
     <resources>
       <resource>
@@ -56,7 +45,7 @@
       <plugin>
         <groupId>org.apache.servicemix.tooling</groupId>
         <artifactId>jbi-maven-plugin</artifactId>
-        <version>${servicemix-version}</version>
+        <version>@{jbi-maven-plugin-version}</version>
         <extensions>true</extensions>
         <configuration>
           <type>service-unit</type>

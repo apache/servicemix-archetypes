@@ -17,8 +17,7 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
@@ -26,24 +25,26 @@
   <version>${version}</version>
   <name>A custom project</name>
   <url>http://www.myorganization.org</url>
-  @{repositories}
+@{repositories}
+
   <properties>
-    <servicemix-version>@{servicemix-version}</servicemix-version>
-    <cxf-version>@{cxf-version}</cxf-version>
+    <componentName>servicemix-cxf-se</componentName>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-cxf-se</artifactId>
-      <version>${servicemix-version}</version>
+      <version>@{servicemix-version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
-  </dependency>
+    </dependency>
   </dependencies>
+
   <build>
     <resources>
       <resource>
@@ -62,38 +63,38 @@
         </configuration>
       </plugin>
       <plugin>
-      <groupId>org.apache.servicemix.tooling</groupId>
+        <groupId>org.apache.servicemix.tooling</groupId>
         <artifactId>jbi-maven-plugin</artifactId>
-        <version>${servicemix-version}</version>
+        <version>@{jbi-maven-plugin-version}</version>
         <extensions>true</extensions>
         <configuration>
           <type>service-unit</type>
         </configuration>
       </plugin>
       <plugin>
-              <groupId>org.apache.cxf</groupId>
-              <artifactId>cxf-codegen-plugin</artifactId>
-              <version>${cxf-version}</version>
-              <executions>
-                  <execution>
-                      <phase>generate-sources</phase>
-                      <configuration>
-                          <sourceRoot>./target/jaxws</sourceRoot>
-                          <wsdlOptions>
-                              <wsdlOption>
-                                  <wsdl>./src/main/resources/person.wsdl</wsdl>
-                                  <extraargs>
-                                      <extraarg>-verbose</extraarg>
-                                  </extraargs>
-                              </wsdlOption>
-                          </wsdlOptions>
-                      </configuration>
-                      <goals>
-                          <goal>wsdl2java</goal>
-                      </goals>
-                  </execution>
-              </executions>
-       </plugin>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-codegen-plugin</artifactId>
+        <version>@{cxf-version}</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <configuration>
+              <sourceRoot>./target/jaxws</sourceRoot>
+              <wsdlOptions>
+                <wsdlOption>
+                  <wsdl>./src/main/resources/person.wsdl</wsdl>
+                  <extraargs>
+                    <extraarg>-verbose</extraarg>
+                  </extraargs>
+                </wsdlOption>
+              </wsdlOptions>
+            </configuration>
+            <goals>
+              <goal>wsdl2java</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>

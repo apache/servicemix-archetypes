@@ -26,21 +26,18 @@
   <version>${version}</version>
   <name>A custom project</name>
   <url>http://www.myorganization.org</url>
-  @{repositories}
-  <properties>
-    <xbean-version>@{xbean-version}</xbean-version>
-    <servicemix-version>@{servicemix-version}</servicemix-version>
-  </properties>
+@{repositories}
+
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-shared</artifactId>      
-      <version>${servicemix-version}</version>      
+      <version>@{servicemix-version}</version>      
     </dependency>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-core</artifactId>
-      <version>${servicemix-version}</version>      
+      <version>@{servicemix-version}</version>      
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -50,11 +47,13 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.servicemix.tooling</groupId>
         <artifactId>jbi-maven-plugin</artifactId>        
+        <version>@{jbi-maven-plugin-version}</version>
         <extensions>true</extensions>
         <configuration>   
         	<type>binding-component</type>       
@@ -64,7 +63,7 @@
       <plugin>
         <groupId>org.apache.xbean</groupId>
         <artifactId>maven-xbean-plugin</artifactId>
-        <version>${xbean-version}</version>
+        <version>@{xbean-version}</version>
         <executions>
           <execution>
             <configuration>
