@@ -101,20 +101,9 @@
     </dependency>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
-      <artifactId>servicemix-mail</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-saxon</artifactId>
       <version>${servicemix-version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix</groupId>
-      <artifactId>servicemix-osworkflow</artifactId>
-      <version>${servicemix-version}</version>
-    </dependency>
-
     <dependency>
       <groupId>org.apache.servicemix.tooling</groupId>
       <artifactId>servicemix-binding-component</artifactId>

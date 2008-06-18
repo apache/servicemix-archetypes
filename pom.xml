@@ -76,7 +76,7 @@
   
   <properties>
     <archetypes-version>4.0-SNAPSHOT</archetypes-version>
-    <servicemix-version>3.3-SNAPSHOT</servicemix-version>
+    <servicemix-version>3.2.1</servicemix-version>
     <xbean-version>3.2</xbean-version>
     <camel-version>1.3.0</camel-version>
     <cxf-version>2.1.1-SNAPSHOT</cxf-version>
