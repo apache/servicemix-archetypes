@@ -34,7 +34,7 @@
   <eip:xpath-splitter service="replaceMe:aggregatorSplitter" endpoint="endpoint" 
                       xpath="/*/*" namespaceContext="#nsContext">
     <eip:target>
-      <eip:exchange-target service="test:aggregator" />
+      <eip:exchange-target service="replaceMe:aggregator" />
     </eip:target>
   </eip:xpath-splitter>
   
