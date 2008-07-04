@@ -27,6 +27,10 @@ import org.springframework.context.support.AbstractXmlApplicationContext;
 
 public class MySpringComponentTest extends SpringTestSupport {
 
+    public MySpringComponentTest(String name) {
+        super(name);
+    }
+
     public void test() throws Exception {
         DefaultServiceMixClient client = new DefaultServiceMixClient(jbi);
         InOut me = client.createInOutExchange();
