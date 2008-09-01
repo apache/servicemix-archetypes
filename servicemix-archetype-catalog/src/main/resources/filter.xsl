@@ -23,7 +23,7 @@
   <xsl:strip-space elements="*"/>
   <xsl:param name="version"/>
 
-  <xsl:template match="archetype[version != '@{servicemix-version}']">
+  <xsl:template match="archetype[version != '@{components-version}']">
     <!-- simply drop archetypes for other versions of ServiceMix -->
   </xsl:template>
 

@@ -33,7 +33,7 @@
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-shared</artifactId>      
-      <version>@{servicemix-version}</version>      
+      <version>@{components-version}</version>      
     </dependency>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
