@@ -21,7 +21,7 @@
   <parent>
     <groupId>org.apache.servicemix</groupId>
     <artifactId>servicemix-pom</artifactId>
-    <version>1.0</version>
+    <version>2-SNAPSHOT</version>
   </parent>
   
   <groupId>org.apache.servicemix</groupId>
@@ -86,6 +86,14 @@
     <xfire-version>1.2.5</xfire-version>
     <activemq-version>5.1.0</activemq-version>
   </properties>
+
+  <repositories>
+    <repository>
+       <id>servicemix-m2-repo</id>
+       <name>Servicemix Maven2 Repository</name>
+       <url>http://svn.apache.org/repos/asf/servicemix/m2-repo/</url>
+    </repository>
+  </repositories>
   
   <build>
     <plugins>
