@@ -71,7 +71,7 @@
     <module>servicemix-snmp-service-unit</module>
     <module>servicemix-validation-service-unit</module>
     <module>servicemix-archetype-catalog</module>
-    <module>servicemix-osgi-camel-service-unit</module>
+    <module>servicemix-osgi-camel-archetype</module>
     <module>servicemix-project-root</module>
     <module>servicemix-archetypes-itests</module>
   </modules>

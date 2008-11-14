@@ -25,59 +25,11 @@
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <packaging>bundle</packaging>
-    <version>4.0.0.2-fuse</version>
+    <version>${version}</version>
     <name>A Camel OSGi Service Unit</name>
     <url>http://www.myorganization.org</url>
 
-	<pluginRepositories>
-		<pluginRepository>
-		  <id>open.iona.m2-snapshot</id>
-		  <name>IONA Snapshots Repository</name>
-		  <url>http://repo.open.iona.com/maven2-snapshot/</url>
-		  <snapshots>
-			<enabled>true</enabled>
-		  </snapshots>
-		  <releases>
-			 <enabled>false</enabled>
-		  </releases>
-		</pluginRepository>
-		<pluginRepository>
-		  <id>open.iona.m2</id>
-		  <name>IONA Repository</name>
-		  <url>http://repo.open.iona.com/maven2/</url>
-		  <snapshots>
-			<enabled>false</enabled>
-		  </snapshots>
-		  <releases>
-			 <enabled>true</enabled>
-		  </releases>
-		</pluginRepository>
-	  </pluginRepositories>
-
-	  <repositories>
-		<repository>
-		  <id>open.iona.m2-snapshot</id>
-		  <name>IONA Snapshots Repository</name>
-		  <url>http://repo.open.iona.com/maven2-snapshot/</url>
-		  <snapshots>
-			<enabled>true</enabled>
-		  </snapshots>
-		  <releases>
-			 <enabled>false</enabled>
-		  </releases>
-		</repository>
-		<repository>
-		   <id>open.iona.m2</id>
-		  <name>IONA Repository</name>
-		  <url>http://repo.open.iona.com/maven2/</url>
-		  <snapshots>
-			<enabled>false</enabled>
-		  </snapshots>
-		  <releases>
-			 <enabled>true</enabled>
-		  </releases>
-		</repository>
-	  </repositories>
+    @{repositories}
 
     <dependencies>
         <dependency>
@@ -121,7 +73,7 @@
 
 	<properties>
 		<commons.logging.version>1.1</commons.logging.version>
-	    <camel-version>1.5.0.0-fuse</camel-version>
+	    <camel-version>1.5.0</camel-version>
 	</properties>
 
 </project>

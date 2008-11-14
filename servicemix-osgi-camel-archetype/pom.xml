@@ -29,8 +29,8 @@
   </parent>
 
   <groupId>org.apache.servicemix.tooling</groupId>
-  <artifactId>servicemix-osgi-camel-service-unit</artifactId>
-  <name>ServiceMix :: Archetypes :: CamelOSGiServiceUnit</name>
+  <artifactId>servicemix-osgi-camel-archetype</artifactId>
+  <name>ServiceMix :: Archetypes :: CamelOSGiArchetype</name>
 
   <dependencies>
 	<dependency>
