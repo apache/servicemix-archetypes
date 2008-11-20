@@ -28,8 +28,10 @@
   	<source>src/main/java/types/GetPersonResponse.java</source>
   	<source>src/main/java/types/ObjectFactory.java</source>
   	<source>src/main/java/types/package-info.java</source>
-  	<source>src/main/java/types/UnknownPersonFault.java</source>
+        <source>src/main/java/types/UnknownPersonFault.java</source>
+        <source>src/main/java/client/Client.java</source>
   </sources>
+
   <resources>
     <resource>src/main/resources/META-INF/spring/beans.xml</resource>
   </resources>
