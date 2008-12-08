@@ -70,6 +70,7 @@
     <module>servicemix-scripting-service-unit</module>
     <module>servicemix-snmp-service-unit</module>
     <module>servicemix-validation-service-unit</module>
+    <module>servicemix-quartz-service-unit</module>
     <module>servicemix-archetype-catalog</module>
     <module>servicemix-osgi-camel-archetype</module>
     <module>servicemix-osgi-cxf-code-first-archetype</module>
