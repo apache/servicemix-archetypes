@@ -15,7 +15,6 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -23,39 +22,14 @@
          
     <modelVersion>4.0.0</modelVersion>
     
-    <groupId>${groupId}</groupId>
-    <artifactId>${artifactId}</artifactId>
-    <packaging>jbi-service-unit</packaging>
-    <version>${version}</version>
-    <name>An Exec service unit</name>
-    <url>http://www.myorganization.org</url>
+    <parent>
+        <groupId>org.apache.servicemix</groupId>
+        <artifactId>archetypes</artifactId>
+        <version>2009.01-SNAPSHOT</version>
+    </parent>         
     
-    @{repositories}
-    
-    <properties>
-        <componentName>servicemix-exec</componentName>
-    </properties>
-    
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*</include>
-                </includes>
-            </resource>
-        </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.servicemix.tooling</groupId>
-                <artifactId>jbi-maven-plugin</artifactId>
-                <version>@{jbi-maven-plugin-version}</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <type>service-unit</type>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <groupId>org.apache.servicemix.tooling</groupId>
+    <artifactId>servicemix-script-service-unit</artifactId>
+    <name>ServiceMix :: Archetypes :: ScriptServiceUnit</name>
          
-</project>         
+</project>

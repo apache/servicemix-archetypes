@@ -27,13 +27,13 @@
     <artifactId>${artifactId}</artifactId>
     <packaging>jbi-service-unit</packaging>
     <version>${version}</version>
-    <name>An Exec service unit</name>
+    <name>A Script service unit</name>
     <url>http://www.myorganization.org</url>
     
     @{repositories}
     
     <properties>
-        <componentName>servicemix-exec</componentName>
+        <componentName>servicemix-script</componentName>
     </properties>
     
     <build>
