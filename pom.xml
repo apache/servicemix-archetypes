@@ -68,6 +68,7 @@
     <module>servicemix-osworkflow-service-unit</module>
     <module>servicemix-mail-service-unit</module>
     <module>servicemix-scripting-service-unit</module>
+    <module>servicemix-script-service-unit</module>
     <module>servicemix-snmp-service-unit</module>
     <module>servicemix-validation-service-unit</module>
     <module>servicemix-quartz-service-unit</module>
