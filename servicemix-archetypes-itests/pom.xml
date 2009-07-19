@@ -302,6 +302,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
+          <argLine>-Dmaven.repo.local=${settings.localRepository}</argLine>
           <forkMode>always</forkMode>
           <workingDirectory>${basedir}</workingDirectory>
           <includes>

@@ -80,12 +80,12 @@
     <module>servicemix-osgi-cxf-code-first-archetype</module>
     <module>servicemix-osgi-cxf-wsdl-first-archetype</module>
     <module>servicemix-project-root</module>
-    <!-- <module>servicemix-archetypes-itests</module> -->
+    <module>servicemix-archetypes-itests</module>
   </modules>
 
   <properties>
     <components-version>2009.01</components-version>
-    <servicemix-version>3.3</servicemix-version>
+    <servicemix-version>3.3.1</servicemix-version>
     <servicemix-specs-version>1.1.1</servicemix-specs-version>
     <servicemix-utils-version>1.1.0</servicemix-utils-version>
     <xbean-version>3.4.3</xbean-version>
@@ -93,9 +93,9 @@
     <cxf-version>2.1.4</cxf-version>
     <xfire-version>1.2.5</xfire-version>
     <activemq-version>5.2.0</activemq-version>
-	<jaxb.version>2.1</jaxb.version>
-	<jaxws.version>2.1</jaxws.version>
-	<geronimo.wsmetadata.version>1.1.2</geronimo.wsmetadata.version>
+    <jaxb.version>2.1</jaxb.version>
+    <jaxws.version>2.1</jaxws.version>
+    <geronimo.wsmetadata.version>1.1.2</geronimo.wsmetadata.version>
   </properties>
 
   <repositories>
@@ -130,7 +130,7 @@
           <outputDirectory>${basedir}/target/classes</outputDirectory>
           <filters>
 <!-- Don't like these bits.. archetypes should not be tied to specific versions if possible -->
-            <components-version>${pom.version}</components-version>
+            <components-version>${components-version}</components-version>
             <jbi-maven-plugin-version>3.2.1</jbi-maven-plugin-version>
             <servicemix-version>${servicemix-version}</servicemix-version>
             <xbean-version>${xbean-version}</xbean-version>
@@ -146,7 +146,7 @@
     <repository>
       <id>apache.snapshots</id>
       <name>Apache Snapshots Repository</name>
-      <url>http://people.apache.org/repo/m2-snapshot-repository</url>
+      <url>http://repository.apache.org/snapshots</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -156,17 +156,17 @@
     </repository>
   </repositories>
   <pluginRepositories>
-  	<pluginRepository>
+    <pluginRepository>
       <id>apache.snapshots</id>
       <name>Apache Snapshots Repository</name>
-      <url>http://people.apache.org/repo/m2-snapshot-repository</url>
-  	  <snapshots>
-  	    <enabled>true</enabled>
-  	  </snapshots>
-  	  <releases>
-  	    <enabled>false</enabled>
-  	  </releases>
-  	</pluginRepository>
+      <url>http://repository.apache.org/snapshots</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </pluginRepository>
   </pluginRepositories>
 ]]></repositories>
           </filters>

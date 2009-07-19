@@ -25,6 +25,8 @@ import java.util.Properties;
 import java.util.UUID;
 
 import junit.framework.TestCase;
+
+import org.apache.commons.lang.StringUtils;
 import org.apache.maven.artifact.manager.WagonManager;
 import org.apache.maven.cli.ConsoleDownloadMonitor;
 import org.apache.maven.embedder.MavenEmbedder;
@@ -38,6 +40,7 @@ import org.codehaus.plexus.util.FileUtils;
 
 public abstract class AbstractArchetypeTest extends TestCase {
 
+    private static final String MAVEN_REPO_LOCAL = "maven.repo.local";
     private static final File baseDir = new File(System.getProperty("basedir", ".")).getAbsoluteFile();
 
     private MavenEmbedder maven;
@@ -47,6 +50,10 @@ public abstract class AbstractArchetypeTest extends TestCase {
     protected void setUp() throws Exception {
         maven = new MavenEmbedder();
         maven.setOffline(false);
+        if (StringUtils.isNotEmpty(sysProps.getProperty(MAVEN_REPO_LOCAL))) {
+        	maven.setLocalRepositoryDirectory(new File(sysProps.getProperty(MAVEN_REPO_LOCAL)));
+        }
+        
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         maven.setClassLoader(classLoader);
         MavenEmbedderLogger logger = new MavenEmbedderConsoleLogger();
