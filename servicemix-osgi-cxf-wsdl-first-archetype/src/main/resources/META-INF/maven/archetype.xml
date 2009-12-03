@@ -20,7 +20,9 @@
 <archetype>
   <id>cxf-osgi-service-unit</id>
 
-  <sources/>
+  <sources>
+      <source>src/main/java/PersonImpl.java</source>
+  </sources>
   <resources>
     <resource>src/main/resources/META-INF/spring/beans.xml</resource>
     <resource>src/main/resources/wsdl/person.wsdl</resource>
