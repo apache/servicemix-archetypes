@@ -32,7 +32,7 @@
     <import resource="classpath:META-INF/cxf/osgi/cxf-extension-osgi.xml" />
 
 	<jaxws:endpoint id="HTTPEndpoint"
-	    implementor="org.apache.servicemix.samples.wsdl_first.PersonImpl"
+	    implementor="${packageName}.PersonImpl"
 	    address="/PersonService"
 	    wsdlLocation="wsdl/person.wsdl"
 	    endpointName="e:soap"

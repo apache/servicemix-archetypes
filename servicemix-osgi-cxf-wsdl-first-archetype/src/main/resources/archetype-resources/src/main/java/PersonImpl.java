@@ -14,11 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.servicemix.samples.wsdl_first;
+package ${packageName};
 
 import javax.jws.WebService;
 import javax.xml.ws.Holder;
-
+import org.apache.servicemix.samples.wsdl_first.Person;
+import org.apache.servicemix.samples.wsdl_first.UnknownPersonFault;
 import org.apache.servicemix.samples.wsdl_first.types.GetPerson;
 import org.apache.servicemix.samples.wsdl_first.types.GetPersonResponse;
 
