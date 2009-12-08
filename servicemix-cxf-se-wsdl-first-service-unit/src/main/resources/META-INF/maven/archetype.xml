@@ -20,7 +20,7 @@
 <archetype>
   <id>servicemix-cxf-se-service-unit</id>
   <sources>
-    <source>src/main/java/org/apache/servicemix/samples/wsdl_first/PersonImpl.java</source>
+    <source>src/main/java/PersonImpl.java</source>
   </sources>
   <resources>
     <resource>src/main/resources/xbean.xml</resource>

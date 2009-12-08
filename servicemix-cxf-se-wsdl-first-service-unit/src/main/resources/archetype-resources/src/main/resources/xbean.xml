@@ -25,7 +25,7 @@
 
     <cxfse:endpoint>
         <cxfse:pojo>
-          <bean class="org.apache.servicemix.samples.wsdl_first.PersonImpl" />
+          <bean class="${packageName}.PersonImpl" />
         </cxfse:pojo>
     </cxfse:endpoint>
 

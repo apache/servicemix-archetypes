@@ -80,15 +80,18 @@
           <execution>
             <phase>generate-sources</phase>
             <configuration>
-              <sourceRoot>./target/jaxws</sourceRoot>
-              <wsdlOptions>
-                <wsdlOption>
-                  <wsdl>./src/main/resources/person.wsdl</wsdl>
-                  <extraargs>
-                    <extraarg>-verbose</extraarg>
-                  </extraargs>
-                </wsdlOption>
-              </wsdlOptions>
+                <sourceRoot>\${basedir}/src/main/java</sourceRoot>
+                            <wsdlOptions>
+                                <wsdlOption>
+                                <!-- Update wsdl tag with appropriate wsdl file -->
+                                    <wsdl>\${basedir}/src/main/resources/person.wsdl</wsdl>
+                                    <extraargs>
+                                        <extraarg>-verbose</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+
+                            </wsdlOptions>
+
             </configuration>
             <goals>
               <goal>wsdl2java</goal>
