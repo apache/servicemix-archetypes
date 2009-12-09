@@ -16,7 +16,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<deploy xmlns="http://ode.fivesight.com/schemas/2006/06/27/dd"
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03"
         xmlns:pns="urn:/HelloWorld2-RPC.bpel"
         xmlns:sns="urn:/HelloWorld2-RPC.wsdl">
     <process name="pns:HelloWorld2-RPC">
