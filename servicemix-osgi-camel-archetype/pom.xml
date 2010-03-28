@@ -25,7 +25,7 @@
   <parent>
     <groupId>org.apache.servicemix</groupId>
     <artifactId>archetypes</artifactId>
-    <version>2009.01-SNAPSHOT</version>
+    <version>2010.01-SNAPSHOT</version>
   </parent>
 
   <groupId>org.apache.servicemix.tooling</groupId>
@@ -36,7 +36,7 @@
 	<dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-maven-plugin</artifactId>
-      <version>${camel-version}</version>
+      <version>${camel.version}</version>
       <scope>test</scope>
 	</dependency>
   </dependencies>

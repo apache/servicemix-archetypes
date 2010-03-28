@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <!--
 
@@ -29,19 +28,17 @@
   <name>A Camel OSGi Service Unit</name>
   <url>http://www.myorganization.org</url>
 
-  @{repositories}
-
   <dependencies>
     <dependency>
       <groupId>commons-logging</groupId>
       <artifactId>commons-logging</artifactId>
-      <version>${commons.logging.version}</version>
+      <version>${commons-logging.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-core</artifactId>
-      <version>${camel-version}</version>
+      <version>${camel.version}</version>
     </dependency>
   </dependencies>
 
@@ -72,8 +69,8 @@
   </build>
 
   <properties>
-    <commons.logging.version>1.1</commons.logging.version>
-    <camel-version>@{camel-version}</camel-version>
+    <commons.logging.version>1.1.1</commons.logging.version>
+    <camel-version>@{camel.version}</camel-version>
   </properties>
 
 </project>

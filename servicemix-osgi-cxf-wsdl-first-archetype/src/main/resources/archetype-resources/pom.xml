@@ -29,8 +29,6 @@
     <name>A CXF WSDL First OSGi Project </name>
     <url>http://www.myorganization.org</url>
 
-    @{repositories}
-
     <dependencies>
         <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
@@ -64,7 +62,7 @@
             <plugin>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-codegen-plugin</artifactId>
-                <version>@{cxf-version}</version>
+                <version>@{cxf.version}</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>

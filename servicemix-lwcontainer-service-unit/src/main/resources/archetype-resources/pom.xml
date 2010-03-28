@@ -17,49 +17,36 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
   <modelVersion>4.0.0</modelVersion>
+  
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
   <packaging>jbi-service-unit</packaging>
   <version>${version}</version>
-  <name>A LWContainer Service Unit</name>
+  <name>A LWContainer service unit</name>
   <url>http://www.myorganization.org</url>
-
-  @{repositories}
-  
-  <properties>
-    <componentName>servicemix-lwcontainer</componentName>
-  </properties>
   
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-lwcontainer</artifactId>
-      <version>@{servicemix-version}</version>      
+      <version>@{servicemix.version}</version>      
     </dependency>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-components</artifactId>
-      <version>@{servicemix-version}</version>      
+      <version>@{servicemix.version}</version>      
     </dependency>
   </dependencies>
   
   <build>
-  	<resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <includes>
-          <include>**/*</include>
-        </includes>
-      </resource>    
-    </resources>
     <plugins>
       <plugin>
         <groupId>org.apache.servicemix.tooling</groupId>
-        <version>@{jbi-maven-plugin-version}</version>
-        <version>${servicemix-version}</version>      
+        <artifactId>jbi-maven-plugin</artifactId>
+        <version>@{jbi-maven-plugin.version}</version>      
         <extensions>true</extensions>
       </plugin>     
     </plugins>

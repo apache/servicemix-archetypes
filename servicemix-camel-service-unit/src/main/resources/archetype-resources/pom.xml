@@ -17,9 +17,10 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
   <modelVersion>4.0.0</modelVersion>
+  
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
   <packaging>jbi-service-unit</packaging>
@@ -27,23 +28,11 @@
   <name>A Camel based JBI Service Unit</name>
   <url>http://www.myorganization.org</url>
 
-  @{repositories}
-
-  <properties>
-    <componentName>servicemix-camel</componentName>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-camel</artifactId>
-      <version>@{components-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix</groupId>
-      <artifactId>servicemix-core</artifactId>
-      <version>@{servicemix-version}</version>
-      <scope>provided</scope>
+      <version>@{components.version}</version>
     </dependency>
   </dependencies>
 
@@ -62,14 +51,14 @@
       <plugin>
         <groupId>org.apache.servicemix.tooling</groupId>
         <artifactId>jbi-maven-plugin</artifactId>
-        <version>@{jbi-maven-plugin-version}</version>
+        <version>@{jbi-maven-plugin.version}</version>
         <extensions>true</extensions>
       </plugin>
       <!-- allows the route to be ran via 'mvn camel:run' -->
       <plugin>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-maven-plugin</artifactId>
-        <version>@{camel-version}</version>
+        <version>@{camel.version}</version>
       </plugin>
     </plugins>
   </build>

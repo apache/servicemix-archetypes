@@ -21,12 +21,12 @@
   <parent>
     <groupId>org.apache.servicemix</groupId>
     <artifactId>servicemix-pom</artifactId>
-    <version>2</version>
+    <version>4</version>
   </parent>
 
   <groupId>org.apache.servicemix</groupId>
   <artifactId>archetypes</artifactId>
-  <version>2009.01-SNAPSHOT</version>
+  <version>2010.01-SNAPSHOT</version>
 
   <name>ServiceMix :: Archetypes</name>
   <packaging>pom</packaging>
@@ -84,27 +84,23 @@
   </modules>
 
   <properties>
-    <components-version>2009.01</components-version>
-    <servicemix-version>3.3.1</servicemix-version>
-    <servicemix-specs-version>1.1.1</servicemix-specs-version>
-    <servicemix-utils-version>1.1.0</servicemix-utils-version>
-    <xbean-version>3.4.3</xbean-version>
-    <camel-version>1.6.0</camel-version>
-    <cxf-version>2.1.4</cxf-version>
-    <xfire-version>1.2.5</xfire-version>
-    <activemq-version>5.2.0</activemq-version>
+    <components.version>2010.01</components.version>
+    <jbi-maven-plugin.version>4.3</jbi-maven-plugin.version>
+    <maven-bundle-plugin.version>2.0.1</maven-bundle-plugin.version>
+    <servicemix.version>3.3.1</servicemix.version>
+    <servicemix-specs.version>1.4.0</servicemix-specs.version>
+    <servicemix-utils.version>1.2.0</servicemix-utils.version>
+    <geronimo-specs.version>1.1.1</geronimo-specs.version>
+    <xbean.version>3.4.3</xbean.version>
+    <camel.version>2.2.0</camel.version>
+    <cxf.version>2.2.6</cxf.version>
+    <xfire.version>1.2.5</xfire.version>
+    <activemq.version>5.3.0</activemq.version>
     <jaxb.version>2.1</jaxb.version>
     <jaxws.version>2.1-1</jaxws.version>
     <geronimo.wsmetadata.version>1.1.2</geronimo.wsmetadata.version>
+    <junit.version>4.5</junit.version>
   </properties>
-
-  <repositories>
-    <repository>
-       <id>servicemix-m2-repo</id>
-       <name>Servicemix Maven2 Repository</name>
-       <url>http://svn.apache.org/repos/asf/servicemix/m2-repo/</url>
-    </repository>
-  </repositories>
 
   <build>
     <plugins>
@@ -129,46 +125,22 @@
           <inputDirectory>${basedir}/src/main/resources</inputDirectory>
           <outputDirectory>${basedir}/target/classes</outputDirectory>
           <filters>
-<!-- Don't like these bits.. archetypes should not be tied to specific versions if possible -->
-            <components-version>${components-version}</components-version>
-            <jbi-maven-plugin-version>3.2.1</jbi-maven-plugin-version>
-            <servicemix-version>${servicemix-version}</servicemix-version>
-            <xbean-version>${xbean-version}</xbean-version>
-            <camel-version>${camel-version}</camel-version>
-            <cxf-version>${cxf-version}</cxf-version>
-            <xfire-version>${xfire-version}</xfire-version>
-            <activemq-version>${activemq-version}</activemq-version>
+            <!-- Don't like these bits.. archetypes should not be tied to specific versions if possible -->
+            <components.version>${components.version}</components.version>
+            <jbi-maven-plugin.version>${jbi-maven-plugin.version}</jbi-maven-plugin.version>
+            <maven-bundle-plugin.version>${maven-bundle-plugin.version}</maven-bundle-plugin.version>
+            <servicemix.version>${servicemix.version}</servicemix.version>
+            <servicemix-specs.version>${servicemix-specs.version}</servicemix-specs.version>
+            <geronimo-specs.version>${geronimo-specs.version}</geronimo-specs.version>
+            <xbean.version>${xbean.version}</xbean.version>
+            <camel.version>${camel.version}</camel.version>
+            <cxf.version>${cxf.version}</cxf.version>
+            <xfire.version>${xfire.version}</xfire.version>
+            <activemq.version>${activemq.version}</activemq.version>
 			<jaxb.version>${jaxb.version}</jaxb.version>
 			<jaxws.version>${jaxws.version}</jaxws.version>
 			<geronimo.wsmetadata.version>${geronimo.wsmetadata.version}</geronimo.wsmetadata.version>
-            <repositories><![CDATA[
-  <repositories>
-    <repository>
-      <id>apache.snapshots</id>
-      <name>Apache Snapshots Repository</name>
-      <url>http://repository.apache.org/snapshots</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>apache.snapshots</id>
-      <name>Apache Snapshots Repository</name>
-      <url>http://repository.apache.org/snapshots</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </pluginRepository>
-  </pluginRepositories>
-]]></repositories>
+			<junit.version>${junit.version}</junit.version>
           </filters>
         </configuration>
         <executions>

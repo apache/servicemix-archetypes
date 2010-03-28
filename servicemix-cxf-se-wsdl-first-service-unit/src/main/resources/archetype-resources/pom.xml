@@ -18,7 +18,9 @@
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
   <modelVersion>4.0.0</modelVersion>
+  
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
   <packaging>jbi-service-unit</packaging>
@@ -26,35 +28,16 @@
   <name>A custom project</name>
   <url>http://www.myorganization.org</url>
 
-  @{repositories}
-
-  <properties>
-    <componentName>servicemix-cxf-se</componentName>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-cxf-se</artifactId>
-      <version>@{components-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
+      <version>@{components.version}</version>
     </dependency>
   </dependencies>
 
   <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <includes>
-          <include>**/*</include>
-        </includes>
-      </resource>
-    </resources>
+    <defaultGoal>install</defaultGoal>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -66,16 +49,13 @@
       <plugin>
         <groupId>org.apache.servicemix.tooling</groupId>
         <artifactId>jbi-maven-plugin</artifactId>
-        <version>@{jbi-maven-plugin-version}</version>
+        <version>@{jbi-maven-plugin.version}</version>
         <extensions>true</extensions>
-        <configuration>
-          <type>service-unit</type>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.cxf</groupId>
         <artifactId>cxf-codegen-plugin</artifactId>
-        <version>@{cxf-version}</version>
+        <version>@{cxf.version}</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
