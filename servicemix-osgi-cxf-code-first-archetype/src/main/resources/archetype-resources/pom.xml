@@ -35,11 +35,11 @@
             <artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
             <version>@{geronimo.wsmetadata.version}</version>
         </dependency>
-	<dependency>
-		<groupId>javax.xml.bind</groupId>
-		<artifactId>jaxb-api</artifactId>
-		<version>@{jaxb.version}</version>
-	</dependency>
+    <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>@{jaxb.version}</version>
+    </dependency>
         <dependency>
                 <groupId>org.apache.geronimo.specs</groupId>
                 <artifactId>geronimo-jaxws_2.1_spec</artifactId>
@@ -60,15 +60,15 @@
     </dependencies>
 
     <build>
-    	<defaultGoal>install</defaultGoal>
+        <defaultGoal>install</defaultGoal>
         <plugins>
- 	    <plugin>
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-compiler-plugin</artifactId>
-	        <configuration>
-	 	    <source>1.5</source>
-		    <target>1.5</target>
-	        </configuration>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+             <source>1.5</source>
+            <target>1.5</target>
+            </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
@@ -82,9 +82,9 @@
                             javax.wsdl,
                             javax.xml.bind,
                             javax.xml.bind.annotation,
-			    javax.xml.namespace,
-			    javax.xml.ws,
-			    META-INF.cxf,
+                javax.xml.namespace,
+                javax.xml.ws,
+                META-INF.cxf,
                             META-INF.cxf.osgi,
                             org.apache.cxf.bus,
                             org.apache.cxf.bus.spring,

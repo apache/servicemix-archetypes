@@ -28,7 +28,7 @@
   <url>http://www.myorganization.org</url>
   
   <dependencies>
-  	<dependency>
+      <dependency>
       <groupId>org.apache.servicemix</groupId>
       <artifactId>servicemix-core</artifactId>
       <version>@{servicemix.version}</version>

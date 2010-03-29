@@ -137,10 +137,10 @@
             <cxf.version>${cxf.version}</cxf.version>
             <xfire.version>${xfire.version}</xfire.version>
             <activemq.version>${activemq.version}</activemq.version>
-			<jaxb.version>${jaxb.version}</jaxb.version>
-			<jaxws.version>${jaxws.version}</jaxws.version>
-			<geronimo.wsmetadata.version>${geronimo.wsmetadata.version}</geronimo.wsmetadata.version>
-			<junit.version>${junit.version}</junit.version>
+            <jaxb.version>${jaxb.version}</jaxb.version>
+            <jaxws.version>${jaxws.version}</jaxws.version>
+            <geronimo.wsmetadata.version>${geronimo.wsmetadata.version}</geronimo.wsmetadata.version>
+            <junit.version>${junit.version}</junit.version>
           </filters>
         </configuration>
         <executions>

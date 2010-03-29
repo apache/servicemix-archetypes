@@ -33,12 +33,12 @@
   <name>ServiceMix :: Archetypes :: CamelOSGiArchetype</name>
 
   <dependencies>
-	<dependency>
+    <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-maven-plugin</artifactId>
       <version>${camel.version}</version>
       <scope>test</scope>
-	</dependency>
+    </dependency>
   </dependencies>
 
 </project>

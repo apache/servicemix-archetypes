@@ -1,131 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!--
+    <!--
 
-		Licensed to the Apache Software Foundation (ASF) under one or more
-		contributor license agreements. See the NOTICE file distributed with
-		this work for additional information regarding copyright ownership.
-		The ASF licenses this file to You under the Apache License, Version
-		2.0 (the "License"); you may not use this file except in compliance
-		with the License. You may obtain a copy of the License at
+        Licensed to the Apache Software Foundation (ASF) under one or more
+        contributor license agreements. See the NOTICE file distributed with
+        this work for additional information regarding copyright ownership.
+        The ASF licenses this file to You under the Apache License, Version
+        2.0 (the "License"); you may not use this file except in compliance
+        with the License. You may obtain a copy of the License at
 
-		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
-		applicable law or agreed to in writing, software distributed under the
-		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-		CONDITIONS OF ANY KIND, either express or implied. See the License for
-		the specific language governing permissions and limitations under the
-		License.
-	-->
+        http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+        applicable law or agreed to in writing, software distributed under the
+        License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+        CONDITIONS OF ANY KIND, either express or implied. See the License for
+        the specific language governing permissions and limitations under the
+        License.
+    -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>${groupId}</groupId>
-	<artifactId>${artifactId}</artifactId>
-	<packaging>jbi-component</packaging>
-	<version>${version}</version>
-	<name>A custom binding component</name>
-	<url>http://www.myorganization.org</url>
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <packaging>jbi-component</packaging>
+    <version>${version}</version>
+    <name>A custom binding component</name>
+    <url>http://www.myorganization.org</url>
 
-	<properties>
-		<servicemix.osgi.export>
-			${packageName}*;version=${project.version}
-	   </servicemix.osgi.export>
-		<servicemix.osgi.import>
-			!${packageName}*,
-			org.apache.servicemix.common,
-			org.apache.servicemix.common.osgi,
-			org.apache.servicemix.executors.impl,
-			org.apache.servicemix.jbi.container*;resolution:=optional,
-			org.apache.servicemix.jbi.framework*;resolution:=optional,
-			org.apache.xbean.spring.context.v2,
-			org.springframework.beans.factory.xml,
-			*
-	   </servicemix.osgi.import>
-		<servicemix.osgi.bundles>
-			org.springframework.core,
-			org.springframework.beans,
-			org.springframework.context,
-	   </servicemix.osgi.bundles>
-	</properties>
+    <properties>
+        <servicemix.osgi.export>
+            ${packageName}*;version=${project.version}
+       </servicemix.osgi.export>
+        <servicemix.osgi.import>
+            !${packageName}*,
+            org.apache.servicemix.common,
+            org.apache.servicemix.common.osgi,
+            org.apache.servicemix.executors.impl,
+            org.apache.servicemix.jbi.container*;resolution:=optional,
+            org.apache.servicemix.jbi.framework*;resolution:=optional,
+            org.apache.xbean.spring.context.v2,
+            org.springframework.beans.factory.xml,
+            *
+       </servicemix.osgi.import>
+        <servicemix.osgi.bundles>
+            org.springframework.core,
+            org.springframework.beans,
+            org.springframework.context,
+       </servicemix.osgi.bundles>
+    </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-shared</artifactId>
-			<version>@{components.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-common</artifactId>
-			<version>@{components.version}</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.apache.servicemix.specs</groupId>
-		    <artifactId>org.apache.servicemix.specs.jbi-api-1.0</artifactId>
-		    <version>@{servicemix-specs.version}</version>
-		    <scope>provided</scope>
-		</dependency>
-		<dependency>
-		    <groupId>org.apache.geronimo.specs</groupId>
-		    <artifactId>geronimo-jta_1.1_spec</artifactId>
-		    <version>@{geronimo-specs.version}</version>
-		    <scope>provided</scope>
-		</dependency>
-		<dependency>
-		    <groupId>org.apache.servicemix</groupId>
-		    <artifactId>servicemix-core</artifactId>
-		    <version>@{servicemix.version}</version>
-		    <scope>test</scope>
-		</dependency>
-		<dependency>
-		    <groupId>junit</groupId>
-		    <artifactId>junit</artifactId>
-		    <version>@{junit.version}</version>
-		    <scope>test</scope>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.servicemix</groupId>
+            <artifactId>servicemix-shared</artifactId>
+            <version>@{components.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix</groupId>
+            <artifactId>servicemix-common</artifactId>
+            <version>@{components.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.specs</groupId>
+            <artifactId>org.apache.servicemix.specs.jbi-api-1.0</artifactId>
+            <version>@{servicemix-specs.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jta_1.1_spec</artifactId>
+            <version>@{geronimo-specs.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix</groupId>
+            <artifactId>servicemix-core</artifactId>
+            <version>@{servicemix.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>@{junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.servicemix.tooling</groupId>
-				<artifactId>jbi-maven-plugin</artifactId>
-				<version>@{jbi-maven-plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-					<generatedDescriptorLocation>${project.build.directory}/jbi</generatedDescriptorLocation>
-					<type>binding-component</type>
-					<component>${packageName}.MyComponent</component>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.xbean</groupId>
-				<artifactId>maven-xbean-plugin</artifactId>
-				<version>@{xbean.version}</version>
-				<executions>
-					<execution>
-						<configuration>
-							<namespace>http://${packageName}/1.0</namespace>
-						</configuration>
-						<goals>
-							<goal>mapping</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<version>@{maven-bundle-plugin.version}</version>
-				<configuration>
-				    <Bundle-Name>${project.name}</Bundle-Name>
-				    <Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
-				    <Export-Package>${servicemix.osgi.export}</Export-Package>
-				    <Import-Package>${servicemix.osgi.import}</Import-Package>
-				</configuration>
-			
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.servicemix.tooling</groupId>
+                <artifactId>jbi-maven-plugin</artifactId>
+                <version>@{jbi-maven-plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <generatedDescriptorLocation>${project.build.directory}/jbi</generatedDescriptorLocation>
+                    <type>binding-component</type>
+                    <component>${packageName}.MyComponent</component>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.xbean</groupId>
+                <artifactId>maven-xbean-plugin</artifactId>
+                <version>@{xbean.version}</version>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <namespace>http://${packageName}/1.0</namespace>
+                        </configuration>
+                        <goals>
+                            <goal>mapping</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>@{maven-bundle-plugin.version}</version>
+                <configuration>
+                    <Bundle-Name>${project.name}</Bundle-Name>
+                    <Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
+                    <Export-Package>${servicemix.osgi.export}</Export-Package>
+                    <Import-Package>${servicemix.osgi.import}</Import-Package>
+                </configuration>
+            
+            </plugin>
+        </plugins>
+    </build>
 </project>
