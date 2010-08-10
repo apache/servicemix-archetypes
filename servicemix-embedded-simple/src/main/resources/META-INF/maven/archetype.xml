@@ -18,7 +18,7 @@
 
 -->
 <archetype>
-  <id>servicemix-su</id>
+  <id>servicemix-embedded-simple</id>
   <sources>
     <source>src/main/java/Main.java</source> 
   </sources>

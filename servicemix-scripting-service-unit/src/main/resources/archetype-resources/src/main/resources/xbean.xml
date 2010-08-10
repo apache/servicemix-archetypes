@@ -27,29 +27,32 @@
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
        
-    <!-- Groovy JSR-223 Endpoint  -->
+    <!-- BEGIN SNIPPET: groovy-jsr223  -->
     <scripting:endpoint
-        service="replaceMe:groovy-jsr223" 
-        endpoint="endpoint"
+        service="replaceMe:serviceName" 
+        endpoint="groovy-jsr223"
         script="classpath:GroovyExchangeProcessorJSR223.groovy"
         bindings="#customBindings">
     </scripting:endpoint>
+    <!-- END SNIPPET: groovy-jsr223 -->
             
-    <!-- JRuby JSR-223 Endpoint  -->
+    <!-- BEGIN SNIPPET: jruby-jsr223  -->
     <scripting:endpoint
-        service="replaceMe:jruby-jsr223" 
-        endpoint="endpoint"
+        service="replaceMe:serviceName" 
+        endpoint="jruby-jsr223"
         script="classpath:RubyExchangeProcessorJSR223.rb"
         bindings="#customBindings">
     </scripting:endpoint>
+    <!-- END SNIPPET: jruby-jsr223 -->
             
-    <!-- JavaScript JSR-223 Endpoint  -->
+    <!-- BEGIN SNIPPET: javascript-jsr223 -->
     <scripting:endpoint
-        service="replaceMe:js-jsr223" 
-        endpoint="endpoint"
+        service="replaceMe:serviceName" 
+        endpoint="javascript-jsr223"
         script="classpath:JSExchangeProcessorJSR223.js"
         bindings="#customBindings">
     </scripting:endpoint>
+    <!-- END SNIPPET -->
             
     <util:map id="customBindings">
         <entry key="answerGroovy" value="JSR-223 with Groovy is working fine..." />

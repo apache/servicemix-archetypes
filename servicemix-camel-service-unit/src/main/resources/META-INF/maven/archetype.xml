@@ -18,8 +18,7 @@
 
 -->
 <archetype>
-  <id>camel-jbi-service-unit</id>
-  
+  <id>servicemix-camel-service-unit</id>
   <sources>
     <source>src/main/java/MyRouteBuilder.java</source>
   </sources>

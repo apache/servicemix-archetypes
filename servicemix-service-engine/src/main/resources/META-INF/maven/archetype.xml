@@ -18,7 +18,7 @@
 
 -->
 <archetype>
-  <id>servicemix-se</id>
+  <id>servicemix-service-engine</id>
   <sources>
     <source>src/main/java/MyComponent.java</source>
     <source>src/main/java/MyEndpoint.java</source>

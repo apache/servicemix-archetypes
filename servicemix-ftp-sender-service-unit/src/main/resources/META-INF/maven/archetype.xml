@@ -18,7 +18,7 @@
 
 -->
 <archetype>
-  <id>servicemix-su</id>
+  <id>servicemix-ftp-sender-service-unit</id>
   <resources>
     <resource>src/main/resources/xbean.xml</resource>
   </resources>

@@ -18,7 +18,7 @@
 
 -->
 <archetype>
-  <id>servicemix-su</id>
+  <id>servicemix-lwcontainer-service-unit</id>
   <resources>
     <resource>src/main/resources/servicemix.xml</resource>
   </resources>

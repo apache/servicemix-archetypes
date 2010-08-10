@@ -28,7 +28,7 @@
     <sm:activationSpecs>
 
       <!-- Put lw components here -->
-      <sm:activationSpec service="replaceMe:myService">
+      <sm:activationSpec service="replaceMe:serviceName">
         <sm:component>
           <bean class="org.apache.servicemix.components.cache.CacheComponent">
             <property name="cache">

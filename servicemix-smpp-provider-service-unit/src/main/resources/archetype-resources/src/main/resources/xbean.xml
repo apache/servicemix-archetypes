@@ -23,14 +23,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
             http://servicemix.apache.org/smpp/1.0 http://servicemix.apache.org/schema/servicemix-smpp-@{components-version}.xsd
-            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
-       ">
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
-    <smpp:provider service="replaceMe:withYourService"
-                   endpoint="smpp"
+    <!-- BEGIN SNIPPET: smpp-provider -->
+    <smpp:provider service="replaceMe:serviceName"
+                   endpoint="smpp-provider"
                    host="smpp.your.com"
                    port="2700"
                    systemId="user"
-                   password="password"/>       
+                   password="password"/>
+    <!-- END SNIPPET: smpp-provider -->                          
        
 </beans>

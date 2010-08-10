@@ -15,9 +15,7 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
 -->
-
 <beans xmlns:validation="http://servicemix.apache.org/validation/1.0"
        xmlns:replaceMe="http://servicemix.apache.org/replaceMe"
        xmlns="http://www.springframework.org/schema/beans"
@@ -25,21 +23,25 @@
        xsi:schemaLocation="http://servicemix.apache.org/validation/1.0 http://servicemix.apache.org/schema/servicemix-validation-@{components-version}.xsd
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd" >
        
-	<validation:endpoint service="replaceMe:service" 
-    					 endpoint="endpoint" 
+    <!-- BEGIN SNIPPET: validation-fault-flow -->   
+	<validation:endpoint service="replaceMe:serviceName" 
+    					 endpoint="validation-fault-flow" 
             			 schemaResource="classpath:schema.xsd"
             			 handlingErrorMethod="FAULT_FLOW"/>
+    <!-- END SNIPPET: validation-fault-flow -->            			 
             							 
-	<validation:endpoint service="replaceMe:service2" 
-    					 endpoint="endpoint" 
+    <!-- BEGIN SNIPPET: validation-fault-jbi -->            							 
+	<validation:endpoint service="replaceMe:serviceName" 
+    					 endpoint="validation-fault-jbi" 
     					 schemaResource="classpath:schema.xsd"
     					 handlingErrorMethod="FAULT_JBI"/>
+    <!-- END SNIPPET: validation-fault-jbi -->    					 
             							 
-	<validation:endpoint service="replaceMe:service3" 
-    					 endpoint="endpoint" 
+    <!-- BEGIN SNIPPET: validation-error-handler -->            							 
+	<validation:endpoint service="replaceMe:serviceName" 
+    					 endpoint="validation-error-handler" 
     					 schemaResource="classpath:schema.xsd"
     					 handlingErrorMethod="FAULT_FLOW">
-            							 
 		<property name="errorHandlerFactory">
 			<bean class="org.apache.servicemix.validation.handler.MessageAggregatingErrorHandlerFactory">
       			<property name="rootPath" value="Fault/payload/messages"/>
@@ -47,7 +49,7 @@
     			<property name="includeStackTraces" value="false"/>
 			</bean>
 		</property>
-    					
-	</validation:endpoint> 
+	</validation:endpoint>
+	<!-- END SNIPPET: validation-error-handler --> 
 
 </beans>

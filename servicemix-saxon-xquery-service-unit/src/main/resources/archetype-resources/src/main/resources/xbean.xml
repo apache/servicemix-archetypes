@@ -25,12 +25,12 @@
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
   <!-- START SNIPPET: xquery --> 
-  <saxon:xquery service="replaceMe:xquery" endpoint="endpoint"
+  <saxon:xquery service="replaceMe:serviceName" endpoint="saxon-xquery"
                 resource="classpath:query.xq" />
   <!-- END SNIPPET: xquery --> 
   
   <!-- START SNIPPET: xquery-inline --> 
-  <saxon:xquery service="replaceMe:xquery-inline" endpoint="endpoint">
+  <saxon:xquery service="replaceMe:serviceName" endpoint="saxon-xquery-inline">
     <!-- CDATA are not supported currently -->
     <saxon:query>
       for $x in /bookstore/book
@@ -44,7 +44,7 @@
   <!-- END SNIPPET: xquery-inline --> 
   
   <!-- START SNIPPET: xquery-dynamic -->
-  <saxon:xquery service="replaceMe:xquery-dynamic" endpoint="endpoint">
+  <saxon:xquery service="replaceMe:serviceName" endpoint="saxon-xquery-dynamic">
     <saxon:expression>
       <bean class="org.apache.servicemix.expression.PropertyExpression">
         <property name="property" value="xquery.source" />

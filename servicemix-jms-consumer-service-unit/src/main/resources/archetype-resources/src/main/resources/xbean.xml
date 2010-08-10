@@ -26,28 +26,13 @@
        http://activemq.org/config/1.0 http://activemq.apache.org/schema/core/activemq-core-@{activemq-version}.xsd
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
-    <!-- START SNIPPET: consumer -->
-    <jms:endpoint service="test:MyConsumerService"
-                  endpoint="jms"
-                  targetService="test:MyConsumerService"
-                  targetEndpoint="myConsumer"
-                  role="consumer" 
-                  destinationStyle="queue"
-                  jmsProviderDestinationName="queue/A"
-                  defaultMep="http://www.w3.org/2004/08/wsdl/in-out"
-                  defaultOperation="test:Echo"
-                  connectionFactory="#connectionFactory" />
-    <!-- END SNIPPET: consumer -->
-
-    <jms:endpoint service="test:MyConsumerService"
-                  endpoint="jms+soap"
-                  targetInterfaceName="test:MyConsumerInterface"
-                  role="consumer"
-                  destinationStyle="queue"
-                  jmsProviderDestinationName="queue/A/Soap"
-                  soap="true"
-                  defaultMep="http://www.w3.org/2004/08/wsdl/in-out"
-                  connectionFactory="#connectionFactory" />
+    <!-- BEGIN SNIPPET: jms-consumer -->
+    <jms:consumer service="replaceMe:serviceName"
+                  endpoint="jms-consumer"
+                  destinationName="my.queue"
+                  connectionFactory="#connectionFactory"
+                  concurrentConsumers="8" />
+    <!-- END SNIPPET: jms-consumer -->                  
 
     <amq:connectionFactory id="connectionFactory" brokerURL="tcp://localhost:61616" />
 

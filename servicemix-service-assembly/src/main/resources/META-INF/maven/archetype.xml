@@ -18,5 +18,5 @@
 
 -->
 <archetype>
-  <id>servicemix-sa</id>  
+  <id>servicemix-service-assembly</id>  
 </archetype>

@@ -18,31 +18,20 @@
 
 -->
 <beans xmlns:jms="http://servicemix.apache.org/jms/1.0"
-       xmlns:test="http://test"
+       xmlns:replaceMe="http://servicemix.apache.org/replaceMe"
        xmlns:amq="http://activemq.org/config/1.0"
        xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://servicemix.apache.org/jms/1.0 http://servicemix.apache.org/schema/servicemix-jms-@{components-version}.xsd
        http://activemq.org/config/1.0 http://activemq.apache.org/schema/core/activemq-core-@{activemq-version}.xsd
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
-
-    <!-- START SNIPPET: provider -->
-    <jms:endpoint service="test:MyProviderService"
-                  endpoint="myProvider"
-                  role="provider" 
-                  destinationStyle="queue"
-                  jmsProviderDestinationName="queue/A"
-                  connectionFactory="#connectionFactory"
-                  wsdlResource="classpath:provider.wsdl" />
-    <!-- END SNIPPET: provider -->
-
-    <jms:endpoint service="test:MySoapProviderService"
-                  endpoint="myProvider"
-                  role="provider" 
-                  destinationStyle="queue"
-                  jmsProviderDestinationName="queue/A/Soap"
-                  connectionFactory="#connectionFactory"
-                  soap="true"/>
+    
+    <!-- BEGIN SNIPPET: jms-provider -->
+    <jms:provider service="replaceMe:serviceName"
+                  endpoint="jms-provider"
+                  destinationName="my.queue"
+                  connectionFactory="#connectionFactory"/>
+    <!-- END SNIPPET: jms-provider -->                  
 
     <amq:connectionFactory id="connectionFactory" brokerURL="tcp://localhost:61616" />
 

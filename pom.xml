@@ -1,232 +1,358 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-<!--
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    Licensed to the Apache Software Foundation (ASF) under one or more
-    contributor license agreements.  See the NOTICE file distributed with
-    this work for additional information regarding copyright ownership.
-    The ASF licenses this file to You under the Apache License, Version 2.0
-    (the "License"); you may not use this file except in compliance with
-    the License.  You may obtain a copy of the License at
+	<!--
 
-       http://www.apache.org/licenses/LICENSE-2.0
+		Licensed to the Apache Software Foundation (ASF) under one or more
+		contributor license agreements. See the NOTICE file distributed with
+		this work for additional information regarding copyright ownership.
+		The ASF licenses this file to You under the Apache License, Version
+		2.0 (the "License"); you may not use this file except in compliance
+		with the License. You may obtain a copy of the License at
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
--->
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.apache.servicemix</groupId>
-    <artifactId>servicemix-pom</artifactId>
-    <version>4</version>
-  </parent>
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License.
+	-->
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.apache.servicemix</groupId>
+		<artifactId>servicemix-pom</artifactId>
+		<version>4</version>
+	</parent>
 
-  <groupId>org.apache.servicemix</groupId>
-  <artifactId>archetypes</artifactId>
-  <version>2010.01-SNAPSHOT</version>
+	<groupId>org.apache.servicemix</groupId>
+	<artifactId>archetypes</artifactId>
+	<version>2010.01-SNAPSHOT</version>
 
-  <name>ServiceMix :: Archetypes</name>
-  <packaging>pom</packaging>
+	<name>Apache ServiceMix :: Archetypes</name>
+	<packaging>pom</packaging>
 
-  <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/servicemix/archetypes/trunk</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/servicemix/archetypes/trunk</developerConnection>
-    <url>http://svn.apache.org/viewcvs.cgi/servicemix/archetypes/trunk</url>
-  </scm>
+	<scm>
+		<connection>scm:svn:http://svn.apache.org/repos/asf/servicemix/archetypes/trunk</connection>
+		<developerConnection>scm:svn:https://svn.apache.org/repos/asf/servicemix/archetypes/trunk</developerConnection>
+		<url>http://svn.apache.org/viewcvs.cgi/servicemix/archetypes/trunk</url>
+	</scm>
 
-  <modules>
-    <module>servicemix-binding-component</module>
-    <module>servicemix-service-engine</module>
-    <module>servicemix-service-unit</module>
-    <module>servicemix-service-assembly</module>
-    <module>servicemix-shared-library</module>
-    <module>servicemix-file-poller-service-unit</module>
-    <module>servicemix-file-sender-service-unit</module>
-    <module>servicemix-ftp-poller-service-unit</module>
-    <module>servicemix-ftp-sender-service-unit</module>
-    <module>servicemix-http-consumer-service-unit</module>
-    <module>servicemix-http-provider-service-unit</module>
-    <module>servicemix-jms-consumer-service-unit</module>
-    <module>servicemix-jms-provider-service-unit</module>
-    <module>servicemix-jsr181-wsdl-first-service-unit</module>
-    <module>servicemix-lwcontainer-service-unit</module>
-    <module>servicemix-camel-service-unit</module>
-    <module>servicemix-eip-service-unit</module>
-    <module>servicemix-embedded-simple</module>
-    <module>servicemix-ode-service-unit</module>
-    <module>servicemix-jsr181-annotated-service-unit</module>
-    <module>servicemix-saxon-xquery-service-unit</module>
-    <module>servicemix-saxon-xslt-service-unit</module>
-    <module>servicemix-bean-service-unit</module>
-    <module>servicemix-drools-service-unit</module>
-    <module>servicemix-cxf-bc-service-unit</module>
-    <module>servicemix-cxf-se-service-unit</module>
-    <module>servicemix-cxf-se-wsdl-first-service-unit</module>
-    <module>servicemix-osworkflow-service-unit</module>
-    <module>servicemix-mail-service-unit</module>
-    <module>servicemix-scripting-service-unit</module>
-    <module>servicemix-script-service-unit</module>
-    <module>servicemix-snmp-service-unit</module>
-    <module>servicemix-validation-service-unit</module>
-    <module>servicemix-quartz-service-unit</module>
-    <module>servicemix-smpp-provider-service-unit</module>
-    <module>servicemix-smpp-consumer-service-unit</module>
-    <module>servicemix-exec-service-unit</module>
-    <module>servicemix-archetype-catalog</module>
-    <module>servicemix-osgi-camel-archetype</module>
-    <module>servicemix-osgi-cxf-code-first-archetype</module>
-    <module>servicemix-osgi-cxf-wsdl-first-archetype</module>
-    <module>servicemix-project-root</module>
-    <module>servicemix-archetypes-itests</module>
-  </modules>
+    <properties>
+        <components.version>2010.01</components.version>
+        <jbi-maven-plugin.version>4.3</jbi-maven-plugin.version>
+        <maven-bundle-plugin.version>2.0.1</maven-bundle-plugin.version>
+        <junit.version>4.7</junit.version>
+        <servicemix.version>3.3.2</servicemix.version>
+        <commons-logging.version>1.1.1</commons-logging.version>
+        <camel.version>2.2.0</camel.version>
+        <cxf.version>2.2.6</cxf.version>
+        <servicemix.specs.version>1.4.0</servicemix.specs.version>
+        <servicemix-utils.version>1.2.0</servicemix-utils.version>
+    </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.servicemix.specs</groupId>
+                <artifactId>org.apache.servicemix.specs.jbi-api-1.0</artifactId>
+                <version>${servicemix.specs.version}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-utils</artifactId>
+                <version>${servicemix-utils.version}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-core</artifactId>
+                <version>${servicemix.version}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-shared</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-bean</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-camel</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-cxf-bc</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-cxf-se</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-eip</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-ftp</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-http</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-jms</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-jsr181</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-lwcontainer</artifactId>
+                <version>${servicemix.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-mail</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-saxon</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-scripting</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-script</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-validation</artifactId>
+                <version>${components.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-  <properties>
-    <components.version>2010.01</components.version>
-    <jbi-maven-plugin.version>4.3</jbi-maven-plugin.version>
-    <maven-bundle-plugin.version>2.0.1</maven-bundle-plugin.version>
-    <servicemix.version>3.3.1</servicemix.version>
-    <servicemix-specs.version>1.4.0</servicemix-specs.version>
-    <servicemix-utils.version>1.2.0</servicemix-utils.version>
-    <geronimo-specs.version>1.1.1</geronimo-specs.version>
-    <xbean.version>3.4.3</xbean.version>
-    <camel.version>2.2.0</camel.version>
-    <cxf.version>2.2.6</cxf.version>
-    <xfire.version>1.2.5</xfire.version>
-    <activemq.version>5.3.0</activemq.version>
-    <jaxb.version>2.1</jaxb.version>
-    <jaxws.version>2.1-1</jaxws.version>
-    <geronimo.wsmetadata.version>1.1.2</geronimo.wsmetadata.version>
-    <junit.version>4.5</junit.version>
-  </properties>
+	<modules>
+		<module>servicemix-binding-component</module>
+		<module>servicemix-service-engine</module>
+		
+		<module>servicemix-service-unit</module>
+		<module>servicemix-shared-library</module>
+        <module>servicemix-service-assembly</module>
+        <module>servicemix-embedded-simple</module>
+		
+		<module>servicemix-bean-service-unit</module>
+		<module>servicemix-camel-service-unit</module>
+		<module>servicemix-cxf-bc-consumer-service-unit</module>
+		<module>servicemix-cxf-bc-provider-service-unit</module>
+		<module>servicemix-cxf-se-service-unit</module>
+		<module>servicemix-cxf-se-wsdl-first-service-unit</module>
+		<module>servicemix-drools-service-unit</module>
+		<module>servicemix-eip-service-unit</module>
+		<module>servicemix-exec-service-unit</module>
+		<module>servicemix-file-poller-service-unit</module>
+		<module>servicemix-file-sender-service-unit</module>
+		<module>servicemix-ftp-poller-service-unit</module>
+		<module>servicemix-ftp-sender-service-unit</module>
+		<module>servicemix-http-consumer-service-unit</module>
+		<module>servicemix-http-soap-consumer-service-unit</module>
+		<module>servicemix-http-provider-service-unit</module>
+		<module>servicemix-http-soap-provider-service-unit</module>
+		<module>servicemix-jms-consumer-service-unit</module>
+		<!-- <module>servicemix-jms-soap-consumer-service-unit</module> -->
+		<!-- <module>servicemix-jms-jca-consumer-service-unit</module> -->
+		<module>servicemix-jms-provider-service-unit</module>
+		<!-- <module>servicemix-jms-soap-provider-service-unit</module> -->
+		<module>servicemix-jsr181-annotated-service-unit</module>
+		<module>servicemix-jsr181-wsdl-first-service-unit</module>
+		<module>servicemix-lwcontainer-service-unit</module>
+		<module>servicemix-mail-poller-service-unit</module>
+		<module>servicemix-mail-sender-service-unit</module>
+		<module>servicemix-ode-service-unit</module>
+		<module>servicemix-osworkflow-service-unit</module>
+		<module>servicemix-quartz-cron-trigger-service-unit</module>
+		<module>servicemix-quartz-simple-trigger-service-unit</module>
+		<module>servicemix-quartz-custom-marshaler-service-unit</module>
+		<module>servicemix-saxon-xquery-service-unit</module>
+		<module>servicemix-saxon-xslt-service-unit</module>
+		<module>servicemix-script-service-unit</module>
+		<module>servicemix-scripting-service-unit</module>
+		<module>servicemix-smpp-consumer-service-unit</module>
+		<module>servicemix-smpp-provider-service-unit</module>
+		<module>servicemix-snmp-poller-service-unit</module>
+		<module>servicemix-snmp-trap-consumer-service-unit</module>
+		<module>servicemix-validation-service-unit</module>
+		<module>servicemix-vfs-poller-service-unit</module>
+		<module>servicemix-vfs-sender-service-unit</module>
+		<!-- <module>servicemix-wsn2005-subscribe-service-unit</module> -->
+		<!-- <module>servicemix-wsn2005-pull-endpoint-->
+		<!-- <module>servicemix-xmpp-group-chat-service-unit</module> -->
+		<!-- <module>servicemix-xmpp-private-chat-service-unit</module> -->
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.servicemix</groupId>
-        <artifactId>servicemix-build</artifactId>
-        <version>1.0</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <inherited>true</inherited>
-        <groupId>org.apache.servicemix.tooling</groupId>
-        <artifactId>res-maven-plugin</artifactId>
-        <version>3.2.1</version>
-        <configuration>
-          <inputDirectory>${basedir}/src/main/resources</inputDirectory>
-          <outputDirectory>${basedir}/target/classes</outputDirectory>
-          <filters>
-            <!-- Don't like these bits.. archetypes should not be tied to specific versions if possible -->
-            <components.version>${components.version}</components.version>
-            <jbi-maven-plugin.version>${jbi-maven-plugin.version}</jbi-maven-plugin.version>
-            <maven-bundle-plugin.version>${maven-bundle-plugin.version}</maven-bundle-plugin.version>
-            <servicemix.version>${servicemix.version}</servicemix.version>
-            <servicemix-specs.version>${servicemix-specs.version}</servicemix-specs.version>
-            <geronimo-specs.version>${geronimo-specs.version}</geronimo-specs.version>
-            <xbean.version>${xbean.version}</xbean.version>
-            <camel.version>${camel.version}</camel.version>
-            <cxf.version>${cxf.version}</cxf.version>
-            <xfire.version>${xfire.version}</xfire.version>
-            <activemq.version>${activemq.version}</activemq.version>
-            <jaxb.version>${jaxb.version}</jaxb.version>
-            <jaxws.version>${jaxws.version}</jaxws.version>
-            <geronimo.wsmetadata.version>${geronimo.wsmetadata.version}</geronimo.wsmetadata.version>
-            <junit.version>${junit.version}</junit.version>
-          </filters>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>resources</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
+        <!-- <module>servicemix-bundle-osgi</module> -->		
+		<module>servicemix-camel-osgi-bundle</module>
+		<module>servicemix-cxf-code-first-osgi-bundle</module>
+		<module>servicemix-cxf-wsdl-first-osgi-bundle</module>
+		
+		<module>servicemix-archetype-catalog</module>
+		
+		<module>servicemix-project-root</module>
+		
+		<!-- Commented for now  
+		<module>servicemix-archetypes-itests</module>
+		-->
+	</modules>
 
-  <profiles>
-    <profile>
-      <id>release</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-release-plugin</artifactId>
-            <version>2.0-beta-7</version>
-            <configuration>
-              <preparationGoals>clean,verify,install</preparationGoals>
-              <autoVersionSubmodules>true</autoVersionSubmodules>
-            </configuration>
-          </plugin>
-          <!-- We want a source jar -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-            <version>2.0.4</version>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>jar</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-          <!-- We want the JavaDoc JAR published with the release -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <version>2.4</version>
-            <inherited>true</inherited>
-            <configuration>
-              <source>1.5</source>
-            </configuration>
-            <executions>
-              <execution>
-                <id>attach-javadocs</id>
-                <goals>
-                  <goal>jar</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-          <!-- We want to sign the artifact, the POM, and all attached artifacts -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.0-alpha-4</version>
-            <inherited>true</inherited>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-          <!-- We want to deploy the artifact to a staging location for perusal -->
-          <plugin>
-            <inherited>true</inherited>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-deploy-plugin</artifactId>
-            <version>2.3</version>
-            <configuration>
-              <altDeploymentRepository>${deploy.altRepository}</altDeploymentRepository>
-              <updateReleaseInfo>true</updateReleaseInfo>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.servicemix</groupId>
+				<artifactId>servicemix-build</artifactId>
+				<version>1.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<inherited>true</inherited>
+				<groupId>org.apache.servicemix.tooling</groupId>
+				<artifactId>res-maven-plugin</artifactId>
+				<version>3.2.1</version>
+				<configuration>
+					<inputDirectory>${basedir}/src/main/resources</inputDirectory>
+					<outputDirectory>${basedir}/target/classes</outputDirectory>
+					<filters>
+						<!--
+							Don't like these bits.. archetypes should not be tied to specific
+							versions if possible
+						-->
+						<components.version>${components.version}</components.version>
+						<jbi-maven-plugin.version>${jbi-maven-plugin.version}</jbi-maven-plugin.version>
+						<maven-bundle-plugin.version>${maven-bundle-plugin.version}</maven-bundle-plugin.version>
+						<servicemix.version>${servicemix.version}</servicemix.version>
+						<servicemix-specs.version>${servicemix-specs.version}</servicemix-specs.version>
+						<geronimo-specs.version>${geronimo-specs.version}</geronimo-specs.version>
+						<xbean.version>${xbean.version}</xbean.version>
+						<camel.version>${camel.version}</camel.version>
+						<cxf.version>${cxf.version}</cxf.version>
+						<xfire.version>${xfire.version}</xfire.version>
+						<activemq.version>${activemq.version}</activemq.version>
+						<jaxb.version>${jaxb.version}</jaxb.version>
+						<jaxws.version>${jaxws.version}</jaxws.version>
+						<geronimo.wsmetadata.version>${geronimo.wsmetadata.version}</geronimo.wsmetadata.version>
+						<junit.version>${junit.version}</junit.version>
+					</filters>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>resources</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-release-plugin</artifactId>
+						<configuration>
+							<preparationGoals>clean,verify,install</preparationGoals>
+							<autoVersionSubmodules>true</autoVersionSubmodules>
+						</configuration>
+					</plugin>
+					<!-- We want a source jar -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- We want the JavaDoc JAR published with the release -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<inherited>true</inherited>
+						<configuration>
+							<source>1.5</source>
+						</configuration>
+						<executions>
+							<execution>
+								<id>attach-javadocs</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!--
+						We want to sign the artifact, the POM, and all attached artifacts
+					-->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<inherited>true</inherited>
+						<executions>
+							<execution>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!--
+						We want to deploy the artifact to a staging location for perusal
+					-->
+					<plugin>
+						<inherited>true</inherited>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-deploy-plugin</artifactId>
+						<configuration>
+							<altDeploymentRepository>${deploy.altRepository}</altDeploymentRepository>
+							<updateReleaseInfo>true</updateReleaseInfo>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>

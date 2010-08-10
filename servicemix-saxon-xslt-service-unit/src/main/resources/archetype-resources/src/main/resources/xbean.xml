@@ -24,19 +24,19 @@
        xsi:schemaLocation="http://servicemix.apache.org/saxon/1.0 http://servicemix.apache.org/schema/servicemix-saxon-@{components-version}.xsd
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
-  <!-- START SNIPPET: xslt --> 
-  <saxon:xslt service="replaceMe:xslt" endpoint="endpoint"
+  <!--  START SNIPPET: saxon-xslt -->
+  <saxon:xslt service="replaceMe:serviceName" endpoint="saxon-xslt"
               resource="classpath:transform.xsl" />
-  <!-- END SNIPPET: xslt --> 
+  <!--  END SNIPPED: saxon-xslt -->           
   
-  <!-- START SNIPPET: xslt-dynamic -->
-  <saxon:xslt service="replaceMe:xslt-dynamic" endpoint="endpoint">
+  <!-- START SNIPPET: saxon-xslt-dynamic -->
+  <saxon:xslt service="replaceMe:serviceName" endpoint="saxon-xslt-dynamic">
     <saxon:expression>
       <bean class="org.apache.servicemix.expression.PropertyExpression">
         <property name="property" value="xslt.source" />
       </bean>
     </saxon:expression>
   </saxon:xslt>
-  <!-- END SNIPPET: xslt-dynamic -->
+  <!-- END SNIPPET: saxon-xslt-dynamic -->
 
 </beans>

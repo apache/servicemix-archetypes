@@ -18,7 +18,7 @@
 
 -->
 <archetype>
-  <id>servicemix-su</id>
+  <id>servicemix-saxon-xquery-service-unit</id>
   <resources>
     <resource>src/main/resources/xbean.xml</resource>
     <resource>src/main/resources/query.xq</resource>

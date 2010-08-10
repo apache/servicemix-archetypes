@@ -18,5 +18,5 @@
 
 -->
 <archetype>
-  <id>servicemix-su</id>
+  <id>servicemix-shared-library</id>
 </archetype>

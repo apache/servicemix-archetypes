@@ -23,10 +23,12 @@
        xsi:schemaLocation="http://servicemix.apache.org/cxfse/1.0 http://servicemix.apache.org/schema/servicemix-cxfse-@{components-version}.xsd
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
+    <!-- BEGIN SNIPPET: cxfse-pojo -->
     <cxfse:endpoint>
         <cxfse:pojo>
           <bean class="${packageName}.ExampleService" />
         </cxfse:pojo>
     </cxfse:endpoint>
+    <!-- END SNIPPET: cxfse-pojo -->
 
 </beans>

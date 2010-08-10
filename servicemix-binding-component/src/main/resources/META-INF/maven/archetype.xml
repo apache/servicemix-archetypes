@@ -18,7 +18,7 @@
 
 -->
 <archetype>
-  <id>servicemix-se</id>
+  <id>servicemix-binding-component</id>
   <sources>
     <source>src/main/java/MyComponent.java</source>
     <source>src/main/java/MyConsumerEndpoint.java</source>
