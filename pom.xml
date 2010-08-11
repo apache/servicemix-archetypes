@@ -48,6 +48,7 @@
         <geronimo-jta.specs.version>1.1.1</geronimo-jta.specs.version>
         <servicemix.version>3.3.2</servicemix.version>
         <commons-logging.version>1.1.1</commons-logging.version>
+        <activemq.version>5.3.0</activemq.version>
         <camel.version>2.2.0</camel.version>
         <cxf.version>2.2.6</cxf.version>
         <servicemix.specs.version>1.4.0</servicemix.specs.version>
@@ -184,10 +185,10 @@
 		<module>servicemix-http-provider-service-unit</module>
 		<module>servicemix-http-soap-provider-service-unit</module>
 		<module>servicemix-jms-consumer-service-unit</module>
-		<!-- <module>servicemix-jms-soap-consumer-service-unit</module> -->
-		<!-- <module>servicemix-jms-jca-consumer-service-unit</module> -->
+		<module>servicemix-jms-soap-consumer-service-unit</module>
+		<module>servicemix-jms-jca-consumer-service-unit</module>
 		<module>servicemix-jms-provider-service-unit</module>
-		<!-- <module>servicemix-jms-soap-provider-service-unit</module> -->
+		<module>servicemix-jms-soap-provider-service-unit</module>
 		<module>servicemix-jsr181-annotated-service-unit</module>
 		<module>servicemix-jsr181-wsdl-first-service-unit</module>
 		<module>servicemix-lwcontainer-service-unit</module>
