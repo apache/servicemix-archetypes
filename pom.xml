@@ -44,6 +44,8 @@
         <jbi-maven-plugin.version>4.3</jbi-maven-plugin.version>
         <maven-bundle-plugin.version>2.0.1</maven-bundle-plugin.version>
         <junit.version>4.7</junit.version>
+        <xbean.version>3.4.1</xbean.version>
+        <geronimo-jta.specs.version>1.1.1</geronimo-jta.specs.version>
         <servicemix.version>3.3.2</servicemix.version>
         <commons-logging.version>1.1.1</commons-logging.version>
         <camel.version>2.2.0</camel.version>
@@ -221,9 +223,11 @@
 		
 		<module>servicemix-project-root</module>
 		
-		<!-- Commented for now  
-		<module>servicemix-archetypes-itests</module>
-		-->
+		<!-- 
+		  Disabled for now as maven-embedder is not provided for maven 2.2.1
+		  and jbi-maven-plugin 4.3 needs at least maven 2.2.1.
+        -->
+		<!-- <module>servicemix-archetypes-itests</module> -->
 	</modules>
 
 	<build>
@@ -257,8 +261,8 @@
 						<jbi-maven-plugin.version>${jbi-maven-plugin.version}</jbi-maven-plugin.version>
 						<maven-bundle-plugin.version>${maven-bundle-plugin.version}</maven-bundle-plugin.version>
 						<servicemix.version>${servicemix.version}</servicemix.version>
-						<servicemix-specs.version>${servicemix-specs.version}</servicemix-specs.version>
-						<geronimo-specs.version>${geronimo-specs.version}</geronimo-specs.version>
+						<servicemix.specs.version>${servicemix.specs.version}</servicemix.specs.version>
+						<geronimo-jta.specs.version>${geronimo-jta.specs.version}</geronimo-jta.specs.version>
 						<xbean.version>${xbean.version}</xbean.version>
 						<camel.version>${camel.version}</camel.version>
 						<cxf.version>${cxf.version}</cxf.version>
