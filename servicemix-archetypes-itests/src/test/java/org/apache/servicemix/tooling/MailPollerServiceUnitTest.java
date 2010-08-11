@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class MailServiceUnitTest extends AbstractArchetypeTest {
+public class MailPollerServiceUnitTest extends AbstractArchetypeTest {
 
-    public void testMailServiceUnit() throws Exception {
-        testServiceMixArchetype("mail-service-unit");
+    public void testMailPollerServiceUnit() throws Exception {
+        testServiceMixArchetype("mail-poller-service-unit");
     }
 
 }

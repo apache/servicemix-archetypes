@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class CxfBCServiceUnitTest extends AbstractArchetypeTest {
-
-    public void testCxfBCServiceUnit() throws Exception {
-        testServiceMixArchetype("cxf-bc-service-unit");
+public class QuartzSimpleTriggerServiceUnitTest extends AbstractArchetypeTest {
+    
+    public void testQuartzSimpleTriggerServiceUnit() throws Exception {
+        testServiceMixArchetype("quartz-simple-trigger-service-unit");
     }
 
 }
