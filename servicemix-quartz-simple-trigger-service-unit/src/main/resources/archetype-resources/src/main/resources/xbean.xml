@@ -16,7 +16,7 @@
         License.
     -->
 
-<beans xmlns:scripting="http://servicemix.apache.org/quartz/1.0"
+<beans xmlns:quartz="http://servicemix.apache.org/quartz/1.0"
     xmlns:replaceMe="http://servicemix.apache.org/replaceMe" xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://servicemix.apache.org/quartz/1.0 http://servicemix.apache.org/schema/servicemix-quartz-@{components-version}.xsd
