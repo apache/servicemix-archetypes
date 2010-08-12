@@ -211,11 +211,12 @@
 		<module>servicemix-vfs-poller-service-unit</module>
 		<module>servicemix-vfs-sender-service-unit</module>
 		<!-- <module>servicemix-wsn2005-subscribe-service-unit</module> -->
-		<!-- <module>servicemix-wsn2005-pull-endpoint-->
+		<!-- <module>servicemix-wsn2005-pull-point-service-unit-->
+		<!-- <module>servicemix-wsn2005-notify-service-unit -->
 		<!-- <module>servicemix-xmpp-group-chat-service-unit</module> -->
 		<!-- <module>servicemix-xmpp-private-chat-service-unit</module> -->
 
-        <!-- <module>servicemix-bundle-osgi</module> -->		
+        <module>servicemix-osgi-bundle</module>		
 		<module>servicemix-camel-osgi-bundle</module>
 		<module>servicemix-cxf-code-first-osgi-bundle</module>
 		<module>servicemix-cxf-wsdl-first-osgi-bundle</module>
@@ -224,11 +225,7 @@
 		
 		<module>servicemix-project-root</module>
 		
-		<!-- 
-		  Disabled for now as maven-embedder is not provided for maven 2.2.1
-		  and jbi-maven-plugin 4.3 needs at least maven 2.2.1.
-        -->
-		<!-- <module>servicemix-archetypes-itests</module> -->
+		<module>servicemix-archetypes-itests</module>
 	</modules>
 
 	<build>

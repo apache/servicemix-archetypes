@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!--
 
@@ -36,97 +37,31 @@
 			<version>1.1</version>
 		</dependency>
 		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.maven</groupId>
 			<artifactId>maven-embedder</artifactId>
 			<version>2.0.4</version>
 		</dependency>
 		<dependency>
-		  <groupId>org.apache.maven</groupId>
-		  <artifactId>maven-project</artifactId>
-		  <version>2.2.1</version>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-project</artifactId>
+			<version>2.2.1</version>
 		</dependency>
 		<dependency>
-		  <groupId>org.apache.maven</groupId>
-		  <artifactId>maven-core</artifactId>
-		  <version>2.2.1</version>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-core</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-toolchain</artifactId>
+			<version>1.0</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.servicemix.specs</groupId>
-			<artifactId>org.apache.servicemix.specs.jbi-api-1.0</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-shared</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-utils</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-bean</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-camel</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-cxf-bc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-cxf-se</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-eip</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-ftp</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-http</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-jms</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-jsr181</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-lwcontainer</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-mail</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-saxon</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-scripting</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-script</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix</groupId>
-			<artifactId>servicemix-validation</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
 			<artifactId>servicemix-binding-component</artifactId>
@@ -313,12 +248,13 @@
 			<version>${pom.version}</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-archetype-plugin</artifactId>
+				<version>2.0-alpha-5</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -339,5 +275,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>

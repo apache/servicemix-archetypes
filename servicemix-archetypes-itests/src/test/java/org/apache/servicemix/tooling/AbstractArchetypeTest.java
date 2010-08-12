@@ -22,11 +22,11 @@ import java.lang.reflect.Field;
 import java.net.URL;
 import java.util.Collections;
 import java.util.Properties;
-import java.util.UUID;
 
 import junit.framework.TestCase;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.jackrabbit.uuid.UUID;
 import org.apache.maven.artifact.manager.WagonManager;
 import org.apache.maven.cli.ConsoleDownloadMonitor;
 import org.apache.maven.embedder.MavenEmbedder;
