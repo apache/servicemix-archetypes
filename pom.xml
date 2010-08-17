@@ -169,52 +169,32 @@
 		
 		<module>servicemix-bean-service-unit</module>
 		<module>servicemix-camel-service-unit</module>
-		<module>servicemix-cxf-bc-consumer-service-unit</module>
-		<module>servicemix-cxf-bc-provider-service-unit</module>
+		<module>servicemix-cxf-bc-service-unit</module>
 		<module>servicemix-cxf-se-service-unit</module>
 		<module>servicemix-cxf-se-wsdl-first-service-unit</module>
 		<module>servicemix-drools-service-unit</module>
 		<module>servicemix-eip-service-unit</module>
 		<module>servicemix-exec-service-unit</module>
-		<module>servicemix-file-poller-service-unit</module>
-		<module>servicemix-file-sender-service-unit</module>
-		<module>servicemix-ftp-poller-service-unit</module>
-		<module>servicemix-ftp-sender-service-unit</module>
-		<module>servicemix-http-consumer-service-unit</module>
-		<module>servicemix-http-soap-consumer-service-unit</module>
-		<module>servicemix-http-provider-service-unit</module>
-		<module>servicemix-http-soap-provider-service-unit</module>
-		<module>servicemix-jms-consumer-service-unit</module>
-		<module>servicemix-jms-soap-consumer-service-unit</module>
-		<module>servicemix-jms-jca-consumer-service-unit</module>
-		<module>servicemix-jms-provider-service-unit</module>
-		<module>servicemix-jms-soap-provider-service-unit</module>
-		<module>servicemix-jsr181-annotated-service-unit</module>
+		<module>servicemix-file-service-unit</module>
+		<module>servicemix-ftp-service-unit</module>
+		<module>servicemix-http-service-unit</module>
+		<module>servicemix-jms-service-unit</module>
+		<module>servicemix-jsr181-service-unit</module>
 		<module>servicemix-jsr181-wsdl-first-service-unit</module>
 		<module>servicemix-lwcontainer-service-unit</module>
-		<module>servicemix-mail-poller-service-unit</module>
-		<module>servicemix-mail-sender-service-unit</module>
+		<module>servicemix-mail-service-unit</module>
 		<module>servicemix-ode-service-unit</module>
 		<module>servicemix-osworkflow-service-unit</module>
-		<module>servicemix-quartz-cron-trigger-service-unit</module>
-		<module>servicemix-quartz-simple-trigger-service-unit</module>
-		<module>servicemix-quartz-custom-marshaler-service-unit</module>
-		<module>servicemix-saxon-xquery-service-unit</module>
-		<module>servicemix-saxon-xslt-service-unit</module>
+		<module>servicemix-quartz-service-unit</module>
+		<module>servicemix-saxon-service-unit</module>
 		<module>servicemix-script-service-unit</module>
 		<module>servicemix-scripting-service-unit</module>
-		<module>servicemix-smpp-consumer-service-unit</module>
-		<module>servicemix-smpp-provider-service-unit</module>
-		<module>servicemix-snmp-poller-service-unit</module>
-		<module>servicemix-snmp-trap-consumer-service-unit</module>
+		<module>servicemix-smpp-service-unit</module>
+		<module>servicemix-snmp-service-unit</module>
 		<module>servicemix-validation-service-unit</module>
-		<module>servicemix-vfs-poller-service-unit</module>
-		<module>servicemix-vfs-sender-service-unit</module>
-		<!-- <module>servicemix-wsn2005-subscribe-service-unit</module> -->
-		<!-- <module>servicemix-wsn2005-pull-point-service-unit-->
-		<!-- <module>servicemix-wsn2005-notify-service-unit -->
-		<!-- <module>servicemix-xmpp-group-chat-service-unit</module> -->
-		<!-- <module>servicemix-xmpp-private-chat-service-unit</module> -->
+		<module>servicemix-vfs-service-unit</module>
+		<!-- <module>servicemix-wsn2005-service-unit</module> -->
+		<!-- <module>servicemix-xmpp-service-unit</module> -->
 
         <module>servicemix-osgi-bundle</module>		
 		<module>servicemix-camel-osgi-bundle</module>
