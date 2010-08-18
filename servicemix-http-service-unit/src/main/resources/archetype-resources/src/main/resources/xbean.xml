@@ -3,30 +3,139 @@
 <beans xmlns:http="http://servicemix.apache.org/http/1.0"
 	xmlns:replaceMe="http://servicemix.apache.org/replaceMe" xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://servicemix.apache.org/http/1.0 http://servicemix.apache.org/schema/servicemix-http-@{components-version}.xsd
+	xsi:schemaLocation="
+	   http://servicemix.apache.org/http/1.0 http://servicemix.apache.org/schema/servicemix-http-@{components.version}.xsd
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
+    <!-- 
+        The ServiceMix HTTP component supports HTTP/SOAP message.
+        It supports:
+            - integration of Jetty 6
+            - highly performant and scalable using Jetty 6 continuations
+            - HTTP client using Commons HTTP Client
+            - SOAP 1.1 and 1.2
+            - MIME attachments
+            - WS-Addressing
+            - WSDL based and XBean based deployment
+            - all MEPs as consumers or providers
+            - SSL
+            - WS-Security
+    -->
+
     <!-- BEGIN SNIPPET: http-consumer -->
+    <!-- 
+        The HTTP Consumer endpoint is a server-side endpoint which exposes a service
+        in pure HTTP.
+        These endpoints receive HTTP messages, marshals it and send to the target service via the NMR.
+        
+        Attributes:
+            service                 : the endpoint service name
+            endpoint                : the endpoint name
+            interfaceName           : the endpoint interface name
+            targetService           : the target endpoint service name
+            targetEndpoint          : the target endpoint name
+            targetInterface         : the target endpoint interface name
+            targetOperation         : the operation name for the JBI exchange
+            targetUri               : the target endpoint URI
+            authMethod              : HTTP authentication method to use, eg basic
+            locationURI             : the URI where to expose the message
+            ssl                     : the SslParameters to define SSL configuration
+            marshaler               : implementation of HttpConsumerMarshaler to use
+            timeout                 : the continuation timeout
+            defaultMep              : the URI of the MEP to use (InOut by default)
+    -->
 	<http:consumer service="replaceMe:serviceName" endpoint="http-consumer"
 	    targetService="replaceMe:serviceName"
 	    targetEndpoint="targetEndpoint"
 		locationURI="http://0.0.0.0:8192/example/" />
     <!-- END SNIPPET: http-consumer -->		
     
-    <!-- BEGIN SNIPPET: http-consumer -->
+    <!-- BEGIN SNIPPET: http-soap-consumer -->
+    <!-- 
+        The HTTP SOAP Consumer endpoint is a server-side endpoint which exposes a service
+        in HTTP/SOAP.
+        These endpoints receive HTTP/SOAP messages, marshals it and send to the target service via the NMR.
+        
+        Attributes:
+            service                 : the endpoint service name
+            endpoint                : the endpoint name
+            interfaceName           : the endpoint interface name
+            targetService           : the target endpoint service name
+            targetEndpoint          : the target endpoint name
+            targetInterface         : the target endpoint interface name
+            targetOperation         : the operation name for the JBI exchange
+            targetUri               : the target endpoint URI
+            authMethod              : HTTP authentication method to use, eg basic
+            locationURI             : the URI where to expose the message
+            ssl                     : the SslParameters to define SSL configuration
+            marshaler               : implementation of HttpConsumerMarshaler to use
+            timeout                 : the continuation timeout
+            defaultMep              : the URI of the MEP to use (InOut by default)
+            wsdl                    : the WSDL will be retrieved from the given location
+            useJbiWrapper           : specifies if the endpoint expects messages to use the JBI wrapper for SOAP messages
+            validateWsdl            : specifies if the exposed WSDL should be validated or not
+            policies                : specifies the policy (Policy[]) used by the SOAP endpoint
+    -->
     <http:soap-consumer service="replaceMe:serviceName" endpoint="http-soap-consumer"
         targetService="replaceMe:serviceName"
         targetEndpoint="targetEndpoint"
         wsdl="classpath:service.wsdl"
         locationURI="http://0.0.0.0:8192/example/" />
-    <!-- END SNIPPET: http-consumer -->   
+    <!-- END SNIPPET: http-soap-consumer -->   
     
     <!-- BEGIN SNIPPET: http-provider -->
+    <!-- 
+        A provider endpoint is a client side JBI endpoint which can receive requests from the NMR and send
+        them to a given URL where the service is provided.
+        
+        Attributes:
+            service                 : the endpoint service name
+            endpoint                : the endpoint name
+            interfaceName           : the endpoint interface name
+            marshaler               : the implementation of the HttpProviderMarshaler to use
+            locationURI             : the target service URI
+            clientSoTimeout         : the client timeout
+            ssl                     : SslParameters used to specify SSL configuration
+            proxyHost               : the proxy hostname if you need to use a proxy
+            proxyPort               : the proxy port number if you need to use a proxy
+            proxyUsername           : the proxy username if you need to use a proxy
+            proxyPassword           : the proxy password if you need to use a proxy
+            gzipRequest             : if true, the request content will be gzipped and sent over the wire.
+                                      The Content-Encoding HTTP header will also be set to gzip.
+            expectGzippedResponse   : if true, the Accept-Encoding HTTP header will be set to gzip and the
+                                      response will be un-gzipped.                                      
+    -->
     <http:provider service="replaceMe:serviceName" endpoint="http-provider"
         locationURI="http://192.168.0.12:8080" />
     <!-- END SNIPPET: http-provider --> 
     
     <!-- BEGIN SNIPPET: http-provider -->
+    <!-- 
+        A provider endpoint is a client side JBI endpoint which can receive requests from the NMR and send
+        them to a given URL where the service is provided.
+        
+        Attributes:
+            service                 : the endpoint service name
+            endpoint                : the endpoint name
+            interfaceName           : the endpoint interface name
+            marshaler               : the implementation of the HttpProviderMarshaler to use
+            locationURI             : the target service URI
+            clientSoTimeout         : the client timeout
+            ssl                     : SslParameters used to specify SSL configuration
+            proxyHost               : the proxy hostname if you need to use a proxy
+            proxyPort               : the proxy port number if you need to use a proxy
+            proxyUsername           : the proxy username if you need to use a proxy
+            proxyPassword           : the proxy password if you need to use a proxy
+            gzipRequest             : if true, the request content will be gzipped and sent over the wire.
+                                      The Content-Encoding HTTP header will also be set to gzip.
+            expectGzippedResponse   : if true, the Accept-Encoding HTTP header will be set to gzip and the
+                                      response will be un-gzipped.    
+            wsdl                    : the WSDL will be retrieved from the given location
+            useJbiWrapper           : specifies if the endpoint expects messages to use the JBI wrapper for SOAP messages
+            validateWsdl            : specifies if the exposed WSDL should be validated or not
+            policies                : specifies the policy (Policy[]) used by the SOAP endpoint
+            soapAction              : the target SOAP action                                                                      
+    -->
     <http:soap-provider service="replaceMe:serviceName" endpoint="http-provider"
         wsdl="classpath:service.wsdl" />
     <!-- END SNIPPET: http-provider -->

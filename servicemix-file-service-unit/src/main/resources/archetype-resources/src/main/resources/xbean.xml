@@ -11,6 +11,8 @@
         The ServiceMix File component provides integration to the file system.
         It can be used to read and write files via URI or to periodically poll directories
         for new files.
+        
+            http://servicemix.apache.org/servicemix-file.html
     -->
 
     <!-- BEGIN SNIPPET: file-poller -->

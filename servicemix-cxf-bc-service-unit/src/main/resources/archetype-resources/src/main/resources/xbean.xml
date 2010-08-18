@@ -20,8 +20,6 @@
             - WS-RM
             - WS-Addressing
     -->
-
-    <!-- == CONSUMER ENDPOINT == -->
     
     <!-- 
         A consumer endpoint is a server side CXF endpoint that will consume
@@ -58,8 +56,6 @@
 		targetService="replaceMe:targetService"
 		targetInterface="replaceMe:targetInterface" />
     <!-- END SNIPPET: cxfbc-consumer -->
-    
-    <!-- == PROVIDER ENDPOINT == -->
     
     <!-- 
         A provider endpoint is a client side JBI endpoint which can receive requests from the NMR and send
