@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class CxfBCConsumerServiceUnitTest extends AbstractArchetypeTest {
-
-    public void testCxfBCConsumerServiceUnit() throws Exception {
-        testServiceMixArchetype("cxf-bc-consumer-service-unit");
+public class SnmpPollerServiceUnitTest extends AbstractArchetypeTest {
+    
+    public void testSnmpPollerServiceUnit() throws Exception {
+        testServiceMixArchetype("snmp-service-unit");
     }
 
 }

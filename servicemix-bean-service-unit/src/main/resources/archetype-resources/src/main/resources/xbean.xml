@@ -4,14 +4,35 @@
        xmlns:bean="http://servicemix.apache.org/bean/1.0"
        xmlns:replaceMe="http://servicemix.apache.org/replaceMe"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://servicemix.apache.org/bean/1.0 http://servicemix.apache.org/schema/servicemix-bean-@{components-version}.xsd
-       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+       xsi:schemaLocation="http://servicemix.apache.org/bean/1.0 http://servicemix.apache.org/schema/servicemix-bean-@{components.version}.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
   <!-- 
+    A bean endpoint provides integration of beans (POJOs) with the JBI bus to make it easy
+    to use POJOs to process JBI messages exchanges.
+    Like in a MDB in JEE, a POJO will receive a message from the NMR and process it
+    in any way it likes.
+    
+    See the bean component wiki page:
+    
+        http://servicemix.apache.org/servicemix-bean.html
+  -->
+
+  <!-- 
+    The bean endpoint allows to set a bean or beanName. The bean will create a single
+    instance of the POJO per endpoint whereas the beanName will create an instance
+    per request (message exchange).
+  
     Attributes:
         service         : the bean endpoint service name
         endpoint        : the bean endpoint name
-        bean            : the POJO bean used by the endpoint     : 
+        bean            : the POJO bean used by the endpoint
+        beanName        : the POJO bean name used by the endpoint 
+  -->
+  
+  <!-- BEGIN SNIPPET: bean -->
+  <!-- 
+    Simple endpoint which exposed myBean into the NMR.
   -->
   <bean:endpoint service="replaceMe:serviceName" endpoint="bean" bean="#myBean"/>
 
@@ -19,5 +40,6 @@
     The POJO used by the bean endpoint. 
   -->
   <bean id="myBean" class="${packageName}.MyBean"/>
+  <!-- END SNIPPET: bean -->
 
 </beans>

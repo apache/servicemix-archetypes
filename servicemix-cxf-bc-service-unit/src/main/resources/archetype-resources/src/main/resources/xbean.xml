@@ -7,12 +7,77 @@
 	xsi:schemaLocation="http://servicemix.apache.org/cxfbc/1.0 http://servicemix.apache.org/schema/servicemix-cxfbc-@{components-version}.xsd
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
+    <!-- 
+        Service CXF-BC component uses Apache CXF internally to work with HTTP/SOAP or JMS/SOAP messages.
+        
+        It supports:
+            - SOAP 1.1 and 1.2
+            - MIME attachments
+            - all MEPs as consumers or providers
+            - SSL
+            - WS-Security
+            - WS-Policy
+            - WS-RM
+            - WS-Addressing
+    -->
+
+    <!-- == CONSUMER ENDPOINT == -->
+    
+    <!-- 
+        A consumer endpoint is a server side CXF endpoint that will consume
+        plain HTTP+SOAP requests and send them into the NMR to a given JBI
+        endpoint, which is called a proxied endpoint.
+        
+        Attributes:
+            wsdl                    : the WSDL will be retrieved from the given location
+            service                 : the service name of the proxied endpoint
+            endpoint                : the endpoint name of the proxied endpoint
+            interfaceName           : the interface name of the proxied endpoint
+            targetService           : the service name of the target endpoint
+            targetEndpoint          : the endpoint name of the target endpoint
+            targetInterfaceName     : the interface name of the target endpoint
+            busCfg                  : the Spring configuration file used for CXF bus initialization
+            mtomEnabled             : enable MTOM/attachment support
+            synchronous             : specifies if the endpoint expects send message exchange by sendSync method
+            useJBIWrapper           : specifies if the endpoint expects messages to use the JBI wrapper for SOAP messages
+            useSOAPEnvelope         : specifies if the endpoint expects SOAP messages when useJBIWrapper is false
+            locationURI             : specifies the HTTP address to which requests are sent. This value will override any value specified in the WSDL.
+            timeout                 : specifies the interval for which the endpoint will wait for a response. This is specified in seconds.
+            x509                    : specifies if the endpoint uses X.509 Certificate to do the authentication. By default, the Authorization and Anthentication
+                                      is delegated to ServiceMix JAASAuthenticationService with WS-Security UsernameToken. If this flag is set to true,
+                                      X.509 Certificate is checked to run authentication.
+            delegateToJaas          : specifies if the endpoint delegates to JAASAuthenticationService to do the authentication (true by default).
+            schemaValidationEnabled : specifies if the endpoint use schema validation for the incoming/outgoing message.
+            properties              : sets arbitrary properties that are added to the CXF context at the endpoint level.                                      
+    -->
+
     <!-- BEGIN SNIPPET: cxfbc-consumer -->
+    
 	<cxfbc:consumer wsdl="classpath:service.wsdl"
 		targetEndpoint="replaceMe:targetEndpoint" 
 		targetService="replaceMe:targetService"
 		targetInterface="replaceMe:targetInterface" />
     <!-- END SNIPPET: cxfbc-consumer -->
+    
+    <!-- == PROVIDER ENDPOINT == -->
+    
+    <!-- 
+        A provider endpoint is a client side JBI endpoint which can receive requests from the NMR and send
+        them to a given URL where the service is provided.
+        
+        Attributes:
+            wsdl                    : the WSDL will be retrieved from the given location
+            service                 : the service name of the exposed endpoint
+            endpoint                : the endpoint name of the exposed endpoint
+            interfaceName           : the interface name of the exposed endpoint
+            locationURI             : the HTTP URL of the target service (external)
+            bugCfg                  : the Spring configuration file used for CXF bus initialization
+            mtomEnabled             : enable MTOM/attachment support
+            useJBIWrapper           : specifies if the endpoint expects messages to use the JBI wrapper for SOAP messages
+            useSOAPEnvelope         : specifies if the endpoint expects SOAP messages when useJBIWrapper is false
+            schemaValidationEnabled : specifies if the endpoint use schema validation for the incoming/outgoing message
+            properties              : sets arbitrary properties that are added to the CXF content at endpoint level
+    -->
     
     <!-- BEGIN SNIPPET: cxfbc-provider -->
     <cxfbc:provider wsdl="classpath:service.wsdl"

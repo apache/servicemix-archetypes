@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class QuartzSimpleTriggerServiceUnitTest extends AbstractArchetypeTest {
+public class SmppConsumerServiceUnitTest extends AbstractArchetypeTest {
     
-    public void testQuartzSimpleTriggerServiceUnit() throws Exception {
-        testServiceMixArchetype("quartz-simple-trigger-service-unit");
+    public void testSmppConsumerServiceUnit() throws Exception {
+        testServiceMixArchetype("smpp-service-unit");
     }
 
 }

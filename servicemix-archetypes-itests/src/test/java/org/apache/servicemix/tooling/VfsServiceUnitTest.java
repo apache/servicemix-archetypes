@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class SmppConsumerServiceUnitTest extends AbstractArchetypeTest {
+public class VfsPollerServiceUnitTest extends AbstractArchetypeTest {
     
-    public void testSmppConsumerServiceUnit() throws Exception {
-        testServiceMixArchetype("smpp-consumer-service-unit");
+    public void testVfsPollerServiceUnit() throws Exception {
+        testServiceMixArchetype("vfs-service-unit");
     }
 
 }

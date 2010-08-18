@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class HttpSoapProviderServiceUnitTest extends AbstractArchetypeTest {
+public class QuartzCronTriggerServiceUnitTest extends AbstractArchetypeTest {
     
-    public void testHttpSoapProviderServiceUnit() throws Exception {
-        testServiceMixArchetype("http-soap-provider-service-unit");
+    public void testQuartzCronTriggerServiceUnit() throws Exception {
+        testServiceMixArchetype("quartz-service-unit");
     }
 
 }

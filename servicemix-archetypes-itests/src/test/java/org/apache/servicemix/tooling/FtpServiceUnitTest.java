@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class SmppProviderServiceUnitTest extends AbstractArchetypeTest {
-    
-    public void testSmppProviderServiceUnit() throws Exception {
-        testServiceMixArchetype("smpp-provider-service-unit");
+public class FtpPollerServiceUnitTest extends AbstractArchetypeTest {
+
+    public void testFtpPollerServiceUnit() throws Exception {
+        testServiceMixArchetype("ftp-service-unit");
     }
 
 }

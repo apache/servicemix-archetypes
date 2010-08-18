@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class QuartzCustomMarshalerServiceUnitTest extends AbstractArchetypeTest {
-    
-    public void testQuartzCustomMarshalerServiceUnit() throws Exception {
-        testServiceMixArchetype("quartz-custom-marshaler-service-unit");
+public class MailPollerServiceUnitTest extends AbstractArchetypeTest {
+
+    public void testMailPollerServiceUnit() throws Exception {
+        testServiceMixArchetype("mail-service-unit");
     }
 
 }

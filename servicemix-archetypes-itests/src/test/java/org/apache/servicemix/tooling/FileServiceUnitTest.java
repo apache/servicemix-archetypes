@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class SnmpTrapConsumerServiceUnitTest extends AbstractArchetypeTest {
-    
-    public void testSnmpTrapConsumerServiceUnit() throws Exception {
-        testServiceMixArchetype("snmp-trap-consumer-service-unit");
+public class FilePollerServiceUnitTest extends AbstractArchetypeTest {
+
+    public void testFilePollerServiceUnit() throws Exception {
+        testServiceMixArchetype("file-service-unit");
     }
 
 }

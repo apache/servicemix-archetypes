@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class FtpPollerServiceUnitTest extends AbstractArchetypeTest {
+public class Jsr181AnnotatedServiceUnitTest extends AbstractArchetypeTest {
 
-    public void testFtpPollerServiceUnit() throws Exception {
-        testServiceMixArchetype("ftp-poller-service-unit");
+    public void testJsr181AnnotatedServiceUnit() throws Exception {
+        testServiceMixArchetype("jsr181-service-unit");
     }
 
 }

@@ -16,10 +16,10 @@
  */
 package org.apache.servicemix.tooling;
 
-public class HttpSoapConsumerServiceUnitTest extends AbstractArchetypeTest {
-    
-    public void testHttpSoapConsumerServiceUnit() throws Exception {
-        testServiceMixArchetype("http-soap-consumer-service-unit");
+public class JmsConsumerServiceUnitTest extends AbstractArchetypeTest {
+
+    public void testJmsConsumerServiceUnit() throws Exception {
+        testServiceMixArchetype("jms-service-unit");
     }
 
 }
