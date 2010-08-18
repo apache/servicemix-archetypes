@@ -9,7 +9,6 @@
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}</version>
 	<name>Apache ServiceMix :: Embedded Simple</name>
-	<url>http://www.myorganization.org</url>
 
 	<dependencies>
 		<dependency>
