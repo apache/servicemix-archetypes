@@ -155,6 +155,11 @@
                 <artifactId>servicemix-validation</artifactId>
                 <version>${components.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix</groupId>
+                <artifactId>servicemix-xmpp</artifactId>
+                <version>${components.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -194,7 +199,7 @@
 		<module>servicemix-validation-service-unit</module>
 		<module>servicemix-vfs-service-unit</module>
 		<!-- <module>servicemix-wsn2005-service-unit</module> -->
-		<!-- <module>servicemix-xmpp-service-unit</module> -->
+		<module>servicemix-xmpp-service-unit</module>
 
         <module>servicemix-osgi-bundle</module>		
 		<module>servicemix-camel-osgi-bundle</module>

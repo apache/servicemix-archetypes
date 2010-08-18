@@ -18,16 +18,16 @@
         License.
     -->
     
+    <modelVersion>4.0.0</modelVersion>
+    
     <parent>
         <groupId>org.apache.servicemix</groupId>
         <artifactId>archetypes</artifactId>
         <version>2010.01-SNAPSHOT</version>
     </parent>
-
-    <modelVersion>4.0.0</modelVersion>
     
     <groupId>org.apache.servicemix.tooling</groupId>
-    <artifactId>servicemix-smpp-service-unit</artifactId>
-    <name>Apache ServiceMix :: Archetypes :: SMPP Service Unit</name>
+    <artifactId>servicemix-xmpp-service-unit</artifactId>
+    <name>Apache ServiceMix :: Archetypes :: XMPP Service Unit</name>
 
 </project>

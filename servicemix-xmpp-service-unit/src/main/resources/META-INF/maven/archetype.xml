@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <!--
 
         Licensed to the Apache Software Foundation (ASF) under one or more
@@ -17,17 +15,9 @@
         the specific language governing permissions and limitations under the
         License.
     -->
-    
-    <parent>
-        <groupId>org.apache.servicemix</groupId>
-        <artifactId>archetypes</artifactId>
-        <version>2010.01-SNAPSHOT</version>
-    </parent>
-
-    <modelVersion>4.0.0</modelVersion>
-    
-    <groupId>org.apache.servicemix.tooling</groupId>
-    <artifactId>servicemix-smpp-service-unit</artifactId>
-    <name>Apache ServiceMix :: Archetypes :: SMPP Service Unit</name>
-
-</project>
+<archetype>
+    <id>servicemix-xmpp-service-unit</id>
+    <resources>
+        <resource>src/main/resources/xbean.xml</resource>
+    </resources>
+</archetype>    
