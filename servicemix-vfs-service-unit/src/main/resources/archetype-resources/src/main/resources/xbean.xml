@@ -7,8 +7,38 @@
        xsi:schemaLocation="
             http://servicemix.apache.org/vfs/1.0 http://servicemix.apache.org/schema/servicemix-vfs-@{components.version}.xsd
             http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <!-- 
+        The ServiceMix VFS component provides support for reading from and writing to virtual file system
+        via the bus. It uses Apache Commons VFS (http://commons.apache.org/vfs) library.
+        
+            http://servicemix.apache.org/servicemix-vfs.html
+    -->            
             
     <!-- BEGIN SNIPPET: vfs-poller -->
+    <!-- 
+        The VFS Poller endpoint read file in a given VFS location, marshals it and send to the NMR.
+        
+        Attributes:
+            service                         : the endpoint service name
+            endpoint                        : the endpoint name
+            interfaceName                   : the endpoint interface name
+            targetService                   : the target endpoint service name
+            targetEndpoint                  : the target endpoint name
+            targetInterface                 : the target endpoint interface name
+            targetUri                       : the target endpoint URI
+            firstTime                       : datetime before first poll can take place
+            delay                           : amount of time first polling is delayed after start
+            period                          : amount of time between polls
+            path                            : sets the VFS path to poll
+            deleteFile                      : delete file when it is processed
+            recursive                       : process sub directories
+            marshaler                       : implementation of FileMarshaler to read/write message
+            lockManager                     : implementation of LockManager
+            selector                        : implementation of FileSelector to use
+            comparator                      : implementation of Comparator to order file process
+            fileSystemManager               : sets the VFS file manager object
+    -->
     <vfs:poller service="replaceMe:serviceName"
                 endpoint="vfs-poller"
                 path="tgz:http://remote/file.tar.gz!/inner/directory"
@@ -24,6 +54,17 @@
     <!-- END SNIPPET: vfs-poller -->
     
     <!-- BEGIN SNIPPET: vfs-sender -->
+    <!-- 
+        The VFS Sender endpoint expects message coming from the NMR, marshals it and sent to the 
+        VFS file destination.
+        
+        Attributes:
+            service                         : the endpoint service name
+            endpoint                        : the endpoint name
+            path                            : sets the VFS path where to write file
+            marshaler                       : implementation of FileMarshaler used to read/write file
+            fileSystemManager               : set the VFS file system manager
+    -->
     <vfs:sender service="replaceMe:serviceName"
                 endpoint="vfs-sender"
                 path="sftp://username:password@hostname/path">
