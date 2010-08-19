@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class SaxonXQueryServiceUnitTest extends AbstractArchetypeTest {
+public class SaxonServiceUnitTest extends AbstractArchetypeTest {
 
     public void testSaxonXQueryServiceUnit() throws Exception {
         testServiceMixArchetype("saxon-service-unit");

@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class EIPServiceUnitTest extends AbstractArchetypeTest {
+public class EipServiceUnitTest extends AbstractArchetypeTest {
 
     public void testEIPServiceUnit() throws Exception {
         testServiceMixArchetype("eip-service-unit");

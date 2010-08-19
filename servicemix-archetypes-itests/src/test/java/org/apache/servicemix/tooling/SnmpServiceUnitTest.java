@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class SnmpPollerServiceUnitTest extends AbstractArchetypeTest {
+public class SnmpServiceUnitTest extends AbstractArchetypeTest {
     
     public void testSnmpPollerServiceUnit() throws Exception {
         testServiceMixArchetype("snmp-service-unit");

@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class FilePollerServiceUnitTest extends AbstractArchetypeTest {
+public class FileServiceUnitTest extends AbstractArchetypeTest {
 
     public void testFilePollerServiceUnit() throws Exception {
         testServiceMixArchetype("file-service-unit");

@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class JmsConsumerServiceUnitTest extends AbstractArchetypeTest {
+public class JmsServiceUnitTest extends AbstractArchetypeTest {
 
     public void testJmsConsumerServiceUnit() throws Exception {
         testServiceMixArchetype("jms-service-unit");

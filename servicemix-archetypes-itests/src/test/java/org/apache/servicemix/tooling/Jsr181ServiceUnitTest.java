@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class Jsr181AnnotatedServiceUnitTest extends AbstractArchetypeTest {
+public class Jsr181ServiceUnitTest extends AbstractArchetypeTest {
 
     public void testJsr181AnnotatedServiceUnit() throws Exception {
         testServiceMixArchetype("jsr181-service-unit");

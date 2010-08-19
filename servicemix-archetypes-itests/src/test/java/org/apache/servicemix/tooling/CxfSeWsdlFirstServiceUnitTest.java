@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class CxfSEWsdlFirstServiceUnitTest extends AbstractArchetypeTest {
+public class CxfSeWsdlFirstServiceUnitTest extends AbstractArchetypeTest {
 
     public void testCxfWsdlFirstSEServiceUnit() throws Exception {
         testServiceMixArchetype("cxf-se-wsdl-first-service-unit");

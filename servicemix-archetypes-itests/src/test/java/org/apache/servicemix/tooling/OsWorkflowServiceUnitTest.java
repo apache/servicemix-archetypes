@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class OSWorkflowServiceUnitTest extends AbstractArchetypeTest {
+public class OsWorkflowServiceUnitTest extends AbstractArchetypeTest {
 
     public void testOSWorkflowServiceUnit() throws Exception {
         testServiceMixArchetype("osworkflow-service-unit");

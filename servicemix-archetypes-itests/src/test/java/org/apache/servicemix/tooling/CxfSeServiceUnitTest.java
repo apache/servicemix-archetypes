@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class CxfSEServiceUnitTest extends AbstractArchetypeTest {
+public class CxfSeServiceUnitTest extends AbstractArchetypeTest {
 
     public void testCxfSEServiceUnit() throws Exception {
         testServiceMixArchetype("cxf-se-service-unit");

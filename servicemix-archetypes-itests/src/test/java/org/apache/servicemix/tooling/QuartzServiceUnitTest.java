@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class QuartzCronTriggerServiceUnitTest extends AbstractArchetypeTest {
+public class QuartzServiceUnitTest extends AbstractArchetypeTest {
     
     public void testQuartzCronTriggerServiceUnit() throws Exception {
         testServiceMixArchetype("quartz-service-unit");

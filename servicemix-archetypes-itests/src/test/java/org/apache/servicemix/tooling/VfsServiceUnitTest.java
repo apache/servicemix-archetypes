@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class VfsPollerServiceUnitTest extends AbstractArchetypeTest {
+public class VfsServiceUnitTest extends AbstractArchetypeTest {
     
     public void testVfsPollerServiceUnit() throws Exception {
         testServiceMixArchetype("vfs-service-unit");

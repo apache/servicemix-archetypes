@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class HttpConsumerServiceUnitTest extends AbstractArchetypeTest {
+public class HttpServiceUnitTest extends AbstractArchetypeTest {
 
     public void testHttpConsumerServiceUnit() throws Exception {
         testServiceMixArchetype("http-service-unit");

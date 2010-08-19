@@ -16,7 +16,7 @@
  */
 package org.apache.servicemix.tooling;
 
-public class SmppConsumerServiceUnitTest extends AbstractArchetypeTest {
+public class SmppServiceUnitTest extends AbstractArchetypeTest {
     
     public void testSmppConsumerServiceUnit() throws Exception {
         testServiceMixArchetype("smpp-service-unit");
