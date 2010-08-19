@@ -20,6 +20,8 @@
             - all MEPs as consumers or providers
             - SSL
             - WS-Security
+            
+            http://servicemix.apache.org/servicemix-http.html
     -->
 
     <!-- BEGIN SNIPPET: http-consumer -->
