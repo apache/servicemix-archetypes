@@ -4,10 +4,34 @@
        xmlns:replaceMe="http://servicemix.apache.org/replaceMe"
        xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://servicemix.apache.org/file/1.0 http://servicemix.apache.org/schema/servicemix-file-@{components.version}.xsd
-       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+       xsi:schemaLocation="
+            http://servicemix.apache.org/file/1.0 http://servicemix.apache.org/schema/servicemix-file-@{components.version}.xsd
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <!-- 
+        The ServiceMix SNMP component provides support for receiving SNMP events via the bus.
+        It uses SNMP4J API.
+        
+            http://servicemix.apache.org/servicemix-snmp.html
+    -->
 
     <!-- BEGIN SNIPPET: snmp-poller -->
+    <!-- 
+        The SNMP Poller endpoint periodically poll SNMP events.
+        
+        Attributes:
+            service                             : the endpoint service name
+            endpoint                            : the endpoint name
+            targetService                       : the target endpoint service name
+            targetEndpoint                      : the target endpoint name
+            oids                                : sets the resource containing all OIDs to poll
+            address                             : the address to use for SNMP connection
+            marshaler                           : implementation of SnmpMarshalerSupport to read/write SNMP events
+            retries                             : the retries for requesting the values via SNMP
+            timeout                             : the timeout in milliseconds for a request to be answered
+            snmpVersion                         : the SNMP version to use
+            snmpCommunity                       : the SNMP community
+    -->
     <snmp:poller service="replaceMe:serviceName"
                  endpoint="snmp-poller"
                  targetService="replaceMe:targetService"

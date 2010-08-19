@@ -4,10 +4,38 @@
        xmlns:replaceMe="http://servicemix.apache.org/replaceMe"
        xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://servicemix.apache.org/saxon/1.0 http://servicemix.apache.org/schema/servicemix-saxon-@{components-version}.xsd
-       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+       xsi:schemaLocation="
+            http://servicemix.apache.org/saxon/1.0 http://servicemix.apache.org/schema/servicemix-saxon-@{components.version}.xsd
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <!-- 
+    The ServiceMix Saxon component is a service engine that use XSLT/XQuery. It's based on Saxon and supports
+    XSLT 2.0 and XPath 2.0, and XQuery 1.0.
+    
+        http://servicemix.apache.org/servicemix-saxon.html
+        http://saxon.sourceforge.net/
+  -->
 
   <!-- START SNIPPET: xquery --> 
+  <!-- 
+    The Saxon XQuery endpoint can be used to apply a selected XQuery to the input document.
+    
+    Attributes:
+        service                         : the endpoint service name
+        endpoint                        : the endpoint name
+        targetService                   : the target endpoint service name
+        targetEndpoint                  : the target endpoint name
+        query                           : inlined XQuery
+        resource                        : the Spring resource pointing to the XQuery
+        expression                      : expression used to dynamically load the XQuery
+        wsdlResource                    : if set, the WSDL will be retrieved from the given Spring resource
+        outputProperties                : Saxon specific output properties
+        configuration                   : Saxon configuration
+        result                          : output result type
+        copyAttachments                 : if set, copy the attachments in the output message
+        copyProperties                  : if set, copy the properties in the output message
+        copySubject                     : if set, copy the subject in the output message
+  -->
   <saxon:xquery service="replaceMe:serviceName" endpoint="saxon-xquery"
                 resource="classpath:query.xq" />
   <!-- END SNIPPET: xquery --> 
@@ -37,6 +65,26 @@
   <!-- END SNIPPET: xquery-dynamic -->
   
   <!--  START SNIPPET: saxon-xslt -->
+  <!-- 
+    The Saxon XSLT endpoint applies an XSLT stylesheet to the incoming exchange and will return
+    the transformed result as the output message.
+    
+    Attributes:
+        service                         : the endpoint service name
+        endpoint                        : the endpoint name
+        resource                        : the Spring resource pointing to the XSLT stylesheet file
+        expression                      : expression used to dynamically load the stylesheet
+        wsdlResource                    : if set, the WSDL will be retrieved from the given Spring resource
+        transformerFactory              : TraX factory to create transformers
+        configuration                   : Saxon configuration
+        result                          : output result type
+        copyAttachments                 : if set, copy the attachments in the output message
+        copyProperties                  : if set, copy the properties in the output message
+        copySubject                     : if set, copy the subject in the output message
+        useDomSourceForXslt             : force the transformation of the XSLT stylesheet into a DOM document before giving it to the transformer
+        useDomSourceForContent          : force the transformation of the incoming JBI message into a DOM document before giving it to the transformer
+        parameters                      : additional parameters to give to the transformation engine
+  -->
   <saxon:xslt service="replaceMe:serviceName" endpoint="saxon-xslt"
               resource="classpath:transform.xsl" />
   <!--  END SNIPPED: saxon-xslt -->           
