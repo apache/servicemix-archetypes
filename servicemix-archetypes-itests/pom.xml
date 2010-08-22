@@ -78,37 +78,22 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-ftp-poller-service-unit</artifactId>
+			<artifactId>servicemix-ftp-service-unit</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-ftp-sender-service-unit</artifactId>
+			<artifactId>servicemix-http-service-unit</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-http-consumer-service-unit</artifactId>
+			<artifactId>servicemix-jms-service-unit</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-http-provider-service-unit</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-jms-consumer-service-unit</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-jms-provider-service-unit</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-jsr181-annotated-service-unit</artifactId>
+			<artifactId>servicemix-jsr181-service-unit</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
@@ -123,12 +108,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-mail-poller-service-unit</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-mail-sender-service-unit</artifactId>
+			<artifactId>servicemix-mail-service-unit</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
@@ -138,27 +118,12 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-quartz-cron-trigger-service-unit</artifactId>
+			<artifactId>servicemix-quartz-service-unit</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-quartz-simple-trigger-service-unit</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-quartz-custom-marshaler-service-unit</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-saxon-xquery-service-unit</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-saxon-xslt-service-unit</artifactId>
+			<artifactId>servicemix-saxon-service-unit</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
@@ -193,12 +158,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-snmp-poller-service-unit</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-snmp-trap-consumer-service-unit</artifactId>
+			<artifactId>servicemix-snmp-service-unit</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
@@ -228,17 +188,17 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-cxf-bc-consumer-service-unit</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.servicemix.tooling</groupId>
-			<artifactId>servicemix-cxf-bc-provider-service-unit</artifactId>
+			<artifactId>servicemix-cxf-bc-service-unit</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.servicemix.tooling</groupId>
 			<artifactId>servicemix-osworkflow-service-unit</artifactId>
+			<version>${pom.version}</version>
+		</dependency>
+        <dependency>
+			<groupId>org.apache.servicemix.tooling</groupId>
+			<artifactId>servicemix-xmpp-service-unit</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
