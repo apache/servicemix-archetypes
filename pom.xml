@@ -42,7 +42,11 @@
     <properties>
         <components.version>2010.01</components.version>
         <jbi-maven-plugin.version>4.3</jbi-maven-plugin.version>
-        <maven-bundle-plugin.version>2.0.1</maven-bundle-plugin.version>
+        <maven-bundle-plugin.version>2.1.0</maven-bundle-plugin.version>
+        <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
+        <maven-resources-plugin.version>2.4.3</maven-resources-plugin.version>
+        <maven-jar-plugin.version>2.3.1</maven-jar-plugin.version>
+        <maven-shade-plugin.version>1.4</maven-shade-plugin.version>
         <junit.version>4.7</junit.version>
         <xbean.version>3.4.1</xbean.version>
         <geronimo-jta.specs.version>1.1.1</geronimo-jta.specs.version>
@@ -243,9 +247,14 @@
 						<components.version>${components.version}</components.version>
 						<jbi-maven-plugin.version>${jbi-maven-plugin.version}</jbi-maven-plugin.version>
 						<maven-bundle-plugin.version>${maven-bundle-plugin.version}</maven-bundle-plugin.version>
+        				<maven-compiler-plugin.version>${maven-compiler-plugin.version}</maven-compiler-plugin.version>
+        				<maven-resources-plugin.version>${maven-resources-plugin.version}</maven-resources-plugin.version>
+        				<maven-jar-plugin.version>${maven-jar-plugin.version}</maven-jar-plugin.version>
+        				<maven-shade-plugin.version>${maven-shade-plugin.version}</maven-shade-plugin.version>
 						<servicemix.version>${servicemix.version}</servicemix.version>
 						<servicemix.specs.version>${servicemix.specs.version}</servicemix.specs.version>
 						<geronimo-jta.specs.version>${geronimo-jta.specs.version}</geronimo-jta.specs.version>
+						<commons-logging.version>${commons-logging.version}</commons-logging.version>
 						<xbean.version>${xbean.version}</xbean.version>
 						<camel.version>${camel.version}</camel.version>
 						<cxf.version>${cxf.version}</cxf.version>

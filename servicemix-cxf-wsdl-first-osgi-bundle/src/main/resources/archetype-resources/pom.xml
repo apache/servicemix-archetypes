@@ -51,9 +51,19 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>@{maven-compiler-plugin.version}</version>
 				<configuration>
 					<source>1.5</source>
 					<target>1.5</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>@{maven-resources-plugin.version}</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -77,9 +87,7 @@
 										<extraarg>-verbose</extraarg>
 									</extraargs>
 								</wsdlOption>
-
 							</wsdlOptions>
-
 						</configuration>
 						<goals>
 							<goal>wsdl2java</goal>
@@ -90,10 +98,11 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
+				<version>@{maven-bundle-plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Import-Package>
 							javax.jws,
 							javax.wsdl,
@@ -126,5 +135,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
