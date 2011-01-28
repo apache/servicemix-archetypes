@@ -27,19 +27,19 @@ import java.util.List;
 public class MyComponent extends DefaultComponent {
 
     private MyEndpoint[] endpoints;
-	
-	public MyEndpoint[] getEndpoints() {
-	    return endpoints;
-	}
-	
-	public void setEndpoints(MyEndpoint[] endpoints) {
-		this.endpoints = endpoints;
-	}
-	
-	protected List getConfiguredEndpoints() {
-	    return asList(endpoints);
-	}
-	
+    
+    public MyEndpoint[] getEndpoints() {
+        return endpoints;
+    }
+    
+    public void setEndpoints(MyEndpoint[] endpoints) {
+        this.endpoints = endpoints;
+    }
+    
+    protected List getConfiguredEndpoints() {
+        return asList(endpoints);
+    }
+    
     protected Class[] getEndpointClasses() {
         return new Class[] { MyEndpoint.class };
     }

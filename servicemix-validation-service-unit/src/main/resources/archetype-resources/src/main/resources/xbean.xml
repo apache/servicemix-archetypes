@@ -30,32 +30,32 @@
             handlingErrorMethod             : the error handling mode
             errorHandlerFactory             : implementation of MessageAwareErrorHandlerFactory
     -->
-	<validation:endpoint service="replaceMe:serviceName" 
-    					 endpoint="validation-fault-flow" 
-            			 schemaResource="classpath:schema.xsd"
-            			 handlingErrorMethod="FAULT_FLOW"/>
-    <!-- END SNIPPET: validation-fault-flow -->            			 
-            							 
-    <!-- BEGIN SNIPPET: validation-fault-jbi -->            							 
-	<validation:endpoint service="replaceMe:serviceName" 
-    					 endpoint="validation-fault-jbi" 
-    					 schemaResource="classpath:schema.xsd"
-    					 handlingErrorMethod="FAULT_JBI"/>
-    <!-- END SNIPPET: validation-fault-jbi -->    					 
-            							 
-    <!-- BEGIN SNIPPET: validation-error-handler -->				 
-	<validation:endpoint service="replaceMe:serviceName" 
-    					 endpoint="validation-error-handler" 
-    					 schemaResource="classpath:schema.xsd"
-    					 handlingErrorMethod="FAULT_FLOW">
-		<property name="errorHandlerFactory">
-			<bean class="org.apache.servicemix.validation.handler.MessageAggregatingErrorHandlerFactory">
-      			<property name="rootPath" value="Fault/payload/messages"/>
-    			<property name="namespace" value="http://www.servicemix.org/fault"/>
-    			<property name="includeStackTraces" value="false"/>
-			</bean>
-		</property>
-	</validation:endpoint>
-	<!-- END SNIPPET: validation-error-handler --> 
+    <validation:endpoint service="replaceMe:serviceName" 
+                         endpoint="validation-fault-flow" 
+                         schemaResource="classpath:schema.xsd"
+                         handlingErrorMethod="FAULT_FLOW"/>
+    <!-- END SNIPPET: validation-fault-flow -->                         
+                                         
+    <!-- BEGIN SNIPPET: validation-fault-jbi -->                                         
+    <validation:endpoint service="replaceMe:serviceName" 
+                         endpoint="validation-fault-jbi" 
+                         schemaResource="classpath:schema.xsd"
+                         handlingErrorMethod="FAULT_JBI"/>
+    <!-- END SNIPPET: validation-fault-jbi -->                         
+                                         
+    <!-- BEGIN SNIPPET: validation-error-handler -->                 
+    <validation:endpoint service="replaceMe:serviceName" 
+                         endpoint="validation-error-handler" 
+                         schemaResource="classpath:schema.xsd"
+                         handlingErrorMethod="FAULT_FLOW">
+        <property name="errorHandlerFactory">
+            <bean class="org.apache.servicemix.validation.handler.MessageAggregatingErrorHandlerFactory">
+                  <property name="rootPath" value="Fault/payload/messages"/>
+                <property name="namespace" value="http://www.servicemix.org/fault"/>
+                <property name="includeStackTraces" value="false"/>
+            </bean>
+        </property>
+    </validation:endpoint>
+    <!-- END SNIPPET: validation-error-handler --> 
 
 </beans>

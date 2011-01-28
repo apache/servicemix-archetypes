@@ -51,7 +51,7 @@ public abstract class AbstractArchetypeTest extends TestCase {
         maven = new MavenEmbedder();
         maven.setOffline(false);
         if (StringUtils.isNotEmpty(sysProps.getProperty(MAVEN_REPO_LOCAL))) {
-        	maven.setLocalRepositoryDirectory(new File(sysProps.getProperty(MAVEN_REPO_LOCAL)));
+            maven.setLocalRepositoryDirectory(new File(sysProps.getProperty(MAVEN_REPO_LOCAL)));
         }
         
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();

@@ -84,8 +84,8 @@
                  port="5222"
                  user="lhein"
                  password="myPassword"
-		 createAccount="false"                  
-		 participant="gertv@my.jabberserver.lan" />
+         createAccount="false"                  
+         participant="gertv@my.jabberserver.lan" />
     <!-- END SNIPPET: xmpp-sender -->     
 
 </beans>

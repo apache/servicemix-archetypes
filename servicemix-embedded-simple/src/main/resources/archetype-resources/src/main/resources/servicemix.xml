@@ -11,7 +11,7 @@
                 statsInterval="10" 
                 flowName="seda">                   
     <sm:activationSpecs>
-				<!-- Place your activation specs here -->
+                <!-- Place your activation specs here -->
     </sm:activationSpecs>
   </sm:container>
 
