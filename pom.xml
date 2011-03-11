@@ -57,6 +57,10 @@
         <cxf.version>2.3.2</cxf.version>
         <servicemix.specs.version>1.6.0</servicemix.specs.version>
         <servicemix-utils.version>1.4.0-SNAPSHOT</servicemix-utils.version>
+        <activemq.version>5.4.2</activemq.version>
+        <jaxb.version>2.2</jaxb.version>
+        <jaxws.version>2.2</jaxws.version>
+        <geronimo.wsmetadata.version>1.1.2</geronimo.wsmetadata.version>
     </properties>
     
     <dependencyManagement>
