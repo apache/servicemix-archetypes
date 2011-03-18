@@ -40,7 +40,7 @@
     </scm>
 
     <properties>
-        <components.version>2011.01-SNAPSHOT</components.version>
+        <components.version>2011.01</components.version>
         <jbi-maven-plugin.version>4.4</jbi-maven-plugin.version>
         <maven-bundle-plugin.version>2.2.0</maven-bundle-plugin.version>
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
@@ -48,18 +48,18 @@
         <maven-jar-plugin.version>2.3.1</maven-jar-plugin.version>
         <maven-shade-plugin.version>1.4</maven-shade-plugin.version>
         <junit.version>4.7</junit.version>
-        <xbean.version>3.4.1</xbean.version>
+        <xbean.version>3.7</xbean.version>
         <geronimo-jta.specs.version>1.1.1</geronimo-jta.specs.version>
         <servicemix.version>3.3.2</servicemix.version>
         <commons-logging.version>1.1.1</commons-logging.version>
         <activemq.version>5.4.2</activemq.version>
-        <camel.version>2.6-SNAPSHOT</camel.version>
+        <camel.version>2.6.0</camel.version>
         <cxf.version>2.3.2</cxf.version>
-        <servicemix.specs.version>1.6.0</servicemix.specs.version>
-        <servicemix-utils.version>1.4.0-SNAPSHOT</servicemix-utils.version>
+        <servicemix.specs.version>1.7.0</servicemix.specs.version>
+        <servicemix-utils.version>1.4.0</servicemix-utils.version>
         <activemq.version>5.4.2</activemq.version>
-        <jaxb.version>2.2</jaxb.version>
-        <jaxws.version>2.2</jaxws.version>
+        <jaxb.version>2.1</jaxb.version>
+        <jaxws.version>2.1</jaxws.version>
         <geronimo.wsmetadata.version>1.1.2</geronimo.wsmetadata.version>
     </properties>
     

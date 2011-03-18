@@ -12,17 +12,10 @@
     <name>Apache ServiceMix :: Camel OSGi Bundle</name>
     
     <properties>
-       <commons-logging.version>@{commons-logging.version}</commons-logging.version>
        <camel.version>@{camel.version}</camel.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>${commons-logging.version}</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-core</artifactId>

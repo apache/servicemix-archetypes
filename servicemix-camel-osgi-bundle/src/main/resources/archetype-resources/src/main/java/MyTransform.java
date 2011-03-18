@@ -1,12 +1,10 @@
 package ${packageName};
 
 import java.util.Date;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import java.util.logging.Logger;
 
 public class MyTransform  {
-    private static final transient Log LOG = LogFactory.getLog(MyTransform.class);
+    private static final transient Logger LOGGER = Logger.getLogger(MyTransform.class.getName());
     private boolean verbose = true;
     private String prefix = "MyTransform";
 
@@ -15,7 +13,7 @@ public class MyTransform  {
         if (verbose) {
             System.out.println(">>>> " + answer);
         }
-        LOG.info(">>>> " + answer);
+        LOGGER.info(">>>> " + answer);
         return answer;
     }
 
