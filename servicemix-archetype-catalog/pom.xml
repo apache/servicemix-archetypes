@@ -76,6 +76,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>xslt-maven-plugin</artifactId>
+		<version>1.0</version>
                 <executions>
                     <execution>
                         <id>filter-by-version</id>
@@ -109,6 +110,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
+		<version>1.5</version>
                 <executions>
                     <execution>
                         <id>attach-artifacts</id>
