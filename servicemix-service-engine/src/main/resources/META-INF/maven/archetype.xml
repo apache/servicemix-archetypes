@@ -23,6 +23,9 @@
     <source>src/main/java/MyComponent.java</source>
     <source>src/main/java/MyEndpoint.java</source>
   </sources>
+  <resources>
+    <resource>src/main/resources/OSGI-INF/blueprint/my-component.xml</resource>
+  </resources>
   <testSources>
     <source>src/test/java/MySpringComponentTest.java</source>
   </testSources>
