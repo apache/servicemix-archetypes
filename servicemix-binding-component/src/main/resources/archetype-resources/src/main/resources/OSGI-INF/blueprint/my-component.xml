@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
+           xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0">
+
+    <!-- Retrieve ManagementStrategy from OSGi service registry -->
+    <reference id="managementStrategy" interface="org.fusesource.commons.management.ManagementStrategy"/>
+
+    <bean id="my-component" class="${packageName}.MyComponent">
+        <property name="executorFactory" ref="executorFactory"/>
+    </bean>
+
+    <bean id="executorFactory" class="org.apache.servicemix.executors.impl.ExecutorFactoryImpl">
+        <property name="defaultConfig">
+            <bean class="org.apache.servicemix.executors.impl.ExecutorConfig">
+                <property name="corePoolSize" value="${threadPoolCorePoolSize}"/>
+                <property name="maximumPoolSize" value="${threadPoolMaximumPoolSize}"/>
+                <property name="queueSize" value="${threadPoolQueueSize}"/>
+            </bean>
+        </property>
+        <property name="managementStrategy" ref="managementStrategy"/>
+    </bean>
+
+    <bean id="endpoint-tracker" class="org.apache.servicemix.common.osgi.EndpointTracker">
+        <property name="component" ref="my-component"/>
+    </bean>
+
+    <reference-list id="endpoints"
+                    interface="org.apache.servicemix.common.osgi.EndpointWrapper"
+                    availability="optional">
+        <reference-listener ref="endpoint-tracker" bind-method="register" unbind-method="unregister"/>
+    </reference-list>
+
+    <service ref="my-component" interface="javax.jbi.component.Component">
+        <service-properties>
+            <entry key="NAME" value="my-component"/>
+            <entry key="TYPE" value="binding-component"/>
+        </service-properties>
+    </service>
+
+    <service interface="org.apache.aries.blueprint.NamespaceHandler">
+        <service-properties>
+            <entry key="osgi.service.blueprint.namespace" value="http://servicemix.apache.org/my-component/1.0"/>
+        </service-properties>
+        <bean class="org.apache.xbean.blueprint.context.impl.XBeanNamespaceHandler">
+            <argument value="http://servicemix.apache.org/my-component/1.0"/>
+            <argument value="servicemix-my-component.xsd"/>
+            <argument ref="blueprintBundle"/>
+            <argument value="META-INF/services/org/apache/xbean/spring/http/servicemix.apache.org/my-component/1.0"/>
+        </bean>
+    </service>
+
+    <cm:property-placeholder persistent-id="org.apache.servicemix.components.my-component">
+        <cm:default-properties>
+            <cm:property name="threadPoolCorePoolSize" value="8"/>
+            <cm:property name="threadPoolMaximumPoolSize" value="32"/>
+            <cm:property name="threadPoolQueueSize" value="256"/>
+            </cm:default-properties>
+    </cm:property-placeholder>
+
+</blueprint>
