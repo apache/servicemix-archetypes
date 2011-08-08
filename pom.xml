@@ -28,7 +28,7 @@
 
     <groupId>org.apache.servicemix</groupId>
     <artifactId>archetypes</artifactId>
-    <version>2011.01-SNAPSHOT</version>
+    <version>2010.02-SNAPSHOT</version>
 
     <name>Apache ServiceMix :: Archetypes</name>
     <packaging>pom</packaging>
@@ -40,9 +40,9 @@
     </scm>
 
     <properties>
-        <components.version>2011.01</components.version>
-        <jbi-maven-plugin.version>4.4</jbi-maven-plugin.version>
-        <maven-bundle-plugin.version>2.2.0</maven-bundle-plugin.version>
+        <components.version>2010.02</components.version>
+        <jbi-maven-plugin.version>4.5</jbi-maven-plugin.version>
+        <maven-bundle-plugin.version>2.3.5</maven-bundle-plugin.version>
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
         <maven-resources-plugin.version>2.4.3</maven-resources-plugin.version>
         <maven-jar-plugin.version>2.3.1</maven-jar-plugin.version>
@@ -52,11 +52,11 @@
         <geronimo-jta.specs.version>1.1.1</geronimo-jta.specs.version>
         <servicemix.version>3.3.2</servicemix.version>
         <commons-logging.version>1.1.1</commons-logging.version>
-        <activemq.version>5.4.2</activemq.version>
-        <camel.version>2.6.0</camel.version>
-        <cxf.version>2.3.2</cxf.version>
-        <servicemix.specs.version>1.7.0</servicemix.specs.version>
-        <servicemix-utils.version>1.4.0</servicemix-utils.version>
+        <activemq.version>5.4.1</activemq.version>
+        <camel.version>2.5.0</camel.version>
+        <cxf.version>2.2.11</cxf.version>
+        <servicemix.specs.version>1.6.0</servicemix.specs.version>
+        <servicemix-utils.version>1.3.0</servicemix-utils.version>
         <jaxb.version>2.1</jaxb.version>
         <jaxws.version>2.1</jaxws.version>
         <geronimo.wsmetadata.version>1.1.2</geronimo.wsmetadata.version>
