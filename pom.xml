@@ -28,15 +28,15 @@
 
     <groupId>org.apache.servicemix</groupId>
     <artifactId>archetypes</artifactId>
-    <version>2010.02-SNAPSHOT</version>
+    <version>2010.02</version>
 
     <name>Apache ServiceMix :: Archetypes</name>
     <packaging>pom</packaging>
 
     <scm>
-        <connection>scm:svn:http://svn.apache.org/repos/asf/servicemix/archetypes/trunk</connection>
-        <developerConnection>scm:svn:https://svn.apache.org/repos/asf/servicemix/archetypes/trunk</developerConnection>
-        <url>http://svn.apache.org/viewcvs.cgi/servicemix/archetypes/trunk</url>
+        <connection>scm:svn:http://svn.apache.org/repos/asf/servicemix/archetypes/tags/archetypes-2010.02</connection>
+        <developerConnection>scm:svn:https://svn.apache.org/repos/asf/servicemix/archetypes/tags/archetypes-2010.02</developerConnection>
+        <url>http://svn.apache.org/viewcvs.cgi/servicemix/archetypes/tags/archetypes-2010.02</url>
     </scm>
 
     <properties>
