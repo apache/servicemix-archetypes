@@ -213,8 +213,6 @@
         <module>servicemix-cxf-code-first-osgi-bundle</module>
         <module>servicemix-cxf-wsdl-first-osgi-bundle</module>
         
-        <module>servicemix-archetype-catalog</module>
-        
         <module>servicemix-project-root</module>
         
         <module>servicemix-archetypes-itests</module>
