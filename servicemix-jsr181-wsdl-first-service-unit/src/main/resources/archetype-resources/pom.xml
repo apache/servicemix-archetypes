@@ -43,7 +43,7 @@
             <plugin>
                 <groupId>org.apache.servicemix.tooling</groupId>
                 <artifactId>xfire-maven-plugin</artifactId>
-                <version>@{servicemix.version}</version>
+                <version>@{maven-xfire-plugin.version}</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
