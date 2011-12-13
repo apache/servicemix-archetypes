@@ -118,7 +118,7 @@
                             org.apache.cxf.configuration.spring,
                             org.apache.cxf.resource,
                             org.apache.cxf.jaxws,
-                            org.apache.cxf.transport.http_osgi,
+                            org.apache.cxf.transport.http,
                             org.springframework.beans.factory.config
                         </Import-Package>
                         <!-- Update Private Package tag with appropriate package name -->
