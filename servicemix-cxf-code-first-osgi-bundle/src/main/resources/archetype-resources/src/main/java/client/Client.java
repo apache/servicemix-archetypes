@@ -14,7 +14,7 @@ public final class Client {
         if (args != null && args.length > 0 && !"".equals(args[0])) {
             factory.setAddress(args[0]);
         } else {
-            factory.setAddress("http://localhost:8080/cxf/PersonServiceCF");
+            factory.setAddress("http://localhost:8181/cxf/PersonServiceCF");
         }
        
         Person client = (Person)factory.create();
