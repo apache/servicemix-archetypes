@@ -99,7 +99,7 @@ public abstract class AbstractArchetypeTest extends TestCase {
         MavenProject parent = maven.readProject(getDefaultArchetypePom(new File(targetDir, "pom.xml")));
         System.setProperties((Properties) sysProps.clone());
         maven.execute(parent,
-                      Collections.singletonList("archetype:create"), 
+                      Collections.singletonList("org.apache.maven.plugins:maven-archetype-plugin:2.0-alpha-5:create"), 
                       eventMonitor, 
                       new ConsoleDownloadMonitor(), 
                       props, 
